@@ -39,6 +39,7 @@ pitaya/
 ├── .gitignore
 ├── CHANGELOG.md
 ├── Gulpfile.js
+├── LICENSE.md
 ├── package.json
 ├── README.md
 └── style.css
