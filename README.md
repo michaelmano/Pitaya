@@ -51,7 +51,7 @@ pitaya/
 
 You will need to run npm install, If you have issues with devDependancies not being installed you can try npm install
 `$npm install --only=dev`
-Once the node_modules have been installed you can run `npm gulp` and this will watch all scss files inside of the assets/stylesheets directory, once you have finished development you can then run `$npm gulp prodiction` and this will minimize the css and remove all comments and maps except for the wordpress header comments.
+Once the node_modules have been installed you can run `gulp` and this will watch all scss files inside of the assets/stylesheets directory, once you have finished development you can then run `gulp prodiction` and this will minimize the css and remove all comments and maps except for the wordpress header comments.
 
 ## TODO
 * Init all files.
