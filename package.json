@@ -1,0 +1,19 @@
+{
+  "name": "pitaya-0.1.0",
+  "version": "0.1.0",
+  "description": "Wordpress Starter Theme",
+  "main": "Gulpfile.js",
+  "repository": {
+    "url": "git@github.com:michaelmano/Pitaya.git",
+    "type": "git"
+  },
+  "author": "Michael Mano",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-sass": "^2.3.2",
+    "gulp-strip-css-comments": "^1.2.0"
+  }
+}
