@@ -11,3 +11,5 @@ Macy.init({
         400: 1
     }
 });
+const carouselEl = document.querySelector('.carousel');
+const carousel   = new Wallop(carouselEl);
