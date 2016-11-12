@@ -1,0 +1,22 @@
+.carousel {
+  background: #F1F2B5;
+  background: -webkit-linear-gradient(to left, #F1F2B5 , #135058);
+  background: linear-gradient(to left, #F1F2B5 , #135058);
+  &__cell {
+    width: 100%;
+    height: 600px;
+    margin-right: 10px;
+    counter-increment: gallery__cell;
+    &:before {
+      display: block;
+      text-align: center;
+      content: counter(gallery__cell);
+      line-height: 600px;
+      font-size: 80px;
+      color: white;
+    }
+  }
+  & .flickity-page-dots {
+    bottom: 10px;
+  }
+}

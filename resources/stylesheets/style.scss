@@ -11,13 +11,20 @@ Tags: black, brown, orange, tan, white, yellow, light, one-column, two-columns, 
 Text Domain: Pitaya
 */
 
+/* Resets & Variables
+  ======================================================================= */
+
 @import "./partials/variables";
 @import "./partials/normalize";
+
+/* Vendors
+  ======================================================================= */
+@import "./partials/vendors/flickity";
+
+/* Base
+  ======================================================================= */
+
 @import "./partials/grid";
-
-
-/* TEST */
-
-h1 {
-    color:#fff;
-}
+@import "./partials/global";
+@import "./partials/carousel";
+@import "./partials/macy";

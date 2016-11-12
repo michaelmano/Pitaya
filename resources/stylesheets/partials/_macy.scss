@@ -1,0 +1,19 @@
+.macy {
+  &:before, &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  margin-top: 22px;
+  &__demo {
+    margin-bottom: 24px;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid #eee;
+    & img {
+      width: 100%;
+      display: block;
+      height: auto;
+    }
+  }
+}

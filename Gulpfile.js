@@ -1,27 +1,28 @@
 'use strict';
 
-const gulp             = require('gulp');
-const sass             = require('gulp-sass');
-const prefix           = require('gulp-autoprefixer');
-const browserSync      = require('browser-sync').create();
+const gulp    = require('gulp');
+const sass    = require('gulp-sass');
+const prefix  = require('gulp-autoprefixer');
+const uglify  = require('gulp-uglifyjs');
+const concat  = require('gulp-concat');
+
 const paths = {
   styles: {
-    src: './assets/stylesheets/',
-    files: './assets/stylesheets/**/*.scss',
+    src: './resources/stylesheets/',
+    files: './resources/stylesheets/**/*.scss',
     dest: ''
+  },
+  scripts: {
+    src: './resources/javascripts/',
+    files: ['./resources/javascripts/vendors/*.js', './resources/javascripts/*.js'],
+    dest: './assets/javascripts/'
   }
 }
-gulp.task('serve', ['sass'], function() {
-
-    browserSync.init({
-        server: "./"
-    });
-
-    gulp.watch("./assets/stylesheets/*.scss", ['sass']);
-    gulp.watch("./*.html").on('change', browserSync.reload);
+gulp.task('serve', ['development'], function() {
+  gulp.watch(['./resources/stylesheets/*.scss', './resources/javascripts/**/*.js'], ['development']);
 });
 
-gulp.task('sass', function () {
+gulp.task('development', function () {
   output({
     sourceComments: 'map',
     includePaths : [paths.styles.src]
@@ -30,19 +31,30 @@ gulp.task('sass', function () {
 
 gulp.task('production', function (){
   output({
+    production: true,
     outputStyle: 'compressed',
     includePaths : [paths.styles.src]
   });
 })
 
-gulp.task('default', ['sass'], function() {
-  gulp.watch(paths.styles.files, ['sass'])
+gulp.task('default', ['development'], function() {
+  gulp.watch(['./resources/stylesheets/**/*.scss', './resources/javascripts/**/*.js'], ['development'])
   .on('change', function(evt) {
     console.log( '[watcher] File ' + evt.path.replace(/.*(?=sass)/,'') + ' was ' + evt.type + ', compiling...')
   })
 })
 
 function output(args) {
+  if (args.production === true) {
+    gulp.src(paths.scripts.files)
+      .pipe(uglify())
+      .pipe(concat('site.js'))
+      .pipe(gulp.dest(paths.scripts.dest))
+  } else {
+    gulp.src(paths.scripts.files)
+      .pipe(concat('site.js'))
+      .pipe(gulp.dest(paths.scripts.dest))
+  }
   gulp.src(paths.styles.files)
   .pipe(sass(args))
   .on('error', function(err) {
@@ -52,5 +64,4 @@ function output(args) {
     'last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'
   ))
   .pipe(gulp.dest(paths.styles.dest))
-  .pipe(browserSync.stream())
 }
