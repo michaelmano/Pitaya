@@ -1,5 +1,7 @@
 # Pitaya
-A Wordpress Starter theme
+![][pitaya-image]
+
+#### A Wordpress Starter theme
 [Demo][pitaya-demo]
 
 ## Table of Contents
@@ -12,74 +14,46 @@ A Wordpress Starter theme
 ## Folder Structure.
 
 ```
-Pitaya
+The below is as follows:
+
+- Assets is for compiled and site resources.
+- Core is for the theme core functionality that adds onto the functions.php
+- Includes is for any theme partials like the carousel.
+- Resources is for development whith unminified code and original files. ** Might update this later to be in assets.
+- Templates is for wordpress page templates e.g. page-contact.php
+
+Pitaya/
 _____________________________
-|-- assets
-|   |-- fonts
-|   |   `-- idnex.php
-|   |-- images
-|   |   |-- admin-logo.svg
-|   |   |-- favicons
-|   |   `-- index.php
-|   |-- index.php
-|   |-- javascripts
-|   |   |-- index.php
-|   |   `-- site.js
-|   `-- media
-|       `-- index.php
-|-- core
-|   |-- assets
-|   |   |-- index.php
-|   |   |-- main.js
-|   |   `-- style.css
-|   |-- index.php
+|-- assets/
+|   |-- fonts/
+|   |-- images/
+|   |   `-- favicons/
+|   |-- javascripts/
+|   `-- media/
+|-- core/
+|   |-- assets/
 |   |-- pitaya-activation.php
 |   |-- pitaya-functions.php
 |   `-- pitaya-settings.php
-|-- includes
-|   |-- carousel.php
-|   `-- index.php
-|-- languages
-|   `-- index.php
-|-- resources
-|   |-- fonts
-|   |   `-- idnex.php
-|   |-- images
-|   |   |-- index.php
-|   |   `-- screenshot.psd
-|   |-- index.php
-|   |-- javascripts
-|   |   |-- index.php
-|   |   |-- main.js
-|   |   `-- vendors
-|   |       |-- flickity.js
-|   |       `-- macy.js
-|   |-- media
-|   |   `-- index.php
-|   `-- stylesheets
-|       |-- index.php
-|       |-- partials
-|       |   |-- _carousel.scss
-|       |   |-- _global.scss
-|       |   |-- _grid.scss
-|       |   |-- index.php
-|       |   |-- _macy.scss
-|       |   |-- mixins
-|       |   |   `-- index.php
-|       |   |-- _normalize.scss
-|       |   `-- _variables.scss
-|       |-- style.scss
-|       `-- vendors
-|           `-- _flickity.scss
-|-- templates
-|   `-- index.php
+|-- includes/
+|-- resources/
+|   |-- fonts/
+|   |-- images/
+|   |-- javascripts/
+|   |   |-- vendors/
+|   |   `-- main.js
+|   |-- media/
+|   `-- stylesheets/
+|       |-- partials/
+|       |-- vendors/
+|       `-- style.scss
+|-- templates/
 |-- CHANGELOG.md
 |-- footer.php
 |-- front-page.php
 |-- functions.php
 |-- Gulpfile.js
 |-- header.php
-|-- index.html
 |-- index.php
 |-- LICENSE.md
 |-- package.json
@@ -99,6 +73,6 @@ Once the node_modules have been installed you can run `gulp` and this will watch
 ## TODO
 * Init all files.
 
-[pitaya-image]: https://www.michaelmano.com/pitaya.svg
+[pitaya-image]: https://michaelmano.com/Pitaya.svg
 [pitaya-demo]: http://codepen.io/michaelmano/details/ObNORo/
 [pitaya-url]: https://www.michaelmano.com
