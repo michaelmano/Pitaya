@@ -38,39 +38,6 @@
       </div><!-- END grid__cell -->
     </div><!-- END grid -->
     <h3>Great Minimalistic Masonry, Pure Javascript without jQuery.</h3>
-
-    <div class="macy">
-      <div class="macy__demo">
-        <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150">
-      </div><!-- END macy__demo -->
-      <div class="macy__demo">
-        <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=150%C3%97150&w=150&h=150">
-      </div><!-- END macy__demo -->
-      <div class="macy__demo">
-        <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=450%C3%97150&w=450&h=150">
-      </div><!-- END macy__demo -->
-      <div class="macy__demo">
-        <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=250%C3%97150&w=250&h=150">
-      </div><!-- END macy__demo -->
-      <div class="macy__demo">
-        <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=550%C3%97150&w=550&h=150">
-      </div><!-- END macy__demo -->
-      <div class="macy__demo">
-        <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=150%C3%97150&w=150&h=150">
-      </div><!-- END macy__demo -->
-      <div class="macy__demo">
-        <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150">
-      </div><!-- END macy__demo -->
-      <div class="macy__demo">
-        <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=250%C3%97150&w=250&h=150">
-      </div><!-- END macy__demo -->
-      <div class="macy__demo">
-        <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=550%C3%97150&w=550&h=150">
-      </div><!-- END macy__demo -->
-      <div class="macy__demo">
-        <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=650%C3%97150&w=650&h=150">
-      </div><!-- END macy__demo -->
-    </div><!-- END macy -->
     <?php
     if ( have_posts() ) {
       while ( have_posts() ) {
