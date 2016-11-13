@@ -1,5 +1,6 @@
 # Pitaya
 A Wordpress Starter theme
+[!Demo][pitaya-demo]
 
 ## Table of Contents
 
@@ -11,38 +12,80 @@ A Wordpress Starter theme
 ## Folder Structure.
 
 ```
-pitaya/
-├── assets/
-│   ├── fonts/
-│   ├── images/
-│   ├── javascripts/
-│   ├── media/
-│   └── stylesheets/
-|       ├── partials/
-|       |   ├── mixins/
-|       |   ├── _grid.scss
-|       |   ├── _normalize.scss
-|       |   └── _variables.scss
-|       └── style.scss
-├── core/
-│   ├── .../
-|   └── .../
-├── includes/
-│   ├── .../
-|   └── .../
-├── languages/
-│   ├── .../
-|   └── .../
-├── templates/
-|   └── .../
-├── .editorconfig
-├── .gitignore
-├── CHANGELOG.md
-├── Gulpfile.js
-├── LICENSE.md
-├── package.json
-├── README.md
-└── style.css
+Pitaya
+_____________________________
+|-- assets
+|   |-- fonts
+|   |   `-- idnex.php
+|   |-- images
+|   |   |-- admin-logo.svg
+|   |   |-- favicons
+|   |   `-- index.php
+|   |-- index.php
+|   |-- javascripts
+|   |   |-- index.php
+|   |   `-- site.js
+|   `-- media
+|       `-- index.php
+|-- core
+|   |-- assets
+|   |   |-- index.php
+|   |   |-- main.js
+|   |   `-- style.css
+|   |-- index.php
+|   |-- pitaya-activation.php
+|   |-- pitaya-functions.php
+|   `-- pitaya-settings.php
+|-- includes
+|   |-- carousel.php
+|   `-- index.php
+|-- languages
+|   `-- index.php
+|-- resources
+|   |-- fonts
+|   |   `-- idnex.php
+|   |-- images
+|   |   |-- index.php
+|   |   `-- screenshot.psd
+|   |-- index.php
+|   |-- javascripts
+|   |   |-- index.php
+|   |   |-- main.js
+|   |   `-- vendors
+|   |       |-- flickity.js
+|   |       `-- macy.js
+|   |-- media
+|   |   `-- index.php
+|   `-- stylesheets
+|       |-- index.php
+|       |-- partials
+|       |   |-- _carousel.scss
+|       |   |-- _global.scss
+|       |   |-- _grid.scss
+|       |   |-- index.php
+|       |   |-- _macy.scss
+|       |   |-- mixins
+|       |   |   `-- index.php
+|       |   |-- _normalize.scss
+|       |   `-- _variables.scss
+|       |-- style.scss
+|       `-- vendors
+|           `-- _flickity.scss
+|-- templates
+|   `-- index.php
+|-- CHANGELOG.md
+|-- footer.php
+|-- front-page.php
+|-- functions.php
+|-- Gulpfile.js
+|-- header.php
+|-- index.html
+|-- index.php
+|-- LICENSE.md
+|-- package.json
+|-- README.md
+|-- screenshot.png
+`-- style.css
 ```
 
 ## Development
@@ -57,4 +100,5 @@ Once the node_modules have been installed you can run `gulp` and this will watch
 * Init all files.
 
 [pitaya-image]: https://www.michaelmano.com/pitaya.svg
+[pitaya-demo]: http://codepen.io/michaelmano/details/ObNORo/
 [pitaya-url]: https://www.michaelmano.com
