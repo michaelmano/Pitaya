@@ -1,6 +1,6 @@
 # Pitaya
 A Wordpress Starter theme
-[!Demo][pitaya-demo]
+[Demo][pitaya-demo]
 
 ## Table of Contents
 
