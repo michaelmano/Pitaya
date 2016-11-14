@@ -101,9 +101,9 @@ function pitaya_settings_init() {
   );
 
   add_settings_section(
-  'pitaya_section_socials',
+  'pitaya_section_contact',
   __('Social Media Links', 'pitaya'),
-  'pitaya_section_socials_cb',
+  'pitaya_section_contact_cb',
   'pitaya'
   );
 
@@ -124,10 +124,10 @@ function pitaya_settings_init() {
 
   add_settings_field(
     'pitaya',
-    __('Social Media Links', 'pitaya'),
-    'pitaya_field_socials_cb',
+    __('Client Contact Information', 'pitaya'),
+    'pitaya_field_contact_cb',
     'pitaya',
-    'pitaya_section_socials', [
+    'pitaya_section_contact', [
       'socials' =>  pitaya_socials(),
       'class' => 'pitaya_social_row'
     ]
@@ -176,10 +176,10 @@ function pitaya_field_general_cb($args) {
 <?php
 }
 
-function pitaya_section_socials_cb($args) { ?>
+function pitaya_section_contact_cb($args) { ?>
 <?php
 }
-function pitaya_field_socials_cb($args) {
+function pitaya_field_contact_cb($args) {
   $options = get_option('pitaya_options'); ?>
   <?php foreach($args['socials'] as $arg) { ?>
     <fieldset class="<?= esc_attr($args['class']); ?>">
