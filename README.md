@@ -68,8 +68,8 @@ _____________________________
 ## Development
 
 ### Installing
-To take full advantage of this theme you will require NODE to be installed which is for the SCSS files and minifying the javascripts.
-![node-link][node-image]
+To take full advantage of this theme you will require [NODE][node-link] to be installed which is for the SCSS files and minifying the javascripts.
+![][node-image]
 
 For a fresh project without Wordpress installed you can either download Wordpress manually and git clone or download the theme and extract it into the themes folder and then set up your database and then run through the Wordpress installer
 
@@ -77,7 +77,8 @@ OR `npm install wpauto` and when it asks for a custom theme type pitaya and you 
 
 
 ### CSS/SASS Conventions
-This project uses the ![BEM CSS[bem-link]] naming convention which has a few rules which are easy to follow, widely used and considered best practice.
+
+This project uses the [BEM CSS][bem-link] naming convention which has a few rules which are easy to follow, widely used and considered best practice.
 
 ```
 /* Block component */
@@ -96,11 +97,11 @@ This project uses the ![BEM CSS[bem-link]] naming convention which has a few rul
   <span class="btn__text">Subscribe</span>
 </a>
 ```
-You can read the article on CSS tricks ![Here][bem-example]
+You can read the article on CSS tricks [Here][bem-example]
 
 ### Comment Conventions.
 I have set up a few snippets that will help with your commenting style also, These are set up for atom but can be easily changed for any editor.
-![You can download them here][snippets-link]
+You can download them here [snippets-link]
 
 The shortcuts are:
 - d+tab for a new div which will also add the ending comment in HTML/PHP
