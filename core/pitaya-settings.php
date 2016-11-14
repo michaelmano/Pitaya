@@ -116,6 +116,7 @@ function pitaya_settings_init() {
       'first_activation'  => 'First Activation',
       'theme_colour'  => 'Theme Primary Colour',
       'analytics'  => 'Google Analytics Number',
+      'google_maps_api'  => 'Google Maps API',
       'class' => 'pitaya_social_row'
     ]
   );
@@ -160,6 +161,16 @@ function pitaya_field_general_cb($args) {
       name="pitaya_options[<?= esc_attr($args['analytics']); ?>]"
       placeholder="e.g. UA-36045025-1"
       value="<?= $options[$args['analytics']]; ?>"
+      />
+  </fieldset>
+  <fieldset class="<?= esc_attr($args['class']); ?>">
+    <h4 class="description" id="pitaya_options[<?= esc_attr($args['google_maps_api']); ?>]"><?= esc_attr($args['google_maps_api']); ?></h4>
+    <input
+      type="text"
+      class="<?= esc_attr($args['class']); ?>"
+      name="pitaya_options[<?= esc_attr($args['google_maps_api']); ?>]"
+      placeholder="e.g. UA-36045025-1"
+      value="<?= $options[$args['google_maps_api']]; ?>"
       />
   </fieldset>
 <?php
