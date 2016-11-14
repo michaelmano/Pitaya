@@ -155,6 +155,7 @@ function pitaya_field_general_cb($args) {
       value="<?= $options[$args['theme_colour']]; ?>"
       />
   </fieldset>
+
   <fieldset class="<?= esc_attr($args['class']); ?>">
     <h4 class="description" id="pitaya_options[<?= esc_attr($args['analytics']); ?>]"><?= esc_attr($args['analytics']); ?></h4>
     <input
@@ -165,6 +166,7 @@ function pitaya_field_general_cb($args) {
       value="<?= $options[$args['analytics']]; ?>"
       />
   </fieldset>
+
   <fieldset class="<?= esc_attr($args['class']); ?>">
     <h4 class="description" id="pitaya_options[<?= esc_attr($args['google_maps_api']); ?>]"><?= esc_attr($args['google_maps_api']); ?></h4>
     <input
@@ -203,7 +205,11 @@ function pitaya_field_contact_cb($args) {
       value="<?= $options[$args['address']]; ?>"
       />
   </fieldset>
-  <div class="cf"></div>
+
+  <div class="cf">
+    <h2>Social Media Links</h2>
+  </div>
+
   <?php foreach($args['socials'] as $arg) { ?>
     <fieldset class="<?= esc_attr($args['class']); ?>">
       <h4 class="description" id="pitaya_options[<?= esc_attr($arg); ?>]"><?= esc_attr($arg); ?></h4>
