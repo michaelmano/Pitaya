@@ -15,19 +15,22 @@
 */
 
 function load_styles() {
-  wp_register_style('pitaya-theme', get_template_directory_uri() .'/style.css', array(), '1.1', 'all');
+  wp_register_style('pitaya-theme', get_template_directory_uri() .'/assets/stylesheets/style.css', array(), '1.1', 'all');
   wp_enqueue_style( 'pitaya-theme');
 }
 add_action('wp_print_styles', 'load_styles');
 
 
 function pitaya_scripts() {
+
+  wp_deregister_script('jquery');
+  wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js", false, null);
+  wp_enqueue_script('jquery');
+
 	wp_register_script( 'pitaya-functions', get_template_directory_uri() . '/assets/javascripts/site.js', array(), '0.1.0', true );
 	wp_enqueue_script( 'pitaya-functions' );
 }
-add_action( 'wp_enqueue_scripts', 'pitaya_scripts' );
-
-
+if (!is_admin()) add_action( 'wp_enqueue_scripts', 'pitaya_scripts', 11 );
 /*
 |--------------------------------------------------------------------------
 | Redirect Attachment Pages.

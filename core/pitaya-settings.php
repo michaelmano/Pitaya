@@ -5,17 +5,76 @@
 ========================================================================== */
 
 
-// Enque admin styles only for this page.
+/*
+|--------------------------------------------------------------------------
+| Pitaya Admin CSS/JS
+|--------------------------------------------------------------------------
+|
+| The Below functions will echo css and js into the header/footer if the
+| Page is Theme Settings. The reason for using inline vs a whole new
+| File is that there is no reason to make additional http requests
+| As they are not that large of a file.
+*/
 
-function pitaya_theme_settings_styles_scripts($hook) {
+function pitaya_admin_css($hook) {
   if($hook === 'toplevel_page_pitaya') {
-    wp_enqueue_style('pitaya_admin_styles' , get_template_directory_uri() . '/core/assets/style.css' );
-    wp_enqueue_style('wp-color-picker' );
-    wp_enqueue_script('wp-color-picker');
-    wp_enqueue_script('wp-color-picker-script-handle', get_template_directory_uri() . '/core/assets/main.js', array( 'wp-color-picker' ), false, true );
+    echo '
+    <style>
+    .toplevel_page_pitaya fieldset.pitaya_social_row {
+      display: inline-block;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+    }
+    .toplevel_page_pitaya .pitaya_social_row th {
+      display: none;
+    }
+    .toplevel_page_pitaya fieldset.pitaya_social_row input {
+      width: 100%;
+    }
+    .toplevel_page_pitaya tr.pitaya_social_row {
+      width: 100%;
+    }
+    .toplevel_page_pitaya fieldset h4 {
+      margin: 5px 0;
+    }
+    @media screen and (min-width: 640px) {
+      .toplevel_page_pitaya fieldset.pitaya_social_row {
+        width: 24.5%;
+      }
+    }
+    </style>
+    ';
   }
 }
-add_action('admin_enqueue_scripts',  'pitaya_theme_settings_styles_scripts');
+
+add_action('admin_head', 'pitaya_admin_css');
+
+function pitaya_admin_js($hook) {
+  if($hook === 'toplevel_page_pitaya') {
+    echo '
+      <script>
+      jQuery(document).ready(function($){
+        $(".color-field").wpColorPicker();
+      });
+    </script>
+    ';
+  }
+}
+
+add_action('admin_footer', 'pitaya_admin_js');
+
+
+
+/*
+|--------------------------------------------------------------------------
+| Theme Setting Fields
+|--------------------------------------------------------------------------
+|
+| Each of the below socials are an arrayand you can add as many as you would like. I have just grabbed the most popular and left them. The function
+| <?php pitaya_display_social_nav(); ?> Will call the navigation however if you wish to call one seperatly or modify the output you can do
+| $socials = get_option('pitaya_options', 'socials'); and $socials['Facebook'] to get the value. don't forge to check if is not null.
+*/
 
 function pitaya_settings_init() {
 
@@ -35,16 +94,6 @@ function pitaya_settings_init() {
   'pitaya_section_socials_cb',
   'pitaya'
   );
-
-  /*
-  |--------------------------------------------------------------------------
-  | Theme Setting Fields
-  |--------------------------------------------------------------------------
-  |
-  | Each of the below socials are an arrayand you can add as many as you would like. I have just grabbed the most popular and left them. The function
-  | <?php pitaya_display_social_nav(); ?> Will call the navigation however if you wish to call one seperatly or modify the output you can do
-  | $socials = get_option('pitaya_options', 'socials'); and $socials['Facebook'] to get the value. don't forge to check if is not null.
-  */
 
   add_settings_field(
     'pitaya',

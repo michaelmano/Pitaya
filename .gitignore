@@ -19,5 +19,3 @@ jspm_packages
 *.tgz
 .yarn-integrity
 *.lock
-style.css
-assets\javascripts\*.js

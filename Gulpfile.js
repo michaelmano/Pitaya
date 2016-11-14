@@ -8,18 +8,18 @@ const concat  = require('gulp-concat');
 
 const paths = {
   styles: {
-    src: './resources/stylesheets/',
-    files: './resources/stylesheets/**/*.scss',
-    dest: ''
+    src: './assets/stylesheets/scss/',
+    files: './assets/stylesheets/scss/**/*.scss',
+    dest: './assets/stylesheets/'
   },
   scripts: {
-    src: './resources/javascripts/',
-    files: ['./resources/javascripts/vendors/*.js', './resources/javascripts/*.js'],
+    src: './assets/javascripts/',
+    files: ['./assets/javascripts/vendors/*.js', './assets/javascripts/*.js'],
     dest: './assets/javascripts/'
   }
 }
 gulp.task('serve', ['development'], function() {
-  gulp.watch(['./resources/stylesheets/*.scss', './resources/javascripts/**/*.js'], ['development']);
+  gulp.watch(['./assets/stylesheets/scss/*.scss', './assets/javascripts/**/*.js'], ['development']);
 });
 
 gulp.task('development', function () {
@@ -38,7 +38,7 @@ gulp.task('production', function (){
 })
 
 gulp.task('default', ['development'], function() {
-  gulp.watch(['./resources/stylesheets/**/*.scss', './resources/javascripts/**/*.js'], ['development'])
+  gulp.watch(['./assets/stylesheets/scss/**/*.scss', './assets/javascripts/**/*.js'], ['development'])
   .on('change', function(evt) {
     console.log( '[watcher] File ' + evt.path.replace(/.*(?=sass)/,'') + ' was ' + evt.type + ', compiling...')
   })

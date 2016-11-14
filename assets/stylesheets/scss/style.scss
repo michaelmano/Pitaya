@@ -1,0 +1,18 @@
+/* Resets & Variables
+  ======================================================================= */
+
+@import "./partials/variables";
+@import "./partials/normalize";
+
+/* Vendors
+  ======================================================================= */
+@import "./vendors/slick"; // slider
+
+
+/* Base
+  ======================================================================= */
+
+@import "./partials/grid";
+@import "./partials/global";
+@import "./partials/carousel";
+@import "./partials/macy";
