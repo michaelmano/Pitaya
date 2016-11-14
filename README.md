@@ -69,7 +69,8 @@ _____________________________
 
 ### Installing
 To take full advantage of this theme you will require [NODE][node-link] to be installed which is for the SCSS files and minifying the javascripts.
-![][node-image]
+
+[![node-image]][node-link]
 
 For a fresh project without Wordpress installed you can either download Wordpress manually and git clone or download the theme and extract it into the themes folder and then set up your database and then run through the Wordpress installer
 
