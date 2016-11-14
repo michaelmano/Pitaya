@@ -14,7 +14,7 @@ const paths = {
   },
   scripts: {
     src: './assets/javascripts/',
-    files: ['./assets/javascripts/vendors/*.js', './assets/javascripts/*.js'],
+    files: ['./assets/javascripts/vendors/*.js', './assets/javascripts/main.js'],
     dest: './assets/javascripts/'
   }
 }
