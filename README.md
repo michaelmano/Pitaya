@@ -8,10 +8,9 @@
 
 - [Folder Structure](#folder-structure)
 - [Development](#development)
--- [Installing](#installing)
--- [CSS/SASS Conventions](#css/sass-conventions)
--- [Comment Conventions](#comment-conventions)
-
+  * [Installing](#installing)
+  * [CSS/SASS Conventions](#csssass-conventions)
+  * [Comment Conventions](#comment-conventions)
 - [Todo](#todo)
 
 
