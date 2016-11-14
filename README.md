@@ -101,7 +101,7 @@ You can read the article on CSS tricks [Here][bem-example]
 
 ### Comment Conventions.
 I have set up a few snippets that will help with your commenting style also, These are set up for atom but can be easily changed for any editor.
-You can download them here [snippets-link]
+You can [Download them here][snippets-link]
 
 The shortcuts are:
 - d+tab for a new div which will also add the ending comment in HTML/PHP
