@@ -16,10 +16,14 @@
 | As they are not that large of a file.
 */
 
-function pitaya_admin_css() {
-  // Check current admin screen.
-  $screen = get_current_screen();
-  if ($screen->id === 'toplevel_page_pitaya') {
+$screen = get_current_screen();
+if ($screen->id === 'toplevel_page_pitaya') {
+  function wpse_80236_Colorpicker(){
+    wp_enqueue_style( 'wp-color-picker');
+    wp_enqueue_script( 'wp-color-picker');
+  }
+  add_action('admin_enqueue_scripts', 'wpse_80236_Colorpicker');
+  function pitaya_admin_css() {
     echo '
     <style>
     .toplevel_page_pitaya fieldset.pitaya_social_row {
@@ -46,20 +50,10 @@ function pitaya_admin_css() {
       }
     }
     </style>
-    <script>
-    jQuery(document).ready(function($){
-      $(".color-field").wpColorPicker();
-    });
-  </script>
     ';
   }
-}
-
-add_action('admin_head', 'pitaya_admin_css');
-
-function pitaya_admin_js() {
-  $screen = get_current_screen();
-  if ($screen->id === 'toplevel_page_pitaya') {
+  add_action('admin_head', 'pitaya_admin_css');
+  function pitaya_admin_js() {
     echo '
       <script>
       jQuery(document).ready(function($){
@@ -68,11 +62,8 @@ function pitaya_admin_js() {
     </script>
     ';
   }
+  add_action('admin_footer', 'pitaya_admin_js');
 }
-
-add_action('admin_footer', 'pitaya_admin_js');
-
-
 
 /*
 |--------------------------------------------------------------------------
