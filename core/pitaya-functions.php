@@ -1,19 +1,7 @@
 <?php
-
 /* ==========================================================================
  Pitaya Custom Theme Functions
 ========================================================================== */
-
-/*
-|--------------------------------------------------------------------------
-| Shortcodes
-|--------------------------------------------------------------------------
-|
-| The comment structure and description here should be each line Starts
-| With a capital letter, even if the sentence Has not Ended, Also
-| Notice the indentaiton as each line has less and less
-*/
-
 
 /*
 |--------------------------------------------------------------------------

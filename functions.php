@@ -147,3 +147,5 @@ add_filter('post_gallery', 'pitaya_post_gallery', 10, 2);
 
 require_once WP_CONTENT_DIR . '/themes/Pitaya/core/pitaya-settings.php';
 require_once WP_CONTENT_DIR . '/themes/Pitaya/core/pitaya-functions.php';
+require_once WP_CONTENT_DIR . '/themes/Pitaya/core/pitaya-post-types.php';
+require_once WP_CONTENT_DIR . '/themes/Pitaya/core/pitaya-activation.php';

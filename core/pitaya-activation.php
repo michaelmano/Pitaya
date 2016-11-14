@@ -13,10 +13,9 @@
 | Title array is the Page Content and Page Template.
 */
 
-if (isset($_GET['activated']) && is_admin()){
-   add_action('init', 'create_initial_pages');
-}
 function create_initial_pages() {
+
+  // Get value to check if the theme has been activated before.
   $pages = [
    'Home'  => [                   // Page Title
       ''  =>	'front-page.php'    // Page Content and Page Template
@@ -29,8 +28,7 @@ function create_initial_pages() {
     ],
   ];
 
-  // Loops through each page in the above array and creates each page.
-
+  // Loops through each page in the above array and creates each page if the theme has not been activated before.
   foreach($pages as $page_url_title => $page_meta) {
     $id = get_page_by_title($page_url_title);
     foreach ($page_meta as $page_content=>$page_template){
@@ -112,9 +110,16 @@ function create_initial_pages() {
   $menu_header_id = $menu_header->term_id;
   $locations = get_theme_mod('nav_menu_locations');
   $locations['primary'] = $menu_header_id;
+
   set_theme_mod( 'nav_menu_locations', $locations );
+  // Set First Activation
+  update_option( get_option('pitaya_options')['First Activation']) , false );
 }
 
+// Create above pages and menus if the theme has not been activated before.
+if (isset($_GET['activated']) && is_admin() && !get_option('pitaya_options')['First Activation'])) {
+   add_action('init', 'create_initial_pages');
+}
 /*
 |--------------------------------------------------------------------------
 | Plugin Initiation.

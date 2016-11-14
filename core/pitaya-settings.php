@@ -9,10 +9,10 @@
 
 function pitaya_theme_settings_styles_scripts($hook) {
   if($hook === 'toplevel_page_pitaya') {
-    wp_enqueue_style(  'pitaya_admin_styles' , get_template_directory_uri() . '/core/assets/style.css' );
-    wp_enqueue_style( 'wp-color-picker' );
-    wp_enqueue_script( 'wp-color-picker');
-    wp_enqueue_script( 'wp-color-picker-script-handle', get_template_directory_uri() . '/core/assets/main.js', array( 'wp-color-picker' ), false, true );
+    wp_enqueue_style('pitaya_admin_styles' , get_template_directory_uri() . '/core/assets/style.css' );
+    wp_enqueue_style('wp-color-picker' );
+    wp_enqueue_script('wp-color-picker');
+    wp_enqueue_script('wp-color-picker-script-handle', get_template_directory_uri() . '/core/assets/main.js', array( 'wp-color-picker' ), false, true );
   }
 }
 add_action('admin_enqueue_scripts',  'pitaya_theme_settings_styles_scripts');
@@ -52,6 +52,7 @@ function pitaya_settings_init() {
     'pitaya_field_general_cb',
     'pitaya',
     'pitaya_section_general', [
+      'first_activation'  => 'First Activation',
       'theme_colour'  => 'Theme Primary Colour',
       'analytics'  => 'Google Analytics Number',
       'class' => 'pitaya_social_row'
