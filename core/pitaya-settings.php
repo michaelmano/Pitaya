@@ -46,6 +46,11 @@ function pitaya_admin_css() {
       }
     }
     </style>
+    <script>
+    jQuery(document).ready(function($){
+      $(".color-field").wpColorPicker();
+    });
+  </script>
     ';
   }
 }

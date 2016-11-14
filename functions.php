@@ -33,9 +33,7 @@ add_action('wp_print_styles', 'load_styles');
 
 function pitaya_scripts() {
 
-  wp_deregister_script('jquery');
-  wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js", false, null);
-  wp_enqueue_script('jquery');
+
 
 	wp_register_script( 'pitaya-functions', get_template_directory_uri() . '/assets/javascripts/site.js', array(), false, true );
 	wp_enqueue_script( 'pitaya-functions' );
