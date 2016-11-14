@@ -16,8 +16,10 @@
 | As they are not that large of a file.
 */
 
-function pitaya_admin_css($hook) {
-  if($hook === 'toplevel_page_pitaya') {
+function pitaya_admin_css() {
+  // Check current admin screen.
+  $screen = get_current_screen();
+  if (in_array($screen->id, 'toplevel_page_pitaya')) {
     echo '
     <style>
     .toplevel_page_pitaya fieldset.pitaya_social_row {
@@ -50,8 +52,9 @@ function pitaya_admin_css($hook) {
 
 add_action('admin_head', 'pitaya_admin_css');
 
-function pitaya_admin_js($hook) {
-  if($hook === 'toplevel_page_pitaya') {
+function pitaya_admin_js() {
+  $screen = get_current_screen();
+  if (in_array($screen->id, 'toplevel_page_pitaya')) {
     echo '
       <script>
       jQuery(document).ready(function($){
