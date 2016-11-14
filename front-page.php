@@ -3,7 +3,6 @@
   get_template_part( 'includes/carousel' );
   pitaya_social_nav();
 ?>
-
 <div class="container">
   <div class="content">
     <div class="grid">

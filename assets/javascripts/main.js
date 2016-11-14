@@ -13,7 +13,7 @@ Macy.init({
 });
 $('.carousel').slick({
     infinite: true,
-    arrows: false,
+    arrows: true,
     dots: true,
     fade: true,
     speed: 600,
@@ -21,4 +21,7 @@ $('.carousel').slick({
     lazyLoad: 'progressive',
     autoplay: false,
     autoplaySpeed: 4000,
+});
+$('.macy__child a').featherlightGallery({
+    openSpeed: 300
 });

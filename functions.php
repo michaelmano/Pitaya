@@ -146,7 +146,7 @@ function pitaya_post_gallery($output, $attr) {
         $thumb = wp_get_attachment_image_src($id, 'medium_large');
         $img   = wp_get_attachment_image_src($id, 'full');
         $output .= '<div class="macy__child">' . "\n\t\t";
-        $output .= '<a href="'. $img[0] .'">' . "\n\t\t\t";
+        $output .= '<a class="" href="'. $img[0] .'">' . "\n\t\t\t";
         $output .= '<img src="'. $thumb[0] .'" width="'. $thumb[1] .'" height="'. $thumb[2] .'" alt="" />' . "\n\t\t";
         $output .= '</a>' . "\n\t";
         $output .= '</div>' . "\n\t";

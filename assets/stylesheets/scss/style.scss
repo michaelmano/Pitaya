@@ -8,10 +8,11 @@
   ======================================================================= */
 @import "./vendors/slick"; // slider
 
-
 /* Base
   ======================================================================= */
 
+
+@import "./vendors/gallery"; // Popup gallery that runs off featherlight.js
 @import "./partials/grid";
 @import "./partials/global";
 @import "./partials/carousel";

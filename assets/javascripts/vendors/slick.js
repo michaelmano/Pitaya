@@ -87,7 +87,7 @@
                 vertical: false,
                 verticalSwiping: false,
                 waitForAnimate: true,
-                zIndex: 1000
+                zIndex: 10
             };
 
             _.initials = {
