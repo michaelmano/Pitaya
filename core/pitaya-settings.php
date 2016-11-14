@@ -31,26 +31,26 @@ function pitaya_admin_css() {
   if ($screen->id === 'toplevel_page_pitaya') {
     echo '
     <style>
-    .toplevel_page_pitaya fieldset.pitaya_social_row {
+    .toplevel_page_pitaya fieldset.pitaya_settings_row {
       display: inline-block;
       width: 100%;
       padding: 0;
       margin: 0;
     }
-    .toplevel_page_pitaya .pitaya_social_row th {
+    .toplevel_page_pitaya .pitaya_settings_row th {
       display: none;
     }
-    .toplevel_page_pitaya fieldset.pitaya_social_row input {
+    .toplevel_page_pitaya fieldset.pitaya_settings_row input {
       width: 100%;
     }
-    .toplevel_page_pitaya tr.pitaya_social_row {
+    .toplevel_page_pitaya tr.pitaya_settings_row {
       width: 100%;
     }
     .toplevel_page_pitaya fieldset h4 {
       margin: 5px 0;
     }
     @media screen and (min-width: 640px) {
-      .toplevel_page_pitaya fieldset.pitaya_social_row {
+      .toplevel_page_pitaya fieldset.pitaya_settings_row {
         width: 24.5%;
       }
     }
@@ -117,7 +117,7 @@ function pitaya_settings_init() {
       'theme_colour'  => 'Theme Primary Colour',
       'analytics'  => 'Google Analytics Number',
       'google_maps_api'  => 'Google Maps API',
-      'class' => 'pitaya_social_row'
+      'class' => 'pitaya_settings_row'
     ]
   );
 
@@ -129,7 +129,9 @@ function pitaya_settings_init() {
     'pitaya',
     'pitaya_section_contact', [
       'socials' =>  pitaya_socials(),
-      'class' => 'pitaya_social_row'
+      'address' =>  'Address',
+      'phone_number'  =>  'Phone Number',
+      'class' => 'pitaya_settings_row'
     ]
   );
 }
@@ -169,7 +171,7 @@ function pitaya_field_general_cb($args) {
       type="text"
       class="<?= esc_attr($args['class']); ?>"
       name="pitaya_options[<?= esc_attr($args['google_maps_api']); ?>]"
-      placeholder="e.g. UA-36045025-1"
+      placeholder="e.g. AIzaSyCfBT2xjfin8w2Ya5h_gwgN8GvYB_MS8x8"
       value="<?= $options[$args['google_maps_api']]; ?>"
       />
   </fieldset>
@@ -181,6 +183,27 @@ function pitaya_section_contact_cb($args) { ?>
 }
 function pitaya_field_contact_cb($args) {
   $options = get_option('pitaya_options'); ?>
+  <fieldset class="<?= esc_attr($args['class']); ?>">
+    <h4 class="description" id="pitaya_options[<?= esc_attr($args['phone_number']); ?>]"><?= esc_attr($args['phone_number']); ?></h4>
+    <input
+      type="text"
+      class="<?= esc_attr($args['class']); ?>"
+      name="pitaya_options[<?= esc_attr($args['phone_number']); ?>]"
+      placeholder=""
+      value="<?= $options[$args['phone_number']]; ?>"
+      />
+  </fieldset>
+  <fieldset class="<?= esc_attr($args['class']); ?>">
+    <h4 class="description" id="pitaya_options[<?= esc_attr($args['address']); ?>]"><?= esc_attr($args['address']); ?></h4>
+    <input
+      type="text"
+      class="<?= esc_attr($args['class']); ?>"
+      name="pitaya_options[<?= esc_attr($args['address']); ?>]"
+      placeholder=""
+      value="<?= $options[$args['address']]; ?>"
+      />
+  </fieldset>
+  <div class="cf"></div>
   <?php foreach($args['socials'] as $arg) { ?>
     <fieldset class="<?= esc_attr($args['class']); ?>">
       <h4 class="description" id="pitaya_options[<?= esc_attr($arg); ?>]"><?= esc_attr($arg); ?></h4>
