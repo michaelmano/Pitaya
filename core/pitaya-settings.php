@@ -101,6 +101,14 @@ function pitaya_settings_init() {
   );
 
   add_settings_section(
+  'pitaya_section_contact',
+  __('Contact Information', 'pitaya'),
+  'pitaya_section_contact_cb',
+  'pitaya'
+  );
+
+
+  add_settings_section(
   'pitaya_section_socials',
   __('Social Media Links', 'pitaya'),
   'pitaya_section_socials_cb',
@@ -132,6 +140,7 @@ function pitaya_settings_init() {
       'class' => 'pitaya_settings_row'
     ]
   );
+
   add_settings_field(
     'pitaya',
     __('Social Media Links', 'pitaya'),
