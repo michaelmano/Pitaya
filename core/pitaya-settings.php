@@ -16,11 +16,14 @@
 | As they are not that large of a file.
 */
 
-function wpse_80236_Colorpicker(){
+function pitaya_Colorpicker(){
+  $screen = get_current_screen();
+  if ($screen->id === 'toplevel_page_pitaya') {
     wp_enqueue_style( 'wp-color-picker');
     wp_enqueue_script( 'wp-color-picker');
+  }
 }
-add_action('admin_enqueue_scripts', 'wpse_80236_Colorpicker');
+add_action('admin_enqueue_scripts', 'pitaya_Colorpicker');
 
 function pitaya_admin_css() {
   // Check current admin screen.
