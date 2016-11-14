@@ -9,10 +9,20 @@
 | Enque Stylesheets and javascripts.
 |--------------------------------------------------------------------------
 |
-| The Below functions will enque the
-| style.css and the site.js in
-| the header and footer.
+| The Below functions will remove version numbers from static css/js files
+| As this can cause caching issues, it will also enque the sites
+| CSS and JS files and remove the wordpress emojis.
 */
+
+
+function pitaya_remove_wp_ver_css_js( $src ) {
+    if ( strpos( $src, 'ver=' . get_bloginfo( 'version' ) ) )
+        $src = remove_query_arg( 'ver', $src );
+    return $src;
+}
+add_filter( 'style_loader_src', 'pitaya_remove_wp_ver_css_js', 9999 );
+add_filter( 'script_loader_src', 'pitaya_remove_wp_ver_css_js', 9999 );
+
 
 function load_styles() {
   wp_register_style('pitaya-theme', get_template_directory_uri() .'/assets/stylesheets/style.css', array(), false, 'all');
@@ -38,6 +48,7 @@ remove_action('wp_print_styles', 'print_emoji_styles');
 
 remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
 remove_action( 'admin_print_styles', 'print_emoji_styles' );
+
 
 /*
 |--------------------------------------------------------------------------
