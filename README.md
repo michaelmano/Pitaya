@@ -19,10 +19,9 @@
 ```
 The below is as follows:
 
-- Assets is for compiled and site resources.
+- Assets holds the files required for your website, including non compiled.
 - Core is for the theme core functionality that adds onto the functions.php
 - Includes is for any theme partials like the carousel.
-- Resources is for development whith unminified code and original files. ** Might update this later to be in assets.
 - Templates is for wordpress page templates e.g. page-contact.php
 
 Pitaya/
@@ -32,6 +31,8 @@ _____________________________
 |   |-- images/
 |   |   `-- favicons/
 |   |-- javascripts/
+|   |-- stylesheets
+|   |   `-- scss/
 |   `-- media/
 |-- core/
 |   |-- assets/
@@ -39,17 +40,6 @@ _____________________________
 |   |-- pitaya-functions.php
 |   `-- pitaya-settings.php
 |-- includes/
-|-- resources/
-|   |-- fonts/
-|   |-- images/
-|   |-- javascripts/
-|   |   |-- vendors/
-|   |   `-- main.js
-|   |-- media/
-|   `-- stylesheets/
-|       |-- partials/
-|       |-- vendors/
-|       `-- style.scss
 |-- templates/
 |-- CHANGELOG.md
 |-- footer.php
