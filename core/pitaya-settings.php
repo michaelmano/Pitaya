@@ -102,7 +102,7 @@ function pitaya_settings_init() {
 
   add_settings_section(
   'pitaya_section_contact',
-  __('Social Media Links', 'pitaya'),
+  __('Client Contact Information', 'pitaya'),
   'pitaya_section_contact_cb',
   'pitaya'
   );
