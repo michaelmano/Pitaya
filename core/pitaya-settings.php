@@ -101,9 +101,9 @@ function pitaya_settings_init() {
   );
 
   add_settings_section(
-  'pitaya_section_contact',
-  __('Client Contact Information', 'pitaya'),
-  'pitaya_section_contact_cb',
+  'pitaya_section_socials',
+  __('Social Media Links', 'pitaya'),
+  'pitaya_section_socials_cb',
   'pitaya'
   );
 
@@ -121,19 +121,28 @@ function pitaya_settings_init() {
     ]
   );
 
-
   add_settings_field(
     'pitaya',
     __('Client Contact Information', 'pitaya'),
     'pitaya_field_contact_cb',
     'pitaya',
     'pitaya_section_contact', [
-      'socials' =>  pitaya_socials(),
       'address' =>  'Address',
       'phone_number'  =>  'Phone Number',
       'class' => 'pitaya_settings_row'
     ]
   );
+  add_settings_field(
+    'pitaya',
+    __('Social Media Links', 'pitaya'),
+    'pitaya_field_socials_cb',
+    'pitaya',
+    'pitaya_section_socials', [
+      'socials' =>  pitaya_socials(),
+      'class' => 'pitaya_settings_row'
+    ]
+  );
+
 }
 
 add_action('admin_init', 'pitaya_settings_init');
@@ -155,7 +164,6 @@ function pitaya_field_general_cb($args) {
       value="<?= $options[$args['theme_colour']]; ?>"
       />
   </fieldset>
-
   <fieldset class="<?= esc_attr($args['class']); ?>">
     <h4 class="description" id="pitaya_options[<?= esc_attr($args['analytics']); ?>]"><?= esc_attr($args['analytics']); ?></h4>
     <input
@@ -166,25 +174,27 @@ function pitaya_field_general_cb($args) {
       value="<?= $options[$args['analytics']]; ?>"
       />
   </fieldset>
-
   <fieldset class="<?= esc_attr($args['class']); ?>">
     <h4 class="description" id="pitaya_options[<?= esc_attr($args['google_maps_api']); ?>]"><?= esc_attr($args['google_maps_api']); ?></h4>
     <input
       type="text"
       class="<?= esc_attr($args['class']); ?>"
       name="pitaya_options[<?= esc_attr($args['google_maps_api']); ?>]"
-      placeholder="e.g. AIzaSyCfBT2xjfin8w2Ya5h_gwgN8GvYB_MS8x8"
+      placeholder="e.g. UA-36045025-1"
       value="<?= $options[$args['google_maps_api']]; ?>"
       />
   </fieldset>
 <?php
 }
 
+
 function pitaya_section_contact_cb($args) { ?>
 <?php
 }
 function pitaya_field_contact_cb($args) {
+
   $options = get_option('pitaya_options'); ?>
+
   <fieldset class="<?= esc_attr($args['class']); ?>">
     <h4 class="description" id="pitaya_options[<?= esc_attr($args['phone_number']); ?>]"><?= esc_attr($args['phone_number']); ?></h4>
     <input
@@ -195,6 +205,7 @@ function pitaya_field_contact_cb($args) {
       value="<?= $options[$args['phone_number']]; ?>"
       />
   </fieldset>
+
   <fieldset class="<?= esc_attr($args['class']); ?>">
     <h4 class="description" id="pitaya_options[<?= esc_attr($args['address']); ?>]"><?= esc_attr($args['address']); ?></h4>
     <input
@@ -206,10 +217,16 @@ function pitaya_field_contact_cb($args) {
       />
   </fieldset>
 
-  <div class="cf">
-    <h2>Social Media Links</h2>
-  </div>
+  <?php
+}
 
+
+
+function pitaya_section_socials_cb($args) { ?>
+<?php
+}
+function pitaya_field_socials_cb($args) {
+  $options = get_option('pitaya_options'); ?>
   <?php foreach($args['socials'] as $arg) { ?>
     <fieldset class="<?= esc_attr($args['class']); ?>">
       <h4 class="description" id="pitaya_options[<?= esc_attr($arg); ?>]"><?= esc_attr($arg); ?></h4>
