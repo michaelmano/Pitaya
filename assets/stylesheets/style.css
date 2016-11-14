@@ -565,6 +565,65 @@ textarea {
 
 /* Base
   ======================================================================= */
+@media all {
+  /* line 2, /home/michael/www/pitaya.dev/public/wp-content/themes/Pitaya/assets/stylesheets/scss/partials/_gallery.scss */
+  .gallery {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 20;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.8); }
+    /* line 11, /home/michael/www/pitaya.dev/public/wp-content/themes/Pitaya/assets/stylesheets/scss/partials/_gallery.scss */
+    .gallery span {
+      font-size: 0;
+      display: block;
+      width: 60px;
+      height: 60px;
+      background: #fff;
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      margin-top: -10px;
+      border-radius: 50%; }
+      /* line 22, /home/michael/www/pitaya.dev/public/wp-content/themes/Pitaya/assets/stylesheets/scss/partials/_gallery.scss */
+      .gallery span.gallery__previous {
+        left: 0; }
+      /* line 25, /home/michael/www/pitaya.dev/public/wp-content/themes/Pitaya/assets/stylesheets/scss/partials/_gallery.scss */
+      .gallery span.gallery__next {
+        right: 0; }
+      /* line 28, /home/michael/www/pitaya.dev/public/wp-content/themes/Pitaya/assets/stylesheets/scss/partials/_gallery.scss */
+      .gallery span.gallery__close {
+        top: 0;
+        right: 0;
+        background: rgba(255, 255, 255, 0.3);
+        margin-top: 0; }
+      /* line 34, /home/michael/www/pitaya.dev/public/wp-content/themes/Pitaya/assets/stylesheets/scss/partials/_gallery.scss */
+      .gallery span span {
+        display: none; }
+    /* line 38, /home/michael/www/pitaya.dev/public/wp-content/themes/Pitaya/assets/stylesheets/scss/partials/_gallery.scss */
+    .gallery:before {
+      content: '';
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle; }
+    /* line 44, /home/michael/www/pitaya.dev/public/wp-content/themes/Pitaya/assets/stylesheets/scss/partials/_gallery.scss */
+    .gallery .gallery__content {
+      max-width: 100%;
+      text-align: left;
+      vertical-align: middle;
+      display: inline-block;
+      overflow: hidden;
+      white-space: normal; }
+    /* line 52, /home/michael/www/pitaya.dev/public/wp-content/themes/Pitaya/assets/stylesheets/scss/partials/_gallery.scss */
+    .gallery .gallery__inner {
+      display: block; } }
+
 /* ==========================================================================
  Grid system
 ========================================================================== */
