@@ -94,7 +94,7 @@
 		constructor: Featherlight,
 		/*** defaults ***/
 		/* extend featherlight with defaults and methods */
-		namespace:      'gallery',        /* Name of the events and css class prefix */
+		namespace:      'overlay',        /* Name of the events and css class prefix */
 		targetAttr:     'data-featherlight',   /* Attribute of the triggered element that contains the selector to the lightbox content */
 		variant:        null,                  /* Class that will be added to change look of the lightbox */
 		resetCss:       false,                 /* Reset all css */
