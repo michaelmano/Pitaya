@@ -49,6 +49,44 @@ remove_action('wp_print_styles', 'print_emoji_styles');
 remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
 remove_action( 'admin_print_styles', 'print_emoji_styles' );
 
+/*
+|--------------------------------------------------------------------------
+| Basic Theme Setup
+|--------------------------------------------------------------------------
+|
+| The comment structure and description here should be each line Starts
+| With a capital letter, even if the sentence Has not Ended, Also
+| Notice the indentaiton as each line has less and less
+*/
+
+register_nav_menus([
+    'primary' => __(
+      'Primary Navigation',
+      'Pitaya'
+    ),
+    'footer' => __(
+      'Footer Navigation',
+      'Pitaya'
+    ),
+  ]);
+
+//removes inline css for galleries
+add_filter( 'use_default_gallery_style', '__return_false' );
+
+add_post_type_support('page', 'excerpt');
+
+
+if (!current_user_can( 'edit_pages')) {
+    add_filter('show_admin_bar', '__return_false'); //remove admin bar for all but admins/editors
+}
+
+if(!current_user_can('manage_options')){
+  add_filter( 'wpseo_use_page_analysis', '__return_false'); //only show for admins
+}
+
+add_image_size('thumbnail-wide', 400, 266, true); //.666 ratio
+//add_image_size('header-image', 1800, 250, true);
+//add_image_size('home-slide', 1800, 400, true);
 
 /*
 |--------------------------------------------------------------------------

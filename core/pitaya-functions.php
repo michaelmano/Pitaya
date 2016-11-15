@@ -5,23 +5,6 @@
 
 /*
 |--------------------------------------------------------------------------
-| Social Media links
-|--------------------------------------------------------------------------
-|
-| Add and remove social media links here, They will show in the backend under Theme Settings and you can edit them. When you
-| Run the function <?php pitaya_display_social_nav(); ?> if they have a value they will show in a unordered list.
-*/
-
-function pitaya_setting_fields() {
-  return [
-    'theme_settings'  => ['First Activation', 'Theme Primary Colour', 'Google Analytics Number', 'Google Maps API'],
-    'contact_details' => ['Address', 'Phone', 'Email'],
-    'social_links'    => ['Facebook', 'Twitter', 'YouTube','Instagram','Twitter','LinkedIn','Pinterest','Google Plus+','Tumblr','Flickr','Vine']
-  ];
-}
-
-/*
-|--------------------------------------------------------------------------
 | Display Social Navigation. <?php pitaya_display_social_nav(); ?>
 |--------------------------------------------------------------------------
 |
@@ -29,25 +12,30 @@ function pitaya_setting_fields() {
 | echo a <ul> then it runs through foreach social link and checks if it has a value, if a value exists it will then
 | print it out in a list item with the key being the social name e.g. Facebook, and the value being the link.
 */
+function pitaya_social_nav($args) {
 
-function pitaya_social_nav() {
   $output = '';
   ob_start();
   // Content from here on returned to the display_social_nav command
     $options = get_option('pitaya_options');
-    $socials = pitaya_socials();
-    foreach($options as $key => $value) {
-      if($value && in_array($key, $socials)) {
-        echo '
-        <li class="'. $key .'">
-          <a target="_blank" href="'. $value .'">
-          <span class="inner">
-              <img class="injectSvg" data-src="'. get_template_directory_uri() .'/assets/images/icons/'. strtolower ( $key ) .'.svg" alt="'. $key .'">
-            </span>
+    $socials = pitaya_setting_fields();
+    $socials = $socials['social_links'];
+    ?>
+    <?php if($args['container'] === 'true' || !isset($args['container']) ) { ?>
+      <ul class="socials <?php if($args['float']) { echo 'socials--'. $args['float'] . '';} ?>">
+    <?php } ?>
+    <?php foreach($options as $key => $value) {
+      if($value && in_array($key, $socials)) { ?>
+        <li class="social-list-item socials__<?php echo strtolower($key); ?> <?php if($args['size']) { echo 'socials__'. $args['size'] . ''; } elseif (!isset($args['size'])) { echo 'socials__small'; }?>">
+          <a target="_blank" href="<?php echo $value; ?>" class="icon icon--medium">
+            <svg><use xlink:href="#<?php echo strtolower($key); ?>"></use></svg>
           </a>
-        </li>';
-      }
-    }
+        </li>
+      <?php }
+    } ?>
+  <?php if($args['container'] === 'true' || !isset($args['container'])) { ?>
+    </ul><!-- END Socials -->
+  <?php }
   // End of content return
   $output = ob_get_contents();
   ob_end_clean();
@@ -56,6 +44,28 @@ function pitaya_social_nav() {
   }
 }
 
+/*
+|--------------------------------------------------------------------------
+| Pitaya Sprites.
+|--------------------------------------------------------------------------
+|
+| This function will include the sprites in the header but also set a div
+| Around it so they are hidden so you can easily refrence them
+| Anywhere on the site without additional http requests.
+*/
+
+function pitaya_sprites() {
+  $output = '';
+  ob_start(); ?>
+  <div class="sprite hidden">
+    <?php echo include_once("wp-content/themes/Pitaya/assets/images/icons/font-awesome.svg"); ?>
+  </div><!-- END sprite -->
+  <?php $output = ob_get_contents();
+  ob_end_clean();
+  if($output) {
+    echo $output;
+  }
+}
 /*
 |--------------------------------------------------------------------------
 | Display Favicons. <?php pitaya_display_favicons(); ?>

@@ -94,7 +94,7 @@
 		constructor: Featherlight,
 		/*** defaults ***/
 		/* extend featherlight with defaults and methods */
-		namespace:      'gallery',        /* Name of the events and css class prefix */
+		namespace:      'overlay',        /* Name of the events and css class prefix */
 		targetAttr:     'data-featherlight',   /* Attribute of the triggered element that contains the selector to the lightbox content */
 		variant:        null,                  /* Class that will be added to change look of the lightbox */
 		resetCss:       false,                 /* Reset all css */
@@ -720,7 +720,6 @@
 	$(document).ready(function(){ FeatherlightGallery._onReady(); });
 
 }(jQuery));
-
 (function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     define([], function () {
@@ -4174,13 +4173,13 @@
 }));
 
 Macy.init({
-    container: '.macy',
+    container: '.gallery',
     trueOrder: false,
     waitForImages: false,
     margin: 10,
-    columns: 6,
+    columns: 5,
     breakAt: {
-        1200: 5,
+        1200: 4,
         940: 3,
         520: 2,
         400: 1
@@ -4197,6 +4196,6 @@ $('.carousel').slick({
     autoplay: false,
     autoplaySpeed: 4000,
 });
-$('.macy__child a').featherlightGallery({
+$('.gallery__item a').featherlightGallery({
     openSpeed: 300
 });

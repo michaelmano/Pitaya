@@ -4,6 +4,23 @@
  Pitaya Theme Settings Page.
 ========================================================================== */
 
+/*
+|--------------------------------------------------------------------------
+| Fields and Settings
+|--------------------------------------------------------------------------
+|
+| Below is the fields and settings inside of the fields in a simple to edit array.
+| Just add to the array or make a new one to create more settings options.
+*/
+
+function pitaya_setting_fields() {
+  return [
+    'theme_settings'  => ['First Activation', 'Theme Primary Colour', 'Google Analytics Number', 'Google Maps API'],
+    'contact_details' => ['Address', 'Phone', 'Email'],
+    'social_links'    => ['Facebook', 'Twitter', 'YouTube','Instagram','LinkedIn','Pinterest','Google Plus+','Tumblr','Flickr','Vine']
+  ];
+}
+
 
 /*
 |--------------------------------------------------------------------------

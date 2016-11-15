@@ -22,7 +22,7 @@ const paths = {
   },
   svgs: {
     src: './assets/images/icons/svgs/',
-    files: ['./assets/images/icons/svgs/*.svg'],
+    files: ['./assets/images/icons/font-awesome/*.svg'],
     dest: './assets/images/icons/'
   }
 }

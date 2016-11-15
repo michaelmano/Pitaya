@@ -1,7 +1,6 @@
 .carousel {
-  background: #F1F2B5;
-  background: -webkit-linear-gradient(to left, #F1F2B5 , #135058);
-  background: linear-gradient(to left, #F1F2B5 , #135058);
+  background: linear-gradient(to left, #F1F2B5, #135058);
+  clear: both;
   &__item {
     width: 100%;
     counter-increment: gallery__cell;

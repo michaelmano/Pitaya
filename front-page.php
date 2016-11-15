@@ -1,12 +1,15 @@
 <?php
-  get_header();
-  get_template_part( 'includes/carousel' );
-  pitaya_social_nav();
+get_header();
+get_template_part( 'includes/carousel' );
 ?>
 <div class="container">
   <div class="content">
     <div class="grid">
       <div class="1/2--xs-up grid__cell">
+        <?php pitaya_social_nav([
+          'size'  =>  'small',
+          'container' =>  'true'
+        ]); ?>
         <h3>Code quality</h3>
         <h4>BEM CSS naming structure.</h4>
         <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.</p>
@@ -37,6 +40,10 @@
       </div><!-- END grid__cell -->
     </div><!-- END grid -->
     <h3>Great Minimalistic Masonry, Pure Javascript without jQuery.</h3>
+    <svg viewBox="0 0 100 100" class="icon icon--medium">
+      <use xlink:href="#bug"></use>
+    </svg>
+
     <?php
     if ( have_posts() ) {
       while ( have_posts() ) {
