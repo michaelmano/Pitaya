@@ -12,9 +12,14 @@
 | Run the function <?php pitaya_display_social_nav(); ?> if they have a value they will show in a unordered list.
 */
 
-function pitaya_socials() {
-  return ['Facebook', 'Twitter', 'YouTube','Instagram','Twitter','LinkedIn','Pinterest','Google Plus+','Tumblr','Flickr','Vine'];
+function pitaya_setting_fields() {
+  return [
+    'theme_settings'  => ['First Activation', 'Theme Primary Colour', 'Google Analytics Number', 'Google Maps API'],
+    'contact_details' => ['Address', 'Phone', 'Email'],
+    'social_links'    => ['Facebook', 'Twitter', 'YouTube','Instagram','Twitter','LinkedIn','Pinterest','Google Plus+','Tumblr','Flickr','Vine']
+  ];
 }
+
 /*
 |--------------------------------------------------------------------------
 | Display Social Navigation. <?php pitaya_display_social_nav(); ?>
