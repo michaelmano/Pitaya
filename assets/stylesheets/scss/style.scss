@@ -12,8 +12,9 @@
   ======================================================================= */
 
 
-@import "./partials/gallery"; // Popup gallery that runs off featherlight.js
+@import "./partials/overlay"; // Popup gallery that runs off featherlight.js
+@import "./partials/gallery";
+@import "./partials/carousel";
+
 @import "./partials/grid";
 @import "./partials/global";
-@import "./partials/carousel";
-@import "./partials/macy";

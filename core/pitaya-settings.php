@@ -189,7 +189,7 @@ function pitaya_field_general_cb($args) {
       type="text"
       class="<?= esc_attr($args['class']); ?>"
       name="pitaya_options[<?= esc_attr($args['google_maps_api']); ?>]"
-      placeholder="e.g. UA-36045025-1"
+      placeholder="e.g. AIzaSyCfBT2x2ain8wEYa5h_gwgN8GvYB_MS8x8"
       value="<?= $options[$args['google_maps_api']]; ?>"
       />
   </fieldset>
