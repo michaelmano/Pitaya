@@ -6,10 +6,6 @@ get_template_part( 'includes/carousel' );
   <div class="content">
     <div class="grid">
       <div class="1/2--xs-up grid__cell">
-        <?php pitaya_social_nav([
-          'size'  =>  'small',
-          'container' =>  'true'
-        ]); ?>
         <h3>Code quality</h3>
         <h4>BEM CSS naming structure.</h4>
         <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.</p>

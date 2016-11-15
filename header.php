@@ -15,17 +15,21 @@
   <![endif]-->
 </head>
 <body>
-<nav class="navigation navigation--primary">
-<ul>
-  <?php wp_nav_menu([
-    'theme_location' => 'primary',
-    'container' => false,
-    'items_wrap' => '%3$s',
-    'depth' => 3,
-  ]);
-  pitaya_social_nav([
-    'container' => 'false',
-    'size'  =>  'small',
-  ]); ?>
-</ul>
-</nav>
+<header>
+  <div class="container">
+    <nav class="navigation navigation--primary">
+    <ul>
+      <?php wp_nav_menu([
+        'theme_location' => 'primary',
+        'container' => false,
+        'items_wrap' => '%3$s',
+        'depth' => 3,
+      ]);
+      pitaya_social_nav([
+        'container' => 'false',
+        'size'  =>  'small',
+      ]); ?>
+    </ul>
+    </nav>
+  </div><!-- END container -->
+</header>
