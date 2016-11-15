@@ -9,7 +9,7 @@
   pitaya_favicons();
   pitaya_google_analytics(); ?>
   <div class="sprite hidden">
-    <?php echo include_once(''. get_template_directory_uri() .'/assets/images/icons/sprite.svg'); ?>
+    <?php include(locate_template('assets/images/icons/sprite.svg')); ?>
   </div><!-- END sprite -->
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
