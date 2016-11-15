@@ -21,8 +21,8 @@ const paths = {
     dest: './assets/javascripts/'
   },
   svgs: {
-    src: './assets/images/icons/svgs/',
-    files: ['./assets/images/icons/font-awesome/*.svg'],
+    src: './assets/images/icons/sprite/',
+    files: ['./assets/images/icons/sprite/*.svg'],
     dest: './assets/images/icons/'
   }
 }
@@ -54,6 +54,10 @@ gulp.task('svgstore', function () {
 
 gulp.task('default', ['development'], function() {
   gulp.watch(['./assets/stylesheets/scss/**/*.scss', './assets/javascripts/**/*.js'], ['development'])
+  .on('change', function(evt) {
+    console.log( '[watcher] File ' + evt.path.replace(/.*(?=sass)/,'') + ' was ' + evt.type + ', compiling...')
+  })
+  gulp.watch(['./assets/images/icons/sprite/*.svg'], ['svgstore'])
   .on('change', function(evt) {
     console.log( '[watcher] File ' + evt.path.replace(/.*(?=sass)/,'') + ' was ' + evt.type + ', compiling...')
   })

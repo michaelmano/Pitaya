@@ -5,13 +5,20 @@
 
 /*
 |--------------------------------------------------------------------------
-| Display Social Navigation. <?php pitaya_display_social_nav(); ?>
+| Social Navigation. <?php pitaya_social_nav($args); ?>
 |--------------------------------------------------------------------------
 |
-| The function below checks if the theme options page has any values for the social links and if they are not empty it will
-| echo a <ul> then it runs through foreach social link and checks if it has a value, if a value exists it will then
-| print it out in a list item with the key being the social name e.g. Facebook, and the value being the link.
+| This function has arguments suchs as size, float and container. Below is an example to display the navigation
+| With a container, floating to the right (inline-block) and small icons. The container field is in case
+| You wish to display the list items inside of another menus list. The boolian is a string.
 */
+
+// pitaya_social_nav([
+//   'size'      =>  'small',
+//   'container' =>  'true',
+//   'float'     =>  'right'
+// ]);
+
 function pitaya_social_nav($args) {
 
   $output = '';
@@ -25,10 +32,11 @@ function pitaya_social_nav($args) {
       <ul class="socials <?php if($args['float']) { echo 'socials--'. $args['float'] . '';} ?>">
     <?php } ?>
     <?php foreach($options as $key => $value) {
-      if($value && in_array($key, $socials)) { ?>
-        <li class="social-list-item socials__<?php echo strtolower($key); ?> <?php if($args['size']) { echo 'socials__'. $args['size'] . ''; } elseif (!isset($args['size'])) { echo 'socials__small'; }?>">
+      if($value && in_array($key, $socials)) {
+        $name = preg_replace('#[ -]+#', '-', strtolower($key)); ?>
+        <li class="social-list-item socials__<?php echo $name; ?> <?php if($args['size']) { echo 'socials__'. $args['size'] . ''; } elseif (!isset($args['size'])) { echo 'socials__small'; }?>">
           <a target="_blank" href="<?php echo $value; ?>" class="icon icon--medium">
-            <svg><use xlink:href="#<?php echo strtolower($key); ?>"></use></svg>
+            <svg><use xlink:href="#<?php echo $name; ?>"></use></svg>
           </a>
         </li>
       <?php }
@@ -44,28 +52,6 @@ function pitaya_social_nav($args) {
   }
 }
 
-/*
-|--------------------------------------------------------------------------
-| Pitaya Sprites.
-|--------------------------------------------------------------------------
-|
-| This function will include the sprites in the header but also set a div
-| Around it so they are hidden so you can easily refrence them
-| Anywhere on the site without additional http requests.
-*/
-
-function pitaya_sprites() {
-  $output = '';
-  ob_start(); ?>
-  <div class="sprite hidden">
-    <?php echo include_once("wp-content/themes/Pitaya/assets/images/icons/font-awesome.svg"); ?>
-  </div><!-- END sprite -->
-  <?php $output = ob_get_contents();
-  ob_end_clean();
-  if($output) {
-    echo $output;
-  }
-}
 /*
 |--------------------------------------------------------------------------
 | Display Favicons. <?php pitaya_display_favicons(); ?>

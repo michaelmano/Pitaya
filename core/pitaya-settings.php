@@ -17,7 +17,7 @@ function pitaya_setting_fields() {
   return [
     'theme_settings'  => ['First Activation', 'Theme Primary Colour', 'Google Analytics Number', 'Google Maps API'],
     'contact_details' => ['Address', 'Phone', 'Email'],
-    'social_links'    => ['Facebook', 'Twitter', 'YouTube','Instagram','LinkedIn','Pinterest','Google Plus+','Tumblr','Flickr','Vine']
+    'social_links'    => ['Facebook', 'Twitter', 'YouTube','Instagram','LinkedIn','Pinterest','Google Plus','Tumblr','Flickr','Vine', 'Github']
   ];
 }
 
