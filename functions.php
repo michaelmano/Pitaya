@@ -111,6 +111,7 @@ add_action('login_head', 'pitaya_custom_login_logo');
 | The Masonry layout.
 */
 
+
 function pitaya_gallery($output, $attr) {
     global $post;
     if (isset($attr['orderby'])) {
@@ -147,6 +148,7 @@ function pitaya_gallery($output, $attr) {
         }
     }
     if (empty($attachments)) return '';
+
     ob_start(); ?>
     <div class="gallery">
       <?php
@@ -154,7 +156,6 @@ function pitaya_gallery($output, $attr) {
         $thumb = wp_get_attachment_image_src($id, 'medium_large');
         $full   = wp_get_attachment_image_src($id, 'full'); ?>
         <div class="gallery__item">
-          <?php print_r($thumb); ?>
           <a href="<?php echo $full[0]; ?>">
             <img src="<?php echo $thumb[0]; ?>" alt="" />
           </a>
