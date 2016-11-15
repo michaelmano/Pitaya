@@ -139,8 +139,8 @@ function pitaya_gallery($output, $attr) {
           'post_type' => 'attachment',
           'post_mime_type' => 'image',
           'order' => $order,
-          'orderby' => $orderby)
-        ];
+          'orderby' => $orderby
+        ]);
         $attachments = [];
         foreach ($_attachments as $key => $val) {
             $attachments[$val->ID] = $_attachments[$key];
