@@ -111,63 +111,63 @@ add_action('login_head', 'pitaya_custom_login_logo');
 | The Masonry layout.
 */
 
-function pitaya_override_gallery()
-{
-    remove_shortcode('gallery');
-    add_shortcode('gallery', 'pitaya_gallery');
+function pitaya_gallery($output, $attr) {
+    global $post;
+    if (isset($attr['orderby'])) {
+        $attr['orderby'] = sanitize_sql_orderby($attr['orderby']);
+        if (!$attr['orderby'])
+            unset($attr['orderby']);
+    }
+    extract(shortcode_atts([
+      'order' => 'ASC',
+      'orderby' => 'menu_order ID',
+      'id' => $post->ID,
+      'itemtag' => 'dl',
+      'icontag' => 'dt',
+      'captiontag' => 'dd',
+      'columns' => 3,
+      'size' => 'thumbnail',
+      'include' => '',
+      'exclude' => ''
+    ], $attr));
+    if ('RAND' == $order) $orderby = 'none';
+    if (!empty($include)) {
+        $include = preg_replace('/[^0-9,]+/', '', $include);
+        $_attachments = get_posts([
+          'include' => $include,
+          'post_status' => 'inherit',
+          'post_type' => 'attachment',
+          'post_mime_type' => 'image',
+          'order' => $order,
+          'orderby' => $orderby)
+        ];
+        $attachments = [];
+        foreach ($_attachments as $key => $val) {
+            $attachments[$val->ID] = $_attachments[$key];
+        }
+    }
+    if (empty($attachments)) return '';
+    ob_start(); ?>
+    <div class="gallery">
+      <?php
+      foreach ($attachments as $id => $attachment) {
+        $thumb = wp_get_attachment_image_src($id, 'medium_large');
+        $full   = wp_get_attachment_image_src($id, 'full'); ?>
+        <div class="gallery__item">
+          <?php print_r($thumb); ?>
+          <a href="<?php echo $full[0]; ?>">
+            <img src="<?php echo $thumb[0]; ?>" alt="" />
+          </a>
+        </div><!-- END gallery__item -->
+      <?php } ?>
+    </div><!-- END macy -->
+    <?php
+    $output = ob_get_contents();
+    ob_end_clean();
+    return $output;
 }
+add_filter('post_gallery', 'pitaya_gallery', 10, 2);
 
-function pitaya_gallery($atts, $content) {
-  extract(shortcode_atts([
-    'order' => 'ASC',
-    'orderby' => 'menu_order ID',
-    'id' => $post->ID,
-    'itemtag' => 'dl',
-    'icontag' => 'dt',
-    'captiontag' => 'dd',
-    'columns' => 3,
-    'size' => 'thumbnail',
-    'include' => '',
-    'exclude' => ''
-  ], $attr));
-  if ('RAND' == $order) $orderby = 'none';
-  if (!empty($include)) {
-      $include = preg_replace('/[^0-9,]+/', '', $include);
-      $_attachments = get_posts([
-        'include' => $include,
-        'post_status' => 'inherit',
-        'post_type' => 'attachment',
-        'post_mime_type' => 'image',
-        'order' => $order,
-        'orderby' => $orderby)
-      ];
-      $attachments = [];
-      foreach ($_attachments as $key => $val) {
-          $attachments[$val->ID] = $_attachments[$key];
-      }
-  }
-  if (empty($attachments)) return '';
-  ob_start(); ?>
-  <div class="gallery">
-  <?php
-  foreach ($attachments as $id => $attachment) {
-    $thumb = wp_get_attachment_image_src($id, 'medium_large');
-    $full   = wp_get_attachment_image_src($id, 'full'); ?>
-    <div class="gallery__item">
-      <?php print_r($thumb); ?>
-      <a href="<?php echo $full[0]; ?>">
-        <img src="<?php echo $thumb[0]; ?>" alt="" />
-      </a>
-    </div><!-- END gallery__item -->
-  <?php } ?>
-  </div><!-- END macy -->
-  <?php
-  $output = ob_get_contents();
-  ob_end_clean();
-  return $output;
-}
-
-add_action('init', 'pitaya_override_gallery', 10, 2););
 
 /*
 |--------------------------------------------------------------------------
