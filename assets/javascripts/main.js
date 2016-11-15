@@ -22,6 +22,6 @@ $('.carousel').slick({
     autoplay: false,
     autoplaySpeed: 4000,
 });
-$('.macy__child a').featherlightGallery({
+$('.gallery__item a').featherlightGallery({
     openSpeed: 300
 });
