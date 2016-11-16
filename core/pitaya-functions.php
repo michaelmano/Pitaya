@@ -87,6 +87,136 @@ function pitaya_google_analytics() {
 
 /*
 |--------------------------------------------------------------------------
+| Change Login Logo.
+|--------------------------------------------------------------------------
+|
+| Remove the Wordpress logo from the admin page
+| and make assets/images/admin-logo.svg
+| the default logo.
+*/
+
+function pitaya_custom_login_logo() {
+  $logoBg = get_stylesheet_directory_uri().'/assets/images/admin-logo.svg';
+
+  echo "
+  <style type='text/css'>
+  h1 a {
+    max-height: '100px';
+    background-image: url($logoBg) !important;
+    background-size: 100% 100%!important;
+    width: auto !important;
+    margin: 0 auto !important;
+  }
+  </style>
+  ";
+}
+add_action('login_head', 'pitaya_custom_login_logo');
+
+/*
+|--------------------------------------------------------------------------
+| Wordpress Gallery Override.
+|--------------------------------------------------------------------------
+|
+| The functions below will change the layout
+| Type of the Wordpress gallery into
+| The Masonry layout.
+*/
+
+/* Force galleries to link to file and not attachment */
+add_shortcode('gallery', 'devsGalleryShortcode');
+function devsGalleryShortcode($atts) {
+	if(!$atts['link']) {
+    	$atts['link'] = 'file';
+	}
+	if($atts['link'] == 'attachment'){
+    	$atts['link'] = 'file';
+	}
+    return gallery_shortcode($atts);
+}
+
+add_action('print_media_templates', function(){ ?>
+	<script type="text/html" id="tmpl-custom-gallery-setting">
+	    <label class="setting">
+	        <span>Gallery Type</span>
+	        <select name="type" data-setting="type">
+	            <option value="masonry">Masonry</option>
+	            <option value="slider">Slider</option>
+	        </select>
+	    </label>
+	</script>
+
+	<script>
+	    jQuery(document).ready(function($) {
+	        wp.media.view.Settings.Gallery = wp.media.view.Settings.Gallery.extend({
+	        	template: function(view){
+	          		return wp.media.template('gallery-settings')(view)
+	               		+ wp.media.template('custom-gallery-setting')(view);
+	        	}
+	        });
+	    });
+	</script>
+
+<?php });
+
+function pitaya_gallery($output, $attr) {
+  global $post;
+  if (isset($attr['orderby'])) {
+    $attr['orderby'] = sanitize_sql_orderby($attr['orderby']);
+    if (!$attr['orderby'])
+      unset($attr['orderby']);
+  }
+  extract(shortcode_atts([
+    'order' => 'ASC',
+    'orderby' => 'menu_order ID',
+    'type'  =>  '',
+    'id' => $post->ID,
+    'itemtag' => 'dl',
+    'icontag' => 'dt',
+    'captiontag' => 'dd',
+    'columns' => 3,
+    'size' => 'thumbnail',
+    'include' => '',
+    'exclude' => ''
+  ], $attr));
+  if ('RAND' == $order) $orderby = 'none';
+  if (!empty($include)) {
+    $include = preg_replace('/[^0-9,]+/', '', $include);
+    $_attachments = get_posts([
+      'include' => $include,
+      'post_status' => 'inherit',
+      'post_type' => 'attachment',
+      'post_mime_type' => 'image',
+      'order' => $order,
+      'orderby' => $orderby
+    ]);
+    $attachments = [];
+    foreach ($_attachments as $key => $val) {
+      $attachments[$val->ID] = $_attachments[$key];
+    }
+  }
+  if (empty($attachments)) return '';
+    ob_start(); ?>
+    <div class="gallery gallery--<?php if ($attr['type'] === 'slider') { echo 'slider'; } else { echo 'masonry'; } ?>">
+    <?php
+    foreach ($attachments as $id => $attachment) {
+      $thumb = wp_get_attachment_image_src($id, 'medium_large');
+      $full   = wp_get_attachment_image_src($id, 'full'); ?>
+      <div class="gallery__item">
+        <a href="<?php echo $full[0]; ?>">
+          <img src="<?php echo $thumb[0]; ?>" alt="" />
+        </a>
+      </div><!-- END gallery__item -->
+    <?php } ?>
+  </div><!-- END macy -->
+  <?php
+  $output = ob_get_contents();
+  ob_end_clean();
+  return $output;
+}
+add_filter('post_gallery', 'pitaya_gallery', 10, 2);
+
+/*
+|--------------------------------------------------------------------------
 | Add Post Meta to all pages
 |--------------------------------------------------------------------------
 |
