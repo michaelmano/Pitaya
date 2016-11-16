@@ -54,50 +54,12 @@ function pitaya_social_nav($args) {
 
 /*
 |--------------------------------------------------------------------------
-| Display Favicons. <?php pitaya_display_favicons(); ?>
+| Google Analytics
 |--------------------------------------------------------------------------
 |
-| This function will output all of the favicon sizes listed below. Please visit http://www.favicomatic.com/ and upload your
-| favicon.png make sure the min size is 310 x 310 and you have "Every damn size, sir!" selected, Once you have downloaded
-| the zip they will provide put the favicons in the folder assets/images/favicons and overwright the existing ones.
+| Displays the google analytics code if the field is filled in from the settings area.
 */
 
-function pitaya_favicons() {
-  $output = '';
-  ob_start();
-  $options = get_option('pitaya_options');
-  $primary_colour = $options['Theme Primary Colour'];
-  // Content from here on returned to the display_social_nav command
-  echo '
-  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="'. get_template_directory_uri() .'/assets/images/favicons/apple-touch-icon-57x57.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="'. get_template_directory_uri() .'/assets/images/favicons/apple-touch-icon-114x114.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="'. get_template_directory_uri() .'/assets/images/favicons/apple-touch-icon-72x72.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="'. get_template_directory_uri() .'/assets/images/favicons/apple-touch-icon-144x144.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="60x60" href="'. get_template_directory_uri() .'/assets/images/favicons/apple-touch-icon-60x60.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="'. get_template_directory_uri() .'/assets/images/favicons/apple-touch-icon-120x120.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="'. get_template_directory_uri() .'/assets/images/favicons/apple-touch-icon-76x76.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="'. get_template_directory_uri() .'/assets/images/favicons/apple-touch-icon-152x152.png" />
-  <link rel="icon" type="image/png" href="'. get_template_directory_uri() .'/assets/images/favicons/favicon-196x196.png" sizes="196x196" />
-  <link rel="icon" type="image/png" href="'. get_template_directory_uri() .'/assets/images/favicons/favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/png" href="'. get_template_directory_uri() .'/assets/images/favicons/favicon-32x32.png" sizes="32x32" />
-  <link rel="icon" type="image/png" href="'. get_template_directory_uri() .'/assets/images/favicons/favicon-16x16.png" sizes="16x16" />
-  <link rel="icon" type="image/png" href="'. get_template_directory_uri() .'/assets/images/favicons/favicon-128.png" sizes="128x128" />
-  <meta name="application-name" content="&nbsp;"/>
-  <meta name="theme-color" content="'.(($primary_colour)?''. $primary_colour .'':'#991d60').'">
-  <meta name="msapplication-TileColor" content="'.(($primary_colour)?''. $primary_colour .'':'#991d60').'" />
-  <meta name="msapplication-TileImage" content="'. get_template_directory_uri() .'/assets/images/favicons/mstile-144x144.png" />
-  <meta name="msapplication-square70x70logo" content="'. get_template_directory_uri() .'/assets/images/favicons/mstile-70x70.png" />
-  <meta name="msapplication-square150x150logo" content="'. get_template_directory_uri() .'/assets/images/favicons/mstile-150x150.png" />
-  <meta name="msapplication-wide310x150logo" content="'. get_template_directory_uri() .'/assets/images/favicons/mstile-310x150.png" />
-  <meta name="msapplication-square310x310logo" content="'. get_template_directory_uri() .'/assets/images/favicons/mstile-310x310.png" />
-  ';
-  // End of content return
-  $output = ob_get_contents();
-  ob_end_clean();
-  if($output) {
-    echo $output;
-  }
-}
 function pitaya_google_analytics() {
   $output = '';
   ob_start();

@@ -1,7 +1,53 @@
+/* ==========================================================================
+ Global Elements.
+========================================================================== */
+
+
+/* Generic Global Elements
+  ======================================================================= */
+
+.container {
+  max-width: $container-width;
+  padding: 0 $gutter;
+  margin: 0 auto;
+}
+
+.social-list-item { // Class for the social navigation without a container.
+  display: inline-block;
+  & a {
+    background: #135058;
+    text-align: center;
+    border-radius: 50%;
+    transition: all .2s ease-in-out;
+    &:hover {
+      transform: scale(1.2);
+    }
+    & svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      & * {
+        fill: #fff;
+      }
+    }
+  }
+}
+
+/* Header Elements
+  ======================================================================= */
+
+.logo {
+  display: inline-block;
+  float: left;
+}
+
 nav {
   &.navigation {
-    width: 100%;
+    display: inline-block;
+    float: left;
+    width: auto;
     &--primary {
+      padding: 48px 0;
       & ul {
         width: 100%;
         margin: 0;
@@ -16,69 +62,10 @@ nav {
     }
   }
 }
-.container {
-  max-width: $container-width;
-  padding: 0 $gutter;
-  margin: 0 auto;
-}
-.hidden {
-  display: none;
-}
-.icon {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  &--small {
-    width: 20px;
-    height: 20px;
-  }
-  &--medium {
-    width: 26px;
-    height: 26px;
-  }
-  &--large {
-    width: 32px;
-    height: 32px;
-  }
-}
-.socials {
-  list-style: none;
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-  &--right {
-    float: right;
-  }
-  &--left {
-    float: left;
-  }
-  &__small {
-    a {
-      position: relative;
-      width: 22px;
-      height: 22px;
-      svg {
-        width: 12px;
-        height: 12px;
-        margin-top: -6px;
-        margin-left: -6px;
-     }
-    }
-  }
-  &__medium {
-    a {
-      position: relative;
-      width: 26px;
-      height: 26px;
-      svg {
-        width: 14px;
-        height: 14px;
-        margin-top: -7px;
-        margin-left: -7px;
-     }
-    }
-  }
-}
+
+/* Footer Elements
+  ======================================================================= */
+
 footer {
   .socials {
     margin-top: 12px;
@@ -96,26 +83,6 @@ footer {
       span {
         text-decoration: underline;
         color: $primary-color;
-      }
-    }
-  }
-}
-.social-list-item {
-  display: inline-block;
-  & a {
-    background: #135058;
-    text-align: center;
-    border-radius: 50%;
-    transition: all .2s ease-in-out;
-    &:hover {
-      transform: scale(1.2);
-    }
-    & svg {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      & * {
-        fill: #fff;
       }
     }
   }

@@ -149,6 +149,41 @@ add_action('login_head', 'pitaya_custom_login_logo');
 | The Masonry layout.
 */
 
+/* Force galleries to link to file and not attachment */
+add_shortcode('gallery', 'devsGalleryShortcode');
+function devsGalleryShortcode($atts) {
+	if(!$atts['link']) {
+    	$atts['link'] = 'file';
+	}
+	if($atts['link'] == 'attachment'){
+    	$atts['link'] = 'file';
+	}
+    return gallery_shortcode($atts);
+}
+
+add_action('print_media_templates', function(){ ?>
+	<script type="text/html" id="tmpl-custom-gallery-setting">
+	    <label class="setting">
+	        <span>Gallery Type</span>
+	        <select name="type" data-setting="type">
+	            <option value="masonry">Masonry</option>
+	            <option value="slider">Slider</option>
+	        </select>
+	    </label>
+	</script>
+
+	<script>
+	    jQuery(document).ready(function($) {
+	        wp.media.view.Settings.Gallery = wp.media.view.Settings.Gallery.extend({
+	        	template: function(view){
+	          		return wp.media.template('gallery-settings')(view)
+	               		+ wp.media.template('custom-gallery-setting')(view);
+	        	}
+	        });
+	    });
+	</script>
+
+<?php });
 
 function pitaya_gallery($output, $attr) {
     global $post;
@@ -160,6 +195,7 @@ function pitaya_gallery($output, $attr) {
     extract(shortcode_atts([
       'order' => 'ASC',
       'orderby' => 'menu_order ID',
+      'type'  =>  '',
       'id' => $post->ID,
       'itemtag' => 'dl',
       'icontag' => 'dt',
@@ -186,9 +222,8 @@ function pitaya_gallery($output, $attr) {
         }
     }
     if (empty($attachments)) return '';
-
-    ob_start(); ?>
-    <div class="gallery">
+      ob_start(); ?>
+      <div class="gallery gallery--<?php if ($attr['type'] === 'slider') { echo 'slider'; } else { echo 'masonry'; } ?>">
       <?php
       foreach ($attachments as $id => $attachment) {
         $thumb = wp_get_attachment_image_src($id, 'medium_large');
@@ -218,6 +253,7 @@ add_filter('post_gallery', 'pitaya_gallery', 10, 2);
 | the theme settings page.
 */
 
+require_once WP_CONTENT_DIR . '/themes/Pitaya/core/pitaya-activation.php';
 require_once WP_CONTENT_DIR . '/themes/Pitaya/core/pitaya-settings.php';
 require_once WP_CONTENT_DIR . '/themes/Pitaya/core/pitaya-functions.php';
 require_once WP_CONTENT_DIR . '/themes/Pitaya/core/pitaya-post-types.php';

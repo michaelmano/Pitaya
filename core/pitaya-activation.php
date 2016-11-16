@@ -6,31 +6,57 @@
 
 /*
 |--------------------------------------------------------------------------
-| Page Creation on Activation.
+| pitaya_create_initial_pages()
 |--------------------------------------------------------------------------
 |
-| The below function creates the pages listed in the array $pages.
-| The array starts with a Page title, Then inside the page
-| Title array is the Page Content and Page Template.
+| This will only run on the very first activation of the theme.
 */
 
 function pitaya_create_initial_pages() {
 
-  // Get value to check if the theme has been activated before.
+  /*
+  |--------------------------------------------------------------------------
+  | General Setup of Wordpress Settings.
+  |--------------------------------------------------------------------------
+  |
+  | Delete Hello World, Sample Post and the Comment that gets generated when you install
+  | Wordpress. Then we set the default link type to file rather than Attachment
+  | Page, Update the align to none and size to medium.
+  */
+
+  wp_delete_post(1);
+  wp_delete_post(2);
+  wp_delete_comment(1);
+  update_option('image_default_link_type', 'file');
+  update_option('image_default_align', 'none' );
+  update_option('image_default_size', 'medium' );
+
+
+  /*
+  |--------------------------------------------------------------------------
+  | Page Creation.
+  |--------------------------------------------------------------------------
+  |
+  | The Pages Listed below will get created in the order that they are written in the array.
+  | E.g. Home will be menu_order 1 and About will be 2. They will not have any
+  | Content and all but Home and Contact will be the default template
+  */
+
   $pages = [
-   'Home'  => [                   // Page Title
-      ''  =>	'front-page.php'    // Page Content and Page Template
-    ],
-    'Contact' => [               // Page Title
-      ''  =>  'page-contact.php' // Page Content and Page Template
+   'Home'  => [                  // Page Title
+      ''  =>	'front-page.php'   // Page Content and Page Template
     ],
     'News' 		  => [             // Page Title
       ''	=>	''                 // Page Content and Page Template
     ],
+    'Contact' => [               // Page Title
+      ''  =>  'page-contact.php' // Page Content and Page Template
+    ],
   ];
 
-  // Loops through each page in the above array and creates each page if the theme has not been activated before.
+  $count = 0;
   foreach($pages as $page_url_title => $page_meta) {
+    $count++;
     $id = get_page_by_title($page_url_title);
     foreach ($page_meta as $page_content=>$page_template){
      $page = [
@@ -40,7 +66,8 @@ function pitaya_create_initial_pages() {
         'post_status'   => 'publish',
         'post_content'  => $page_content,
         'post_author'   => 1,
-        'post_parent'   => ''
+        'post_parent'   => '',
+        'menu_order'    => $count
       ];
      if(!isset($id->ID)){
         $new_page_id = wp_insert_post($page);

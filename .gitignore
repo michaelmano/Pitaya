@@ -19,3 +19,5 @@ jspm_packages
 *.tgz
 .yarn-integrity
 *.lock
+.ftpconfig
+.remote-sync.json

@@ -6,15 +6,17 @@
 
 /* Vendors
   ======================================================================= */
-@import "./vendors/slick"; // slider
+@import "./partials/vendors/slick"; // slider
 
 /* Base
   ======================================================================= */
 
-
 @import "./partials/overlay"; // Popup gallery that runs off featherlight.js
 @import "./partials/gallery";
 @import "./partials/carousel";
+@import "./partials/grid";
+
+@import "./partials/global"; // Global site layout
+@import "./partials/icons"; // Icons and Social Navigations
 
 @import "./partials/grid";
-@import "./partials/global";

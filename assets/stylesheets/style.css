@@ -17,14 +17,14 @@
 	 2. Correct the line height in all browsers.
 	 3. Prevent adjustments of font size after orientation changes in IE and iOS.
    ======================================================================= */
-/* line 10, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
+/* line 10, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
 html {
   font-family: sans-serif;
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%; }
 
-/* line 19, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
+/* line 19, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
 body {
   margin: 0; }
 
@@ -35,7 +35,7 @@ body {
    1. Add the correct display in Edge, IE, and Firefox.
 	 2. Add the correct display in IE.
    ======================================================================= */
-/* line 33, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
+/* line 33, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
 article,
 aside,
 details,
@@ -50,26 +50,26 @@ section,
 summary {
   display: block; }
 
-/* line 50, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
+/* line 50, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
 audio,
 canvas,
 progress,
 video {
   display: inline-block; }
 
-/* line 59, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
+/* line 59, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
 audio:not([controls]) {
   display: none;
   height: 0; }
 
-/* line 66, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
+/* line 66, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
 progress {
   vertical-align: baseline; }
 
 /* Add the correct display in IE 10-.
    1. Add the correct display in IE.
 ======================================================================= */
-/* line 74, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
+/* line 74, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
 template,
 [hidden] {
   display: none; }
@@ -80,7 +80,7 @@ template,
 /* 1. Remove the gray background on active links in IE 10.
 	 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
    ======================================================================= */
-/* line 87, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
+/* line 87, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
 a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects; }
@@ -88,7 +88,7 @@ a {
 /* Remove the outline on focused links when they are also active or hovered
    in all browsers (opinionated).
   ======================================================================= */
-/* line 96, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
+/* line 96, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
 a:active,
 a:hover {
   outline-width: 0; }
@@ -98,47 +98,47 @@ a:hover {
 /* 1. Remove the bottom border in Firefox 39-.
 	 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
   ======================================================================= */
-/* line 108, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
+/* line 108, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
 abbr[title] {
   border-bottom: none;
   text-decoration: underline;
   text-decoration: underline dotted; }
 
-/* line 116, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
+/* line 116, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
 b,
 strong {
   font-weight: inherit; }
 
-/* line 123, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
+/* line 123, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
 b,
 strong {
   font-weight: bolder; }
 
-/* line 130, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
+/* line 130, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
 dfn {
   font-style: italic; }
 
 /* Correct the font size and margin on `h1` elements within `section` and
   `article` contexts in Chrome, Firefox, and Safari.
   ======================================================================= */
-/* line 138, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
+/* line 138, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
 h1 {
   font-size: 2em;
   margin: 0.67em 0; }
 
-/* line 145, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
+/* line 145, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
 mark {
   background-color: #ff0;
   color: #000; }
 
-/* line 152, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
+/* line 152, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
 small {
   font-size: 80%; }
 
 /* Prevent `sub` and `sup` elements from affecting the line height in
   all browsers.
    ======================================================================= */
-/* line 160, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
+/* line 160, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
 sub,
 sup {
   font-size: 75%;
@@ -146,17 +146,17 @@ sup {
   position: relative;
   vertical-align: baseline; }
 
-/* line 168, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
+/* line 168, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
 sub {
   bottom: -0.25em; }
 
-/* line 172, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
+/* line 172, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
 sup {
   top: -0.5em; }
 
 /* Embedded content
    ======================================================================= */
-/* line 181, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
+/* line 181, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
 img {
   border-style: none;
   display: block;
@@ -169,14 +169,14 @@ img {
   image-rendering: optimize-contrast;
   -ms-interpolation-mode: nearest-neighbor; }
 
-/* line 196, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
+/* line 196, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
 svg:not(:root) {
   overflow: hidden; }
 
 /* 1. Correct the inheritance and scaling of font size in all browsers.
 	 2. Correct the odd `em` font sizing in all browsers.
    ======================================================================= */
-/* line 204, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
+/* line 204, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
 code,
 kbd,
 pre,
@@ -184,14 +184,14 @@ samp {
   font-family: monospace, monospace;
   font-size: 1em; }
 
-/* line 214, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
+/* line 214, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
 figure {
   margin: 1em 40px; }
 
 /* 1. Add the correct box sizing in Firefox.
 	 2. Show the overflow in Edge and IE.
    ======================================================================= */
-/* line 221, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
+/* line 221, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
 hr {
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
@@ -201,7 +201,7 @@ hr {
 /* 1. Change font properties to `inherit` in all browsers (opinionated).
 	 2. Remove the margin in Firefox and Safari.
    ======================================================================= */
-/* line 234, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
+/* line 234, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
 button,
 input,
 optgroup,
@@ -210,20 +210,20 @@ textarea {
   font: inherit;
   margin: 0; }
 
-/* line 245, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
+/* line 245, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
 optgroup {
   font-weight: bold; }
 
 /* 1. Show the overflow in Edge.
    ======================================================================= */
-/* line 252, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
+/* line 252, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
 button,
 input {
   overflow: visible; }
 
 /* Remove the inheritance of text transform in Edge, Firefox, and IE.
    ======================================================================= */
-/* line 260, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
+/* line 260, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
 button,
 select {
   text-transform: none; }
@@ -231,14 +231,14 @@ select {
 /* 1. Prevent a WebKit bug where (2) destroys native `audio` and `video` controls in Android 4.
 	 2. Correct the inability to style clickable types in iOS and Safari.
    ======================================================================= */
-/* line 269, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
+/* line 269, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
 button,
 html [type="button"],
 [type="reset"],
 [type="submit"] {
   -webkit-appearance: button; }
 
-/* line 278, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
+/* line 278, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
 button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
@@ -246,14 +246,14 @@ button::-moz-focus-inner,
   border-style: none;
   padding: 0; }
 
-/* line 288, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
+/* line 288, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
 button:-moz-focusring,
 [type="button"]:-moz-focusring,
 [type="reset"]:-moz-focusring,
 [type="submit"]:-moz-focusring {
   outline: 1px dotted ButtonText; }
 
-/* line 297, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
+/* line 297, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
@@ -263,7 +263,7 @@ fieldset {
 	 2. Correct the color inheritance from `fieldset` elements in IE.
 	 3. Remove the padding so developers are not caught out when they zero out
    ======================================================================= */
-/* line 309, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
+/* line 309, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
 legend {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -273,21 +273,21 @@ legend {
   padding: 0;
   white-space: normal; }
 
-/* line 320, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
+/* line 320, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
 textarea {
   overflow: auto; }
 
 /* 1. Add the correct box sizing in IE 10-.
 	 2. Remove the padding in IE 10-.
    ======================================================================= */
-/* line 328, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
+/* line 328, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
 [type="checkbox"],
 [type="radio"] {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 0; }
 
-/* line 336, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
+/* line 336, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
 [type="number"]::-webkit-inner-spin-button,
 [type="number"]::-webkit-outer-spin-button {
   height: auto; }
@@ -295,17 +295,17 @@ textarea {
 /* 1. Correct the odd appearance in Chrome and Safari.
 	 2. Correct the outline style in Safari.
    ======================================================================= */
-/* line 346, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
+/* line 346, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
 [type="search"] {
   -webkit-appearance: textfield;
   outline-offset: -2px; }
 
-/* line 353, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
+/* line 353, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
 [type="search"]::-webkit-search-cancel-button,
 [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none; }
 
-/* line 360, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
+/* line 360, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
 ::-webkit-input-placeholder {
   color: inherit;
   opacity: 0.54; }
@@ -313,14 +313,14 @@ textarea {
 /* 1. Correct the inability to style clickable types in iOS and Safari.
 	 2. Change font properties to `inherit` in Safari.
 ======================================================================= */
-/* line 369, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
+/* line 369, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_normalize.scss */
 ::-webkit-file-upload-button {
   -webkit-appearance: button;
   font: inherit; }
 
 /* Vendors
   ======================================================================= */
-/* line 1, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/vendors/_slick.scss */
+/* line 1, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
 .slick-slider {
   position: relative;
   display: block;
@@ -336,83 +336,83 @@ textarea {
   -webkit-tap-highlight-color: transparent;
   overflow: hidden; }
 
-/* line 17, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/vendors/_slick.scss */
+/* line 17, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
 .slick-list {
   position: relative;
   overflow: hidden;
   display: block;
   margin: 0;
   padding: 0; }
-  /* line 24, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/vendors/_slick.scss */
+  /* line 24, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
   .slick-list:focus {
     outline: none; }
-  /* line 28, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/vendors/_slick.scss */
+  /* line 28, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
   .slick-list.dragging {
     cursor: pointer;
     cursor: hand; }
 
-/* line 33, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/vendors/_slick.scss */
+/* line 33, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
 .slick-slider .slick-track,
 .slick-slider .slick-list {
   -webkit-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0); }
 
-/* line 42, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/vendors/_slick.scss */
+/* line 42, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
 .slick-track {
   position: relative;
   left: 0;
   top: 0;
   display: block; }
-  /* line 48, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/vendors/_slick.scss */
+  /* line 48, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
   .slick-track:before, .slick-track:after {
     content: "";
     display: table; }
-  /* line 54, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/vendors/_slick.scss */
+  /* line 54, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
   .slick-track:after {
     clear: both; }
-  /* line 58, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/vendors/_slick.scss */
+  /* line 58, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
   .slick-loading .slick-track {
     visibility: hidden; }
 
-/* line 62, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/vendors/_slick.scss */
+/* line 62, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
 .slick-slide {
   float: left;
   height: 100%;
   min-height: 1px;
   display: none; }
-  /* line 66, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/vendors/_slick.scss */
+  /* line 66, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
   [dir="rtl"] .slick-slide {
     float: right; }
-  /* line 69, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/vendors/_slick.scss */
+  /* line 69, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
   .slick-slide img {
     display: block; }
-  /* line 72, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/vendors/_slick.scss */
+  /* line 72, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
   .slick-slide.slick-loading img {
     display: none; }
-  /* line 78, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/vendors/_slick.scss */
+  /* line 78, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
   .slick-slide.dragging img {
     pointer-events: none; }
-  /* line 82, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/vendors/_slick.scss */
+  /* line 82, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
   .slick-initialized .slick-slide {
     display: block; }
-  /* line 86, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/vendors/_slick.scss */
+  /* line 86, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
   .slick-loading .slick-slide {
     visibility: hidden; }
-  /* line 90, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/vendors/_slick.scss */
+  /* line 90, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
   .slick-vertical .slick-slide {
     display: block;
     height: auto;
     border: 1px solid transparent; }
 
-/* line 96, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/vendors/_slick.scss */
+/* line 96, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
 .slick-arrow.slick-hidden {
   display: none; }
 
 /* Slider */
-/* line 122, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/vendors/_slick.scss */
+/* line 122, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
 .slick-loading .slick-list {
-  background: #fff url("../images/ajax-loader.gif") center center no-repeat; }
+  background: #fff url("../images/icons/ajax-loader.gif") center center no-repeat; }
 
 /* Icons */
 @font-face {
@@ -423,7 +423,7 @@ textarea {
   font-style: normal; }
 
 /* Arrows */
-/* line 140, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/vendors/_slick.scss */
+/* line 140, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
 .slick-prev,
 .slick-next {
   position: absolute;
@@ -442,23 +442,23 @@ textarea {
   padding: 0;
   border: none;
   outline: none; }
-  /* line 158, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/vendors/_slick.scss */
+  /* line 158, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
   .slick-prev:hover, .slick-prev:focus,
   .slick-next:hover,
   .slick-next:focus {
     outline: none;
     background: transparent;
     color: transparent; }
-    /* line 162, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/vendors/_slick.scss */
+    /* line 162, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
     .slick-prev:hover:before, .slick-prev:focus:before,
     .slick-next:hover:before,
     .slick-next:focus:before {
       opacity: 1; }
-  /* line 166, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/vendors/_slick.scss */
+  /* line 166, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
   .slick-prev.slick-disabled:before,
   .slick-next.slick-disabled:before {
     opacity: 0.25; }
-  /* line 169, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/vendors/_slick.scss */
+  /* line 169, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
   .slick-prev:before,
   .slick-next:before {
     font-family: "slick";
@@ -469,42 +469,42 @@ textarea {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
 
-/* line 180, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/vendors/_slick.scss */
+/* line 180, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
 .slick-prev {
   left: 25px;
   z-index: 10; }
-  /* line 183, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/vendors/_slick.scss */
+  /* line 183, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
   [dir="rtl"] .slick-prev {
     left: auto;
     right: 25px; }
-  /* line 187, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/vendors/_slick.scss */
+  /* line 187, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
   .slick-prev:before {
     content: "←"; }
-    /* line 189, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/vendors/_slick.scss */
+    /* line 189, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
     [dir="rtl"] .slick-prev:before {
       content: "→"; }
 
-/* line 195, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/vendors/_slick.scss */
+/* line 195, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
 .slick-next {
   z-index: 10;
   right: 25px; }
-  /* line 198, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/vendors/_slick.scss */
+  /* line 198, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
   [dir="rtl"] .slick-next {
     left: 25px;
     right: auto; }
-  /* line 202, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/vendors/_slick.scss */
+  /* line 202, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
   .slick-next:before {
     content: "→"; }
-    /* line 204, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/vendors/_slick.scss */
+    /* line 204, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
     [dir="rtl"] .slick-next:before {
       content: "←"; }
 
 /* Dots */
-/* line 212, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/vendors/_slick.scss */
+/* line 212, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
 .slick-dotted.slick-slider {
   margin-bottom: 30px; }
 
-/* line 216, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/vendors/_slick.scss */
+/* line 216, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
 .slick-dots {
   position: absolute;
   bottom: 25px;
@@ -514,7 +514,7 @@ textarea {
   padding: 0;
   margin: 0;
   width: 100%; }
-  /* line 225, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/vendors/_slick.scss */
+  /* line 225, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
   .slick-dots li {
     position: relative;
     display: inline-block;
@@ -523,7 +523,7 @@ textarea {
     margin: 0 5px;
     padding: 0;
     cursor: pointer; }
-    /* line 233, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/vendors/_slick.scss */
+    /* line 233, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
     .slick-dots li button {
       border: 0;
       background: transparent;
@@ -536,13 +536,13 @@ textarea {
       color: transparent;
       padding: 5px;
       cursor: pointer; }
-      /* line 245, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/vendors/_slick.scss */
+      /* line 245, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
       .slick-dots li button:hover, .slick-dots li button:focus {
         outline: none; }
-        /* line 247, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/vendors/_slick.scss */
+        /* line 247, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
         .slick-dots li button:hover:before, .slick-dots li button:focus:before {
           opacity: 1; }
-      /* line 251, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/vendors/_slick.scss */
+      /* line 251, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
       .slick-dots li button:before {
         position: absolute;
         top: 0;
@@ -558,7 +558,7 @@ textarea {
         opacity: 0.25;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale; }
-    /* line 268, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/vendors/_slick.scss */
+    /* line 268, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
     .slick-dots li.slick-active button:before {
       color: black;
       opacity: 0.75; }
@@ -566,7 +566,7 @@ textarea {
 /* Base
   ======================================================================= */
 @media all {
-  /* line 2, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_overlay.scss */
+  /* line 2, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_overlay.scss */
   .overlay {
     display: none;
     position: fixed;
@@ -579,7 +579,7 @@ textarea {
     white-space: nowrap;
     cursor: pointer;
     background: rgba(0, 0, 0, 0.8); }
-    /* line 11, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_overlay.scss */
+    /* line 11, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_overlay.scss */
     .overlay span {
       font-size: 0;
       display: block;
@@ -591,28 +591,28 @@ textarea {
       top: 50%;
       margin-top: -10px;
       border-radius: 50%; }
-      /* line 22, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_overlay.scss */
+      /* line 22, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_overlay.scss */
       .overlay span__previous {
         left: 0; }
-      /* line 25, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_overlay.scss */
+      /* line 25, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_overlay.scss */
       .overlay span__next {
         right: 0; }
-      /* line 28, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_overlay.scss */
+      /* line 28, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_overlay.scss */
       .overlay span__close {
         top: 0;
         right: 0;
         background: rgba(255, 255, 255, 0.3);
         margin-top: 0; }
-      /* line 34, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_overlay.scss */
+      /* line 34, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_overlay.scss */
       .overlay span span {
         display: none; }
-    /* line 38, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_overlay.scss */
+    /* line 38, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_overlay.scss */
     .overlay:before {
       content: '';
       display: inline-block;
       height: 100%;
       vertical-align: middle; }
-    /* line 44, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_overlay.scss */
+    /* line 44, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_overlay.scss */
     .overlay__content {
       max-width: 100%;
       text-align: left;
@@ -620,42 +620,42 @@ textarea {
       display: inline-block;
       overflow: hidden;
       white-space: normal; }
-    /* line 52, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_overlay.scss */
+    /* line 52, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_overlay.scss */
     .overlay__inner {
       display: block; } }
 
-/* line 1, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_gallery.scss */
+/* line 1, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_gallery.scss */
 .gallery {
   margin-top: 22px; }
-  /* line 2, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_gallery.scss */
+  /* line 2, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_gallery.scss */
   .gallery:before, .gallery:after {
     content: "";
     display: table;
     clear: both; }
-  /* line 8, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_gallery.scss */
+  /* line 8, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_gallery.scss */
   .gallery__item {
     margin-bottom: 24px;
     border-radius: 4px;
     overflow: hidden;
     border: 1px solid #eee; }
-    /* line 13, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_gallery.scss */
+    /* line 13, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_gallery.scss */
     .gallery__item img {
       width: 100%;
       display: block;
       height: auto; }
 
-/* line 1, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_carousel.scss */
+/* line 1, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_carousel.scss */
 .carousel {
   background: -webkit-gradient(linear, right top, left top, from(#F1F2B5), to(#135058));
   background: -webkit-linear-gradient(right, #F1F2B5, #135058);
   background: linear-gradient(to left, #F1F2B5, #135058);
   clear: both; }
-  /* line 4, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_carousel.scss */
+  /* line 4, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_carousel.scss */
   .carousel__item {
     width: 100%;
     counter-increment: gallery__cell;
     position: relative; }
-    /* line 8, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_carousel.scss */
+    /* line 8, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_carousel.scss */
     .carousel__item:before {
       display: block;
       text-align: center;
@@ -663,7 +663,7 @@ textarea {
       line-height: 600px;
       font-size: 80px;
       color: white; }
-  /* line 17, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_carousel.scss */
+  /* line 17, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_carousel.scss */
   .carousel__content {
     position: absolute;
     top: 50%;
@@ -678,7 +678,7 @@ textarea {
 ========================================================================== */
 /* GRID LAYOUT
   ======================================================================= */
-/* line 110, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+/* line 110, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
 .grid {
   display: block;
   list-style: none;
@@ -687,7 +687,7 @@ textarea {
   margin-left: -20px;
   font-size: 0rem; }
 
-/* line 119, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+/* line 119, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
 .grid__cell {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -701,211 +701,197 @@ textarea {
 
 /* GRID WIDTHS
   ======================================================================= */
-/* line 70, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+/* line 70, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
 .\31\/2, .\32\/4 {
   width: 50%; }
 
-/* line 70, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+/* line 70, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
 .\31\/3 {
   width: 33.33333%; }
 
-/* line 70, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+/* line 70, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
 .\32\/3 {
   width: 66.66667%; }
 
-/* line 70, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+/* line 70, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
 .\31\/4 {
   width: 25%; }
 
-/* line 70, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+/* line 70, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
 .\33\/4 {
   width: 75%; }
 
 @media screen and (min-width: 500px) and (max-width: 800px) {
-  /* line 70, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+  /* line 70, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
   .\31\/2--xs, .\32\/4--xs {
     width: 50%; }
-  /* line 70, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+  /* line 70, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
   .\31\/3--xs {
     width: 33.33333%; }
-  /* line 70, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+  /* line 70, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
   .\32\/3--xs {
     width: 66.66667%; }
-  /* line 70, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+  /* line 70, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
   .\31\/4--xs {
     width: 25%; }
-  /* line 70, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+  /* line 70, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
   .\33\/4--xs {
     width: 75%; } }
 
 @media screen and (min-width: 500px) {
-  /* line 70, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+  /* line 70, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
   .\31\/2--xs-up, .\32\/4--xs-up {
     width: 50%; }
-  /* line 70, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+  /* line 70, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
   .\31\/3--xs-up {
     width: 33.33333%; }
-  /* line 70, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+  /* line 70, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
   .\32\/3--xs-up {
     width: 66.66667%; }
-  /* line 70, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+  /* line 70, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
   .\31\/4--xs-up {
     width: 25%; }
-  /* line 70, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+  /* line 70, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
   .\33\/4--xs-up {
     width: 75%; } }
 
 @media screen and (min-width: 801px) and (max-width: 1024px) {
-  /* line 70, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+  /* line 70, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
   .\31\/2--sm, .\32\/4--sm {
     width: 50%; }
-  /* line 70, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+  /* line 70, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
   .\31\/3--sm {
     width: 33.33333%; }
-  /* line 70, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+  /* line 70, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
   .\32\/3--sm {
     width: 66.66667%; }
-  /* line 70, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+  /* line 70, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
   .\31\/4--sm {
     width: 25%; }
-  /* line 70, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+  /* line 70, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
   .\33\/4--sm {
     width: 75%; } }
 
 @media screen and (min-width: 801px) {
-  /* line 70, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+  /* line 70, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
   .\31\/2--sm-up, .\32\/4--sm-up {
     width: 50%; }
-  /* line 70, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+  /* line 70, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
   .\31\/3--sm-up {
     width: 33.33333%; }
-  /* line 70, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+  /* line 70, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
   .\32\/3--sm-up {
     width: 66.66667%; }
-  /* line 70, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+  /* line 70, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
   .\31\/4--sm-up {
     width: 25%; }
-  /* line 70, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+  /* line 70, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
   .\33\/4--sm-up {
     width: 75%; } }
 
 @media screen and (min-width: 1025px) {
-  /* line 70, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+  /* line 70, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
   .\31\/2--lg, .\32\/4--lg {
     width: 50%; }
-  /* line 70, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+  /* line 70, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
   .\31\/3--lg {
     width: 33.33333%; }
-  /* line 70, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+  /* line 70, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
   .\32\/3--lg {
     width: 66.66667%; }
-  /* line 70, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+  /* line 70, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
   .\31\/4--lg {
     width: 25%; }
-  /* line 70, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+  /* line 70, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
   .\33\/4--lg {
     width: 75%; } }
 
 @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
-  /* line 70, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+  /* line 70, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
   .\31\/2--retina, .\32\/4--retina {
     width: 50%; }
-  /* line 70, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+  /* line 70, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
   .\31\/3--retina {
     width: 33.33333%; }
-  /* line 70, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+  /* line 70, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
   .\32\/3--retina {
     width: 66.66667%; }
-  /* line 70, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+  /* line 70, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
   .\31\/4--retina {
     width: 25%; }
-  /* line 70, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+  /* line 70, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
   .\33\/4--retina {
     width: 75%; } }
 
-/* line 2, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_global.scss */
-nav.navigation {
-  width: 100%; }
-  /* line 5, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_global.scss */
-  nav.navigation--primary ul {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    list-style: none; }
-    /* line 10, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_global.scss */
-    nav.navigation--primary ul li {
-      float: left;
-      display: block;
-      padding: 0 10px; }
-
-/* line 19, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_global.scss */
+/* ==========================================================================
+ Global Elements.
+========================================================================== */
+/* Generic Global Elements
+  ======================================================================= */
+/* line 9, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_global.scss */
 .container {
   max-width: 1200px;
   padding: 0 20px;
   margin: 0 auto; }
 
-/* line 24, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_global.scss */
-.hidden {
-  display: none; }
+/* line 15, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_global.scss */
+.social-list-item {
+  display: inline-block; }
+  /* line 17, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_global.scss */
+  .social-list-item a {
+    background: #135058;
+    text-align: center;
+    border-radius: 50%;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out; }
+    /* line 22, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_global.scss */
+    .social-list-item a:hover {
+      -webkit-transform: scale(1.2);
+          -ms-transform: scale(1.2);
+              transform: scale(1.2); }
+    /* line 25, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_global.scss */
+    .social-list-item a svg {
+      position: absolute;
+      top: 50%;
+      left: 50%; }
+      /* line 29, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_global.scss */
+      .social-list-item a svg * {
+        fill: #fff; }
 
-/* line 27, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_global.scss */
-.icon {
+/* Header Elements
+  ======================================================================= */
+/* line 39, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_global.scss */
+.logo {
   display: inline-block;
-  width: 16px;
-  height: 16px; }
-  /* line 31, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_global.scss */
-  .icon--small {
-    width: 20px;
-    height: 20px; }
-  /* line 35, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_global.scss */
-  .icon--medium {
-    width: 26px;
-    height: 26px; }
-  /* line 39, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_global.scss */
-  .icon--large {
-    width: 32px;
-    height: 32px; }
+  float: left; }
 
-/* line 44, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_global.scss */
-.socials {
-  list-style: none;
+/* line 45, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_global.scss */
+nav.navigation {
   display: inline-block;
-  margin: 0;
-  padding: 0; }
-  /* line 49, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_global.scss */
-  .socials--right {
-    float: right; }
-  /* line 52, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_global.scss */
-  .socials--left {
-    float: left; }
-  /* line 56, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_global.scss */
-  .socials__small a {
-    position: relative;
-    width: 22px;
-    height: 22px; }
-    /* line 60, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_global.scss */
-    .socials__small a svg {
-      width: 12px;
-      height: 12px;
-      margin-top: -6px;
-      margin-left: -6px; }
-  /* line 69, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_global.scss */
-  .socials__medium a {
-    position: relative;
-    width: 26px;
-    height: 26px; }
-    /* line 73, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_global.scss */
-    .socials__medium a svg {
-      width: 14px;
-      height: 14px;
-      margin-top: -7px;
-      margin-left: -7px; }
+  float: left;
+  width: auto; }
+  /* line 49, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_global.scss */
+  nav.navigation--primary {
+    padding: 48px 0; }
+    /* line 51, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_global.scss */
+    nav.navigation--primary ul {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      list-style: none; }
+      /* line 56, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_global.scss */
+      nav.navigation--primary ul li {
+        float: left;
+        display: block;
+        padding: 0 10px; }
 
-/* line 83, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_global.scss */
+/* Footer Elements
+  ======================================================================= */
+/* line 70, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_global.scss */
 footer .socials {
   margin-top: 12px; }
 
-/* line 86, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_global.scss */
+/* line 73, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_global.scss */
 footer p {
   font-size: 11px;
   display: inline-block;
@@ -913,35 +899,233 @@ footer p {
   font-weight: 500;
   text-transform: uppercase;
   line-height: 22px; }
-  /* line 93, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_global.scss */
+  /* line 80, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_global.scss */
   footer p a {
     text-decoration: none;
     color: inherit; }
-    /* line 96, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_global.scss */
+    /* line 83, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_global.scss */
     footer p a span {
       text-decoration: underline;
       color: #135058; }
 
-/* line 103, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_global.scss */
-.social-list-item {
-  display: inline-block; }
-  /* line 105, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_global.scss */
-  .social-list-item a {
-    background: #135058;
-    text-align: center;
-    border-radius: 50%;
-    -webkit-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out; }
-    /* line 110, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_global.scss */
-    .social-list-item a:hover {
-      -webkit-transform: scale(1.2);
-          -ms-transform: scale(1.2);
-              transform: scale(1.2); }
-    /* line 113, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_global.scss */
-    .social-list-item a svg {
-      position: absolute;
-      top: 50%;
-      left: 50%; }
-      /* line 117, C:/Users/User/Desktop/Pitaya/assets/stylesheets/scss/partials/_global.scss */
-      .social-list-item a svg * {
-        fill: #fff; }
+/* ==========================================================================
+ Icons and Social Navigations
+========================================================================== */
+/* General Icon Elements
+  ======================================================================= */
+/* line 8, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_icons.scss */
+.icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px; }
+  /* line 12, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_icons.scss */
+  .icon--small {
+    width: 20px;
+    height: 20px; }
+  /* line 16, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_icons.scss */
+  .icon--medium {
+    width: 26px;
+    height: 26px; }
+  /* line 20, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_icons.scss */
+  .icon--large {
+    width: 32px;
+    height: 32px; }
+
+/* Social Navigation Elements
+  ======================================================================= */
+/* line 29, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_icons.scss */
+.socials {
+  list-style: none;
+  display: inline-block;
+  margin: 0;
+  padding: 0; }
+  /* line 34, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_icons.scss */
+  .socials--right {
+    float: right; }
+  /* line 37, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_icons.scss */
+  .socials--left {
+    float: left; }
+  /* line 41, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_icons.scss */
+  .socials__small a {
+    position: relative;
+    width: 22px;
+    height: 22px; }
+    /* line 45, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_icons.scss */
+    .socials__small a svg {
+      width: 12px;
+      height: 12px;
+      margin-top: -6px;
+      margin-left: -6px; }
+  /* line 54, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_icons.scss */
+  .socials__medium a {
+    position: relative;
+    width: 26px;
+    height: 26px; }
+    /* line 58, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_icons.scss */
+    .socials__medium a svg {
+      width: 14px;
+      height: 14px;
+      margin-top: -7px;
+      margin-left: -7px; }
+
+/* line 69, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_icons.scss */
+.sprite {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap; }
+
+/* ==========================================================================
+ Grid system
+========================================================================== */
+/* GRID LAYOUT
+  ======================================================================= */
+/* line 110, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+.grid {
+  display: block;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-left: -20px;
+  font-size: 0rem; }
+
+/* line 119, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+.grid__cell {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  width: 100%;
+  padding: 0;
+  padding-left: 20px;
+  margin: 0;
+  vertical-align: top;
+  font-size: 1rem; }
+
+/* GRID WIDTHS
+  ======================================================================= */
+/* line 70, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+.\31\/2, .\32\/4 {
+  width: 50%; }
+
+/* line 70, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+.\31\/3 {
+  width: 33.33333%; }
+
+/* line 70, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+.\32\/3 {
+  width: 66.66667%; }
+
+/* line 70, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+.\31\/4 {
+  width: 25%; }
+
+/* line 70, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+.\33\/4 {
+  width: 75%; }
+
+@media screen and (min-width: 500px) and (max-width: 800px) {
+  /* line 70, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+  .\31\/2--xs, .\32\/4--xs {
+    width: 50%; }
+  /* line 70, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+  .\31\/3--xs {
+    width: 33.33333%; }
+  /* line 70, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+  .\32\/3--xs {
+    width: 66.66667%; }
+  /* line 70, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+  .\31\/4--xs {
+    width: 25%; }
+  /* line 70, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+  .\33\/4--xs {
+    width: 75%; } }
+
+@media screen and (min-width: 500px) {
+  /* line 70, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+  .\31\/2--xs-up, .\32\/4--xs-up {
+    width: 50%; }
+  /* line 70, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+  .\31\/3--xs-up {
+    width: 33.33333%; }
+  /* line 70, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+  .\32\/3--xs-up {
+    width: 66.66667%; }
+  /* line 70, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+  .\31\/4--xs-up {
+    width: 25%; }
+  /* line 70, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+  .\33\/4--xs-up {
+    width: 75%; } }
+
+@media screen and (min-width: 801px) and (max-width: 1024px) {
+  /* line 70, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+  .\31\/2--sm, .\32\/4--sm {
+    width: 50%; }
+  /* line 70, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+  .\31\/3--sm {
+    width: 33.33333%; }
+  /* line 70, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+  .\32\/3--sm {
+    width: 66.66667%; }
+  /* line 70, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+  .\31\/4--sm {
+    width: 25%; }
+  /* line 70, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+  .\33\/4--sm {
+    width: 75%; } }
+
+@media screen and (min-width: 801px) {
+  /* line 70, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+  .\31\/2--sm-up, .\32\/4--sm-up {
+    width: 50%; }
+  /* line 70, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+  .\31\/3--sm-up {
+    width: 33.33333%; }
+  /* line 70, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+  .\32\/3--sm-up {
+    width: 66.66667%; }
+  /* line 70, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+  .\31\/4--sm-up {
+    width: 25%; }
+  /* line 70, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+  .\33\/4--sm-up {
+    width: 75%; } }
+
+@media screen and (min-width: 1025px) {
+  /* line 70, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+  .\31\/2--lg, .\32\/4--lg {
+    width: 50%; }
+  /* line 70, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+  .\31\/3--lg {
+    width: 33.33333%; }
+  /* line 70, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+  .\32\/3--lg {
+    width: 66.66667%; }
+  /* line 70, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+  .\31\/4--lg {
+    width: 25%; }
+  /* line 70, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+  .\33\/4--lg {
+    width: 75%; } }
+
+@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  /* line 70, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+  .\31\/2--retina, .\32\/4--retina {
+    width: 50%; }
+  /* line 70, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+  .\31\/3--retina {
+    width: 33.33333%; }
+  /* line 70, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+  .\32\/3--retina {
+    width: 66.66667%; }
+  /* line 70, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+  .\31\/4--retina {
+    width: 25%; }
+  /* line 70, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_grid.scss */
+  .\33\/4--retina {
+    width: 75%; } }
