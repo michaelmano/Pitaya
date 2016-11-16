@@ -102,15 +102,23 @@ function pitaya_add_sidebar_meta() {
 
 function pitaya_sidebar_meta_callback( $post ) {
 	global $post;
-	$sidebar_enabled = get_post_meta( $post->ID, 'sidebar_enabled', true );
-?>
-	<input type="checkbox" style="margin:0 16px 0 0;" name="sidebar_enabled" value="true" <?php echo (($sidebar_enabled=='true') ? 'checked="checked"': '');?>/><label for="sidebar_enabled">Enable Sidebar</span>
+  $args = [
+    'enable_sidebar'  =>  get_post_meta( $post->ID, 'enable_sidebar', true )
+  ];
+
+  if($post->post_parent) $args['hide_from_menu'] = get_post_meta( $post->ID, 'hide_from_menu' , true );
+
+  foreach ($args as $key => $value) { ?>
+    <input type="checkbox" style="margin:0 16px 0 0;" name="<?php echo $key; ?>" value="true" <?php echo (($value=='true') ? 'checked="checked"': '');?>/>
+    <label for="<?php echo $key; ?>"><?php echo ucwords ( str_replace('_', ' ', $key)); ?></label><br />
 <?php
+  }
 }
 
 
 function pitaya_save_sidebar_meta($post_id){
-	update_post_meta( $post_id, 'sidebar_enabled', $_POST['sidebar_enabled']);
+  update_post_meta( $post_id, 'enable_sidebar', $_POST['enable_sidebar']);
+	update_post_meta( $post_id, 'hide_from_menu', $_POST['hide_from_menu']);
 }
 
 add_action( 'save_post'     , 'pitaya_save_sidebar_meta');

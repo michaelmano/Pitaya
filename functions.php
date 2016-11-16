@@ -1,8 +1,24 @@
 <?php
-
 /* ==========================================================================
  Functions.php - Setup of Wordpress and overrides.
 ========================================================================== */
+
+
+/*
+|--------------------------------------------------------------------------
+| Enque Pitaya Functions.
+|--------------------------------------------------------------------------
+|
+| The required files below are for the
+| activation of the theme and also
+| the theme settings page.
+*/
+require_once(dirname(__FILE__) . '/core/pitaya-activation.php');
+require_once(dirname(__FILE__) . '/core/pitaya-menu.php');
+require_once(dirname(__FILE__) . '/core/pitaya-settings.php');
+require_once(dirname(__FILE__) . '/core/pitaya-functions.php');
+require_once(dirname(__FILE__) . '/core/pitaya-post-types.php');
+
 
 /*
 |--------------------------------------------------------------------------
@@ -60,15 +76,15 @@ remove_action( 'admin_print_styles', 'print_emoji_styles' );
 */
 
 register_nav_menus([
-    'primary' => __(
-      'Primary Navigation',
-      'Pitaya'
-    ),
-    'footer' => __(
-      'Footer Navigation',
-      'Pitaya'
-    ),
-  ]);
+  'primary' => __(
+    'Primary Navigation',
+    'Pitaya'
+  ),
+  'footer' => __(
+    'Footer Navigation',
+    'Pitaya'
+  ),
+]);
 
 //removes inline css for galleries
 add_filter( 'use_default_gallery_style', '__return_false' );
@@ -188,9 +204,9 @@ add_action('print_media_templates', function(){ ?>
 function pitaya_gallery($output, $attr) {
     global $post;
     if (isset($attr['orderby'])) {
-        $attr['orderby'] = sanitize_sql_orderby($attr['orderby']);
-        if (!$attr['orderby'])
-            unset($attr['orderby']);
+      $attr['orderby'] = sanitize_sql_orderby($attr['orderby']);
+      if (!$attr['orderby'])
+        unset($attr['orderby']);
     }
     extract(shortcode_atts([
       'order' => 'ASC',
@@ -207,19 +223,19 @@ function pitaya_gallery($output, $attr) {
     ], $attr));
     if ('RAND' == $order) $orderby = 'none';
     if (!empty($include)) {
-        $include = preg_replace('/[^0-9,]+/', '', $include);
-        $_attachments = get_posts([
-          'include' => $include,
-          'post_status' => 'inherit',
-          'post_type' => 'attachment',
-          'post_mime_type' => 'image',
-          'order' => $order,
-          'orderby' => $orderby
-        ]);
-        $attachments = [];
-        foreach ($_attachments as $key => $val) {
-            $attachments[$val->ID] = $_attachments[$key];
-        }
+      $include = preg_replace('/[^0-9,]+/', '', $include);
+      $_attachments = get_posts([
+        'include' => $include,
+        'post_status' => 'inherit',
+        'post_type' => 'attachment',
+        'post_mime_type' => 'image',
+        'order' => $order,
+        'orderby' => $orderby
+      ]);
+      $attachments = [];
+      foreach ($_attachments as $key => $val) {
+        $attachments[$val->ID] = $_attachments[$key];
+      }
     }
     if (empty($attachments)) return '';
       ob_start(); ?>
@@ -241,19 +257,3 @@ function pitaya_gallery($output, $attr) {
     return $output;
 }
 add_filter('post_gallery', 'pitaya_gallery', 10, 2);
-
-
-/*
-|--------------------------------------------------------------------------
-| Enque Pitaya Functions.
-|--------------------------------------------------------------------------
-|
-| The required files below are for the
-| activation of the theme and also
-| the theme settings page.
-*/
-
-require_once WP_CONTENT_DIR . '/themes/Pitaya/core/pitaya-activation.php';
-require_once WP_CONTENT_DIR . '/themes/Pitaya/core/pitaya-settings.php';
-require_once WP_CONTENT_DIR . '/themes/Pitaya/core/pitaya-functions.php';
-require_once WP_CONTENT_DIR . '/themes/Pitaya/core/pitaya-post-types.php';
