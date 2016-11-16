@@ -1,4 +1,5 @@
 <?php
+
 /* ==========================================================================
  Pitaya Theme Activation.
 ========================================================================== */
@@ -13,7 +14,7 @@
 | Title array is the Page Content and Page Template.
 */
 
-function create_initial_pages() {
+function pitaya_create_initial_pages() {
 
   // Get value to check if the theme has been activated before.
   $pages = [
@@ -61,11 +62,14 @@ function create_initial_pages() {
   */
 
   $home = get_page_by_title( 'Home' );
-    update_option( 'page_on_front', $home->ID );
-    update_option( 'show_on_front', 'page' );
+  update_option( 'page_on_front', $home->ID );
+  update_option( 'show_on_front', 'page' );
+
   $blog = get_page_by_title( 'News' );
-    update_option( 'page_for_posts', $blog->ID );
+  update_option( 'page_for_posts', $blog->ID );
+
   global $wp_rewrite;
+
   $wp_rewrite->set_permalink_structure('/%postname%/');
   update_option( "rewrite_rules", FALSE );
   $wp_rewrite->flush_rules( true );
@@ -85,7 +89,7 @@ function create_initial_pages() {
    'Primary'  => [
      '/'      => 'Home',
      'contact'=> 'Contact',
-     'news'   => 'news',
+     'news'   => 'News',
    ],
   ];
 
@@ -113,10 +117,10 @@ function create_initial_pages() {
 
   set_theme_mod( 'nav_menu_locations', $locations );
   // Set First Activation
-  update_option( get_option('pitaya_options')['First Activation']) , false );
+  if (FALSE === get_option('pitaya_activated') && FALSE === update_option('pitaya_activated',FALSE)) add_option('pitaya_activated',TRUE);
 }
 
 // Create above pages and menus if the theme has not been activated before.
-if (isset($_GET['activated']) && is_admin() && !get_option('pitaya_options')['First Activation'])) {
-   add_action('init', 'create_initial_pages');
+if (isset($_GET['activated']) && is_admin() && FALSE === get_option('pitaya_activated') && FALSE === update_option('pitaya_activated',FALSE))  {
+   add_action('init', 'pitaya_create_initial_pages');
 }

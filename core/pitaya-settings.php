@@ -15,7 +15,7 @@
 
 function pitaya_setting_fields() {
   return [
-    'theme_settings'  => ['First Activation', 'Theme Primary Colour', 'Google Analytics Number', 'Google Maps API'],
+    'theme_settings'  => ['Theme Primary Colour', 'Google Analytics Number', 'Google Maps API'],
     'contact_details' => ['Address', 'Phone', 'Email'],
     'social_links'    => ['Facebook', 'Twitter', 'YouTube','Instagram','LinkedIn','Pinterest','Google Plus','Tumblr','Flickr','Vine', 'Github']
   ];
@@ -84,7 +84,7 @@ function pitaya_admin_js() {
     echo '
       <script>
       jQuery(document).ready(function($){
-        $(".color-field").wpColorPicker();
+        $("input.theme-primary-colour").wpColorPicker();
       });
     </script>
     ';
