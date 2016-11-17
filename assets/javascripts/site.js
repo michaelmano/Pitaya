@@ -86,16 +86,16 @@
 "use strict";
 
 function navigationSizeCheck() {
+  var nav       = $('.navigation__primary');
+  var navToggle = $('.nav-toggle');
   var total = 5;
+
   total += Number($('header .container .logo').outerWidth())
 
   $('header .navigation ul li').each(function() {
     total += Number($(this).outerWidth())
   });
   if($('header .container').width() < total) {
-
-    var nav       = $('.navigation__primary');
-    var navToggle = $('.nav-toggle');
 
     if(!nav.hasClass('mobile')) {
       nav.addClass('mobile')
