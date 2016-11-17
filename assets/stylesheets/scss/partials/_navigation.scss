@@ -1,0 +1,136 @@
+
+nav {
+  &.navigation {
+    .nav-toggle {
+      display: none;
+      &.mobile {
+        display: block;
+        position: absolute;
+        top: 18px;
+        right: 18px;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+      }
+      &__icon {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        svg {
+          position: absolute;
+          top: 5px;
+          right: 5px;
+          width: 30px;
+          height: 30px;
+          & * {
+            fill: #fff;
+          }
+        }
+      }
+      .icon--close {
+        display: none;
+      }
+      &.toggled {
+        .icon--bars {
+          display: none;
+        }
+        .icon--close {
+          display: block;
+        }
+      }
+    }
+    .navigation__primary {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      li {
+        float: left;
+        position: relative;
+        a {
+          padding: $gutter + 10px 10px; // default padding + 10 for the logo height in play
+          display: block;
+          color: $nav-primary-link-color;
+          &:hover {
+            color: $nav-primary-link-hover-color;
+            text-decoration: none;
+          }
+        }
+        & ul {
+          &:not(.socials) {
+            display: none;
+          }
+        }
+        &.hover,
+        &:hover {
+          & a {
+          }
+          & ul {
+            background: $primary-color;
+            min-width: 280px;
+            position: absolute;
+            margin: 0;
+            padding: 0;
+            top: 100%;
+            display: block;
+            z-index: 10;
+          }
+          & li {
+            padding: 0;
+            display: block;
+            width: 100%;
+            & a {
+              padding: 10px $gutter;
+              display: block;
+              &:hover {
+                background: $secondary-color;
+                color: $primary-color;
+              }
+            }
+          }
+        }
+      }
+      &.mobile {
+        display: none;
+        &.show {
+          display: block;
+          width: 100%;
+          clear:both;
+          li {
+            width: 100%;
+            display: block;
+            a {
+              padding: 10px;
+              &:hover {
+                background: $primary-color;
+                color: #fff;
+              }
+            }
+          }
+          .socials {
+            float: none;
+            display: block;
+            & li {
+              width: 25%;
+              float: left;
+              display: inline-block;
+              margin: 0;
+              & a {
+                width: 100%;
+                text-align: center;
+                border-radius: 0;
+                padding: $gutter + 8px 10px; // Hack to fix the overflow from the hover affect. (notice the padding is 2px less than the nav)
+              }
+            }
+          }
+        }
+      }
+      .socials {
+        float: right;
+        & a {
+          border-radius: 0;
+          padding: $gutter + 8px 10px; // Hack to fix the overflow from the hover affect. (notice the padding is 2px less than the nav)
+        }
+      }
+    }
+  }
+}

@@ -6,60 +6,45 @@
 /* Generic Global Elements
   ======================================================================= */
 
+html {
+
+}
+body {
+
+}
+a {
+  color: $generic-link-color;
+  text-decoration: none;
+  &:hover {
+    color: $generic-link-hover-color;
+    text-decoration: underline;
+  }
+}
 .container {
   max-width: $container-width;
   padding: 0 $gutter;
   margin: 0 auto;
-}
-
-.social-list-item { // Class for the social navigation without a container.
-  display: inline-block;
-  & a {
-    background: #135058;
-    text-align: center;
-    border-radius: 50%;
-    transition: all .2s ease-in-out;
-    &:hover {
-      transform: scale(1.2);
-    }
-    & svg {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      & * {
-        fill: #fff;
-      }
-    }
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
   }
 }
+
 
 /* Header Elements
   ======================================================================= */
 
+header {
+  background: $header-background;
+}
 .logo {
   display: inline-block;
   float: left;
-}
-
-nav {
-  &.navigation {
-    display: inline-block;
-    float: left;
-    width: auto;
-    &--primary {
-      padding: 48px 0;
-      & ul {
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        & li {
-          float: left;
-          display: block;
-          padding: 0 10px;
-        }
-      }
-    }
+  padding: $gutter $gutter $gutter 0;
+  width: 40px;
+  & img {
+    width: 100%;
   }
 }
 

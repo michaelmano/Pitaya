@@ -7,8 +7,23 @@
 
 $container-width: 1200px !default;
 $gutter:  20px !default;
-$primary-color: #135058;
 
+// Colours
+
+$primary-color: #135058;
+$secondary-color: #F1F2B5;
+
+$dark-grey: #1f1f1f;
+
+$generic-link-color: $primary-color;
+$generic-link-hover-color: #000;
+
+$nav-primary-link-color: #fff;
+$nav-primary-link-hover-color: $secondary-color;
+
+// Backgrounds
+
+$header-background: $dark-grey;
 /* Slider
   ======================================================================= */
 

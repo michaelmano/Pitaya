@@ -1,3 +1,7 @@
+<?php
+$options = get_option('pitaya_options');
+$primary_color = $options['Theme Primary Colour'];
+?>
 <link rel="apple-touch-icon-precomposed" sizes="57x57" href="<?php echo get_template_directory_uri(); ?>/assets/images/icons/favicons/apple-touch-icon-57x57.png" />
 <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo get_template_directory_uri(); ?>/assets/images/icons/favicons/apple-touch-icon-114x114.png" />
 <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo get_template_directory_uri(); ?>/assets/images/icons/favicons/apple-touch-icon-72x72.png" />
@@ -12,8 +16,8 @@
 <link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/assets/images/icons/favicons/favicon-16x16.png" sizes="16x16" />
 <link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/assets/images/icons/favicons/favicon-128.png" sizes="128x128" />
 <meta name="application-name" content="&nbsp;"/>
-<meta name="theme-color" content="<?php if($primary_colour) { echo $primary_colour; } else { echo '#991d60'; } ?>">
-<meta name="msapplication-TileColor" content="<?php if($primary_colour) { echo $primary_colour; } else { echo '#991d60'; } ?>" />
+<meta name="theme-color" content="<?php if($primary_color) { echo $primary_color; } else { echo '#991d60'; } ?>">
+<meta name="msapplication-TileColor" content="<?php if($primary_color) { echo $primary_color; } else { echo '#991d60'; } ?>" />
 <meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/assets/images/icons/favicons/mstile-144x144.png" />
 <meta name="msapplication-square70x70logo" content="<?php echo get_template_directory_uri(); ?>/assets/images/icons/favicons/mstile-70x70.png" />
 <meta name="msapplication-square150x150logo" content="<?php echo get_template_directory_uri(); ?>/assets/images/icons/favicons/mstile-150x150.png" />

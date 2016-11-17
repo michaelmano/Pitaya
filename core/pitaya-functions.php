@@ -28,22 +28,19 @@ function pitaya_social_nav($args) {
     $socials = pitaya_setting_fields();
     $socials = $socials['social_links'];
     ?>
-    <?php if($args['container'] === 'true' || !isset($args['container']) ) { ?>
-      <ul class="socials <?php if($args['float']) { echo 'socials--'. $args['float'] . '';} ?>">
-    <?php } ?>
+    <ul class="socials <?php if($args['float']) { echo 'socials--'. $args['float'] . '';} ?> <?php if($args['size']) { echo 'socials--'. $args['size'] . ''; } elseif (!isset($args['size'])) { echo 'socials__small'; }?>">
     <?php foreach($options as $key => $value) {
       if($value && in_array($key, $socials)) {
         $name = preg_replace('#[ -]+#', '-', strtolower($key)); ?>
-        <li class="social-list-item socials__<?php echo $name; ?> <?php if($args['size']) { echo 'socials__'. $args['size'] . ''; } elseif (!isset($args['size'])) { echo 'socials__small'; }?>">
+        <li class="socials__<?php echo $name; ?>">
           <a target="_blank" href="<?php echo $value; ?>" class="icon icon--medium">
             <svg><use xlink:href="#<?php echo $name; ?>"></use></svg>
           </a>
         </li>
       <?php }
     } ?>
-  <?php if($args['container'] === 'true' || !isset($args['container'])) { ?>
     </ul><!-- END Socials -->
-  <?php }
+  <?php
   // End of content return
   $output = ob_get_contents();
   ob_end_clean();
@@ -96,17 +93,28 @@ function pitaya_google_analytics() {
 */
 
 function pitaya_custom_login_logo() {
-  $logoBg = get_stylesheet_directory_uri().'/assets/images/admin-logo.svg';
+  $logoBg = get_stylesheet_directory_uri().'/assets/images/logo.svg';
 
   echo "
   <style type='text/css'>
-  h1 a {
-    max-height: '100px';
-    background-image: url($logoBg) !important;
-    background-size: 100% 100%!important;
-    width: auto !important;
-    margin: 0 auto !important;
+  #login h1 a, .login h1 a {
+    position: relative;
+    background-image: none;
+    margin: 0;
+    height: 96px;
+    width: 100%;
   }
+  .login h1 a:before {
+    content: '';
+    position: absolute;
+    top: 50%; right: 50%;
+    margin-top: -48px;
+    margin-right: -48px;
+    width: 96px;
+    height: 96px;
+    background: url($logoBg) 50% 50% no-repeat;
+  }
+
   </style>
   ";
 }

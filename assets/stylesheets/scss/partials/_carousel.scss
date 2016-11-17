@@ -1,5 +1,5 @@
 .carousel {
-  background: linear-gradient(to left, #F1F2B5, #135058);
+  background: linear-gradient(to left, $secondary-color,$primary-color);
   clear: both;
   &__item {
     width: 100%;
