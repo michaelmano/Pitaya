@@ -3,7 +3,7 @@
 function navigationSizeCheck() {
   var nav       = $('.navigation__primary');
   var navToggle = $('.nav-toggle');
-  var total = 5;
+  var total     = 5;
 
   total += Number($('header .container .logo').outerWidth())
 
@@ -11,15 +11,18 @@ function navigationSizeCheck() {
     total += Number($(this).outerWidth())
   });
   if($('header .container').width() < total) {
-
     if(!nav.hasClass('mobile')) {
-      nav.addClass('mobile')
-      navToggle.addClass('mobile')
+      setTimeout(function(){
+        nav.addClass('mobile')
+        navToggle.addClass('mobile')
+      }, 250)
     }
   } else {
     if(nav.hasClass('mobile')) {
-      nav.removeClass('mobile')
-      navToggle.removeClass('mobile')
+      setTimeout(function(){
+        nav.removeClass('mobile')
+        navToggle.removeClass('mobile')
+      }, 250)
     }
   }
 }
