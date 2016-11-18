@@ -131,8 +131,8 @@ add_action('login_head', 'pitaya_custom_login_logo');
 */
 
 /* Force galleries to link to file and not attachment */
-add_shortcode('gallery', 'devsGalleryShortcode');
-function devsGalleryShortcode($atts) {
+add_shortcode('gallery', 'pitaya_gallery_shortcode');
+function pitaya_gallery_shortcode($atts) {
 	if(!$atts['link']) {
     	$atts['link'] = 'file';
 	}

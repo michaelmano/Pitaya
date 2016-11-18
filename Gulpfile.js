@@ -12,7 +12,7 @@ const path    = require('path');
 const paths = {
   styles: {
     src: './assets/stylesheets/scss/',
-    files: './assets/stylesheets/scss/**/*.scss',
+    files: './assets/stylesheets/scss/style.scss',
     dest: './assets/stylesheets/'
   },
   scripts: {

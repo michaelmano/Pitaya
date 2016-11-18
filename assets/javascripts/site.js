@@ -85,10 +85,11 @@
 
 "use strict";
 
-function navigationSizeCheck() {
-  var nav       = $('.navigation__primary');
-  var navToggle = $('.nav-toggle');
-  var total     = 5;
+function navigationSizeCheck(time) {
+  if(!time) time = 0;
+  var nav        = $('.navigation__primary');
+  var navToggle  = $('.nav-toggle');
+  var total      = 5;
 
   total += Number($('header .container .logo').outerWidth())
 
@@ -100,14 +101,14 @@ function navigationSizeCheck() {
       setTimeout(function(){
         nav.addClass('mobile')
         navToggle.addClass('mobile')
-      }, 250)
+      }, time)
     }
   } else {
     if(nav.hasClass('mobile')) {
       setTimeout(function(){
         nav.removeClass('mobile')
         navToggle.removeClass('mobile')
-      }, 250)
+      }, time)
     }
   }
 }
@@ -4300,6 +4301,17 @@ function deviceDetection() {
 
 "use strict";
 $(window).on('load', function () {
+
+  $(window).on('resize', function () {
+    navigationSizeCheck(200) // Time it takes to add the classes to the div to stop jittering
+  })
+
+  $(window).on('scroll', function () {
+  })
+
+  navigationSizeCheck(0)
+
+
   Macy.init({
     container: '.gallery',
     trueOrder: false,
@@ -4340,11 +4352,4 @@ $(window).on('load', function () {
       $(this).parent('li').addClass('hover')
     }
   });
-})
-
-$(window).on('load resize', function () {
-  navigationSizeCheck()
-})
-
-$(window).on('resize', function () {
 })
