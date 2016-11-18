@@ -1,6 +1,5 @@
 # Pitaya
-![][pitaya-image]
-
+[![pitaya-image]][pitaya-link]
 #### A Wordpress Starter theme
 [Demo][pitaya-demo]
 
