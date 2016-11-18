@@ -14,6 +14,7 @@
   * [CSS/SASS Conventions](#csssass-conventions)
   * [Comment Conventions](#comment-conventions)
   * [Gulp Setup](#gulp-setip)
+  * [Theme Activation Functions](#theme-activation-functions)
   * [Javascript Functions](#javascript-functions)
   * [Theme Specific Functions](#theme-specific-functions)
 - [Todo](#todo)
@@ -140,11 +141,7 @@ All files inside of `assets/images/icons/sprite` are watched any any changes or 
 **Production**
 Once you have finished development and wish to minify the files just run `gulp production` which will minify the css and remove comments and same goes for the javascripts.
 
-
-### Javascript functions
-The javascript files are set up so that all functions are written in `assets/javascripts/core/functions.js` and all vendors are in `assets/javascripts/vendors` and any initations of functions are put into `assets/javascripts/main.js`
-
-### Theme Specific Functions
+### Theme Activation Functions
 **assets/core/pitaya-activation.php**
 This file sets up Wordpress on the themes first activation. Below are a list of functions it runs:
 
@@ -159,8 +156,12 @@ This file sets up Wordpress on the themes first activation. Below are a list of 
 - $wp_rewrite->set_permalink_structure('/%postname%/') **Sets up the sites permalink structure**
 - $menus **Creates the primary navigation and lists all pages mentioned in the array**
 
-**Below are a list of PHP functions I have written for the Theme:**
+### Javascript functions
+The javascript files are set up so that all functions are written in `assets/javascripts/core/functions.js` and all vendors are in `assets/javascripts/vendors` and any initations of functions are put into `assets/javascripts/main.js`
 
+### Theme Specific Functions
+**Below are a list of PHP functions I have written for the Theme:**
+**assets/core/pitaya-functions.php**
 ```
 pitaya_social_nav([
   'size'  =>  'small',
