@@ -3,6 +3,7 @@
 [![pitaya-image]][pitaya-demo]
 
 #### A Wordpress Starter theme
+
 [Demo][pitaya-demo]
 
 ## Table of Contents
