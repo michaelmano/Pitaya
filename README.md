@@ -7,7 +7,7 @@
 
 - [Folder Structure](#folder-structure)
 - [Development](#development)
-  * [Installing](#installing)
+  ** [Installing](#installing)
   * [CSS/SASS Conventions](#csssass-conventions)
   * [Comment Conventions](#comment-conventions)
   * [Gulp Setup](#gulp-setip)
@@ -202,6 +202,7 @@ How the navigation works is not by viewport sizes or media queries but by checki
 This one returns true when its a touch screen device. It can be used like so
 
 `if(deviceDetection() === true) $('.header').addClass('device')`
+
 
 ## TODO
 * Init all files.
