@@ -13,14 +13,34 @@
   &--small {
     width: 20px;
     height: 20px;
+    & svg {
+      width: 20px;
+      height: 20px;
+    }
   }
   &--medium {
     width: 26px;
     height: 26px;
+    & svg {
+      height: 26px;
+      width: 26px;
+    }
   }
   &--large {
     width: 32px;
     height: 32px;
+    & svg {
+      width: 32px;
+      height: 32px;
+    }
+  }
+  & svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    & * {
+      fill: #fff;
+    }
   }
 }
 

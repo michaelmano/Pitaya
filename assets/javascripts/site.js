@@ -127,7 +127,7 @@ function deviceDetection() {
 
 /**
  * Featherlight - ultra slim jQuery lightbox
- * Version 1.5.0 - http://noelboss.github.io/featherlight/
+ * Version 1.6.1 - http://noelboss.github.io/featherlight/
  *
  * Copyright 2016, Noël Raoul Bossart (http://www.noelboss.com)
  * MIT Licensed.
@@ -234,7 +234,7 @@ function deviceDetection() {
 		closeSpeed:     250,                   /* Duration of closing animation */
 		closeOnClick:   'background',          /* Close lightbox on click ('background', 'anywhere' or false) */
 		closeOnEsc:     true,                  /* Close lightbox when pressing esc */
-		closeIcon:      '&#10005;',            /* Close icon */
+		closeIcon:      '<svg class="icon--bars"><use xlink:href="#close"></use></svg>',            /* Close icon */
 		loading:        '',                    /* Content to show while initial content is loading */
 		persist:        false,                 /* If set, the content will persist and will be shown again when opened again. 'shared' is a special value when binding multiple elements for them to share the same content */
 		otherClose:     null,                  /* Selector for alternate close buttons (e.g. "a.close") */
@@ -261,11 +261,11 @@ function deviceDetection() {
 			var self = $.extend(this, config, {target: target}),
 				css = !self.resetCss ? self.namespace : self.namespace+'-reset', /* by adding -reset to the classname, we reset all the default css */
 				$background = $(self.background || [
-					'<div class="'+css+'-loading '+css+'">',
+					'<div class="'+css+'__loading '+css+'">',
 						'<div class="'+css+'__content">',
-							'<span class="'+css+'__close">',
+							'<button class="'+css+'__close-icon icon icon--medium '+ self.namespace + '__close" aria-label="Close">',
 								self.closeIcon,
-							'</span>',
+							'</button>',
 							'<div class="'+self.namespace+'__inner">' + self.loading + '</div>',
 						'</div>',
 					'</div>'].join('')),
@@ -475,7 +475,7 @@ function deviceDetection() {
 					var self = this,
 						deferred = $.Deferred(),
 						img = new Image(),
-						$img = $('<img src="'+url+'" alt="" class="'+self.namespace+'-image" />');
+						$img = $('<img src="'+url+'" alt="" class="'+self.namespace+'__image" />');
 					img.onload  = function() {
 						/* Store naturalWidth & height for IE8 */
 						$img.naturalWidth = img.width; $img.naturalHeight = img.height;
@@ -508,8 +508,8 @@ function deviceDetection() {
 			iframe: {
 				process: function(url) {
 					var deferred = new $.Deferred();
-					var $content = $('<iframe/>')
-						.hide()
+					var $content = $('<iframe/>');
+					$content.hide()
 						.attr('src', url)
 						.css(structure(this, 'iframe'))
 						.on('load', function() { deferred.resolve($content.show()); })
@@ -541,7 +541,7 @@ function deviceDetection() {
 						if ($.inArray(name, Klass.functionAttributes) >= 0) {  /* jshint -W054 */
 							val = new Function(val);                           /* jshint +W054 */
 						} else {
-							try { val = $.parseJSON(val); }
+							try { val = JSON.parse(val); }
 							catch(e) {}
 						}
 						config[name] = val;
@@ -661,6 +661,38 @@ function deviceDetection() {
 				}
 			},
 
+			beforeOpen: function(_super, event) {
+				// Remember focus:
+				this._previouslyActive = document.activeElement;
+
+				// Disable tabbing:
+				// See http://stackoverflow.com/questions/1599660/which-html-elements-can-receive-focus
+				this._$previouslyTabbable = $("a, input, select, textarea, iframe, button, iframe, [contentEditable=true]")
+					.not('[tabindex]')
+					.not(this.$instance.find('button'));
+
+				this._$previouslyWithTabIndex = $('[tabindex]').not('[tabindex="-1"]');
+				this._previousWithTabIndices = this._$previouslyWithTabIndex.map(function(_i, elem) {
+					return $(elem).attr('tabindex');
+				});
+
+				this._$previouslyWithTabIndex.add(this._$previouslyTabbable).attr('tabindex', -1);
+
+				document.activeElement.blur();
+				return _super(event);
+			},
+
+			afterClose: function(_super, event) {
+				var r = _super(event);
+				var self = this;
+				this._$previouslyTabbable.removeAttr('tabindex');
+				this._$previouslyWithTabIndex.each(function(i, elem) {
+					$(elem).attr('tabindex', self._previousWithTabIndices[i]);
+				});
+				this._previouslyActive.focus();
+				return r;
+			},
+
 			onResize: function(_super, event){
 				this.resize(this.$content.naturalWidth, this.$content.naturalHeight);
 				return _super(event);
@@ -668,6 +700,7 @@ function deviceDetection() {
 
 			afterContent: function(_super, event){
 				var r = _super(event);
+				this.$instance.find('[autofocus]:not([disabled])').focus();
 				this.onResize(event);
 				return r;
 			}
@@ -684,9 +717,10 @@ function deviceDetection() {
 	/* bind featherlight on ready if config autoBind is set */
 	$(document).ready(function(){ Featherlight._onReady(); });
 }(jQuery));
+
 /**
  * Featherlight Gallery – an extension for the ultra slim jQuery lightbox
- * Version 1.5.0 - http://noelboss.github.io/featherlight/
+ * Version 1.6.1 - http://noelboss.github.io/featherlight/
  *
  * Copyright 2016, Noël Raoul Bossart (http://www.noelboss.com)
  * MIT Licensed.
@@ -733,7 +767,7 @@ function deviceDetection() {
 			beforeOpen: function(_super, event){
 					var self = this;
 
-					self.$instance.on('next.'+self.namespace+'previous.'+self.namespace, function(event){
+					self.$instance.on('next.'+self.namespace+' previous.'+self.namespace, function(event){
 						var offset = event.type === 'next' ? +1 : -1;
 						self.navigateTo(self.currentNavigation() + offset);
 					});
@@ -753,8 +787,8 @@ function deviceDetection() {
 				var index = this.currentNavigation();
 				var len = this.slides().length;
 				this.$instance
-					.toggleClass(this.namespace+'-first-slide', index === 0)
-					.toggleClass(this.namespace+'-last-slide', index === len - 1);
+					.toggleClass(this.namespace+'__first-slide', index === 0)
+					.toggleClass(this.namespace+'__last-slide', index === len - 1);
 				return _super(event);
 			},
 			onKeyUp: function(_super, event){
@@ -788,8 +822,8 @@ function deviceDetection() {
 
 	$.extend(FeatherlightGallery.prototype, {
 		/** Additional settings for Gallery **/
-		previousIcon: '&#9664;',     /* Code that is used as previous icon */
-		nextIcon: '&#9654;',         /* Code that is used as next icon */
+		previousIcon: '<svg class="icon--bars"><use xlink:href="#arrow-circle-left"></use></svg>',     /* Code that is used as previous icon */
+		nextIcon: '<svg class="icon--bars"><use xlink:href="#arrow-circle-right"></use></svg>',         /* Code that is used as next icon */
 		galleryFadeIn: 100,          /* fadeIn speed when image is loaded */
 		galleryFadeOut: 300,         /* fadeOut speed before image is loaded */
 
@@ -830,7 +864,7 @@ function deviceDetection() {
 
 		createNavigation: function(target) {
 			var self = this;
-			return $('<span title="'+target+'" class="'+this.namespace+'__'+target+'"></span>').click(function(){
+			return $('<span title="'+target+'" class="'+this.namespace+'__'+target+'"><span>'+this[target+'Icon']+'</span></span>').click(function(){
 				$(this).trigger(target+'.'+self.namespace);
 			});
 		}
@@ -847,6 +881,7 @@ function deviceDetection() {
 	$(document).ready(function(){ FeatherlightGallery._onReady(); });
 
 }(jQuery));
+
 (function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     define([], function () {

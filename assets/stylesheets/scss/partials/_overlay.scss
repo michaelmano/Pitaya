@@ -1,56 +1,69 @@
-@media all {
-  .overlay {
-		display: none;
-		position:fixed;
-		top: 0; right: 0; bottom: 0; left: 0;
-		z-index: 20;
-		text-align: center;
-		white-space: nowrap;
-		cursor: pointer;
-    background: rgba(0, 0, 0, 0.8);
-    span {
-      font-size: 0;
-      display: block;
-      width: 60px;
-      height: 60px;
-      background: #fff;
-      cursor: pointer;
-      position: absolute;
-      top: 50%;
-      margin-top: -10px;
-      border-radius: 50%;
-      &__previous {
-        left: 0;
-      }
-      &__next {
-        right: 0;
-      }
-      &__close {
-    		top: 0;
-    		right: 0;
-    		background: rgba(255, 255, 255, 0.3);
-        margin-top: 0;
-      }
-      & span {
-        display: none;
+.overlay {
+	display: none;
+	position:fixed;
+	top: 0; right: 0; bottom: 0; left: 0;
+	z-index: 20;
+	text-align: center;
+	white-space: nowrap;
+	cursor: pointer;
+  background: rgba(0, 0, 0, 0.8);
+  &:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+  &__content {
+    max-width: 100%;
+    text-align: left;
+    vertical-align: middle;
+    display: inline-block;
+    overflow: hidden;
+    white-space: normal;
+  }
+  &__inner {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+  &__close {
+    cursor: pointer;
+    display: block;
+    border: none;
+    outline: none;
+    background: transparent;
+    top: 5px;
+    right: 5px;
+    left: auto;
+    margin-top: 0;
+    position: absolute !important;
+    z-index: 9999;
+  }
+  & > span {
+    border: none;
+    outline: none;
+    font-size: 0;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    margin-top: -10px;
+    border-radius: 50%;
+    z-index: 99999;
+    &.overlay__previous {
+      display: none;
+      left: 0;
+    }
+    &.overlay__next {
+      display: none;
+      right: 0;
+    }
+    @media screen and (min-width: $av-min-med-width) {
+      &.overlay__next,
+      &.overlay__previous {
+        display: block;
       }
     }
-    &:before {
-  		content: '';
-  		display: inline-block;
-  		height: 100%;
-  		vertical-align: middle;
-    }
-    &__content {
-      max-width: 100%;
-  		text-align: left;
-  		vertical-align: middle;
-  		display: inline-block;
-  		overflow: hidden;
-  		white-space: normal;
-    }
-    &__inner {
-  		display: block;
-  	}
   }
 }
