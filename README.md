@@ -157,7 +157,7 @@ This file sets up Wordpress on the themes first activation. Below are a list of 
 - $wp_rewrite->set_permalink_structure('/%postname%/') **Sets up the sites permalink structure**
 - $menus **Creates the primary navigation and lists all pages mentioned in the array**
 
-**Below are a list of PHP functions I have written for the theme which you can use throughout the site:**
+**Below are a list of PHP functions I have written for the Theme:**
 
 ```
 pitaya_social_nav([
@@ -190,11 +190,10 @@ This is the same as above as it does not require to be called. Adds a metabox to
 **pitaya_auto_child_page_menu()**
 This is the same as above as it does not require to be called. Adds all child pages to the menus and you can disable them showing in the menu from the sidebar meta mentioned above.
 
-**Below are a list of Javascript functions I have written for the theme which you can use throughout the site:**
+**Below are a list of Javascript functions I have written for the Theme:**
 ```
 navigationSizeCheck(time);
 deviceDetection();
-
 ```
 **navigationSizeCheck(time)**
 This function runs on page load and resize, The time argument is for how long it takes to add the class dropdown to the menu to stop jittering.
@@ -215,5 +214,5 @@ This one returns true when its a touch screen device. It can be used like so
 [node-link]: https://nodejs.org/en/download/
 [node-image]: https://nodejs.org/static/images/logo-header.png
 [pitaya-image]: https://michaelmano.com/Pitaya.svg
-[pitaya-demo]: http://codepen.io/michaelmano/details/ObNORo/
+[pitaya-demo]: https://pitaya.michaelmano.com
 [pitaya-url]: https://www.michaelmano.com
