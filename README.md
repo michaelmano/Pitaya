@@ -15,7 +15,6 @@
   * [Comment Conventions](#comment-conventions)
   * [Gulp Setup](#gulp-setip)
   * [Theme Activation Functions](#theme-activation-functions)
-  * [Javascript Functions](#javascript-functions)
   * [Theme Specific Functions](#theme-specific-functions)
 - [Todo](#todo)
 
