@@ -1,6 +1,6 @@
 # Pitaya
 
-[pitaya-image][pitaya-link]
+[![pitaya-image]][pitaya-demo]
 
 #### A Wordpress Starter theme
 [Demo][pitaya-demo]
@@ -217,4 +217,3 @@ This one returns true when its a touch screen device. It can be used like so
 [node-image]: https://nodejs.org/static/images/logo-header.png
 [pitaya-image]: https://pitaya.michaelmano.com/wp-content/themes/Pitaya/assets/images/logo.svg
 [pitaya-demo]: https://pitaya.michaelmano.com
-[pitaya-url]: https://www.michaelmano.com
