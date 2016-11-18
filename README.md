@@ -11,7 +11,7 @@
 - [Folder Structure](#folder-structure)
 - [Development](#development)
   * [Installing](#installing)
-  * - [CSS/SASS Conventions](#csssass-conventions)
+  * [CSS/SASS Conventions](#csssass-conventions)
   * [Comment Conventions](#comment-conventions)
   * [Gulp Setup](#gulp-setip)
   * [Javascript Functions](#javascript-functions)
