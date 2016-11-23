@@ -10,10 +10,16 @@
     border-radius: 4px;
     overflow: hidden;
     border: 1px solid #eee;
+    overflow: hidden;
     & img {
       width: 100%;
       display: block;
       height: auto;
+      transform: scale(1,1);
+      transition: 0.2s ease-in-out all;
+      &:hover {
+        transform: scale(1.1,1.1);
+      }
     }
   }
 }

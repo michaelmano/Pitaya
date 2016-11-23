@@ -107,7 +107,7 @@
 		closeSpeed:     250,                   /* Duration of closing animation */
 		closeOnClick:   'background',          /* Close lightbox on click ('background', 'anywhere' or false) */
 		closeOnEsc:     true,                  /* Close lightbox when pressing esc */
-		closeIcon:      '<svg class="icon--bars"><use xlink:href="#close"></use></svg>',            /* Close icon */
+		closeIcon:      '<svg><use xlink:href="#close"></use></svg>',            /* Close icon */
 		loading:        '',                    /* Content to show while initial content is loading */
 		persist:        false,                 /* If set, the content will persist and will be shown again when opened again. 'shared' is a special value when binding multiple elements for them to share the same content */
 		otherClose:     null,                  /* Selector for alternate close buttons (e.g. "a.close") */
@@ -136,7 +136,7 @@
 				$background = $(self.background || [
 					'<div class="'+css+'__loading '+css+'">',
 						'<div class="'+css+'__content">',
-							'<button class="'+css+'__close-icon icon icon--medium '+ self.namespace + '__close" aria-label="Close">',
+							'<button class="'+css+'__close-icon icon icon--large '+ self.namespace + '__close" aria-label="Close">',
 								self.closeIcon,
 							'</button>',
 							'<div class="'+self.namespace+'__inner">' + self.loading + '</div>',

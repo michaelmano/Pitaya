@@ -46,7 +46,11 @@
 
 /* Social Navigation Elements
   ======================================================================= */
-
+ul {
+  &:not(.mobile) {
+    .socials li:hover { transform: scale(0.8); }
+  }
+}
 .socials {
   list-style: none;
   display: inline-block;
@@ -63,9 +67,6 @@
       border-radius: 50%;
       position: relative;
       transition: all .2s ease-in-out;
-      &:hover {
-        transform: scale(0.8);
-      }
       & svg {
         position: absolute;
         top: 50%;
@@ -74,7 +75,7 @@
           fill: #fff;
         }
       }
-  }
+    }
   }
   &--right {
     float: right;
@@ -120,4 +121,5 @@
   position: absolute;
   width: 1px;
   white-space: nowrap;
+  display: none;
 }

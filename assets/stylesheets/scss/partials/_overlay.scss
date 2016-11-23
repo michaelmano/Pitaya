@@ -20,6 +20,49 @@
     display: inline-block;
     overflow: hidden;
     white-space: normal;
+    & span {
+      border: none;
+      outline: none;
+      font-size: 0;
+      width: 30px;
+      height: 30px;
+      margin-top: -15px;
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      border-radius: 50%;
+      z-index: 99999;
+      &.overlay__next,
+      &.overlay__previous {
+        display: block;
+        position: absolute;
+        top: 50%;
+        & svg {
+          position: relative;
+          width: 30px;
+          height: 30px;
+          fill: #fff;
+        }
+      }
+      &.overlay__next {
+        right: $gutter;
+      }
+      &.overlay__previous {
+        left: $gutter;
+      }
+      @media screen and (min-width: $av-min-width) {
+        width: 60px;
+        height: 60px;
+        margin-top: -30px;
+        &.overlay__next,
+        &.overlay__previous {
+          & svg {
+            width: 60px;
+            height: 60px;
+          }
+        }
+      }
+    }
   }
   &__inner {
     display: block;
@@ -38,32 +81,5 @@
     margin-top: 0;
     position: absolute !important;
     z-index: 9999;
-  }
-  & > span {
-    border: none;
-    outline: none;
-    font-size: 0;
-    width: 60px;
-    height: 60px;
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    margin-top: -10px;
-    border-radius: 50%;
-    z-index: 99999;
-    &.overlay__previous {
-      display: none;
-      left: 0;
-    }
-    &.overlay__next {
-      display: none;
-      right: 0;
-    }
-    @media screen and (min-width: $av-min-med-width) {
-      &.overlay__next,
-      &.overlay__previous {
-        display: block;
-      }
-    }
   }
 }

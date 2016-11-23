@@ -1,5 +1,8 @@
 
 nav {
+  & * {
+    transition: 0.2s ease-in-out all;
+  }
   &.navigation {
     .nav-toggle {
       display: none;
@@ -50,8 +53,11 @@ nav {
           padding: $gutter + 10px 10px; // default padding + 10 for the logo height in play
           display: block;
           color: $nav-primary-link-color;
-          &:hover {
-            color: $nav-primary-link-hover-color;
+        }
+        &:hover,
+        &.current-menu-item {
+          background: $primary-color;
+          & a {
             text-decoration: none;
           }
         }
@@ -62,8 +68,6 @@ nav {
         }
         &.hover,
         &:hover {
-          & a {
-          }
           & ul {
             background: $primary-color;
             min-width: 280px;
@@ -84,6 +88,7 @@ nav {
               &:hover {
                 background: $secondary-color;
                 color: $primary-color;
+                transform:scale(1.02,1.02);
               }
             }
           }

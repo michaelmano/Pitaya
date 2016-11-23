@@ -1,4 +1,4 @@
-<div class="carousel gradiant">
+<div class="carousel">
   <div class="carousel__item">
     <div class="carousel__content">
       <div class="container">

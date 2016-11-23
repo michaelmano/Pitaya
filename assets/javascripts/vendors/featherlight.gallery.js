@@ -102,8 +102,8 @@
 
 	$.extend(FeatherlightGallery.prototype, {
 		/** Additional settings for Gallery **/
-		previousIcon: '<svg class="icon--bars"><use xlink:href="#arrow-circle-left"></use></svg>',     /* Code that is used as previous icon */
-		nextIcon: '<svg class="icon--bars"><use xlink:href="#arrow-circle-right"></use></svg>',         /* Code that is used as next icon */
+		previousIcon: '<svg><use xlink:href="#arrow-circle-left"></use></svg>',     /* Code that is used as previous icon */
+		nextIcon: '<svg><use xlink:href="#arrow-circle-right"></use></svg>',         /* Code that is used as next icon */
 		galleryFadeIn: 100,          /* fadeIn speed when image is loaded */
 		galleryFadeOut: 300,         /* fadeOut speed before image is loaded */
 
