@@ -6,7 +6,6 @@
 
 /* Vendors
   ======================================================================= */
-@import "./partials/vendors/slick"; // slider
 
 /* Base
   ======================================================================= */
@@ -16,6 +15,7 @@
 @import "./partials/carousel";
 @import "./partials/grid";
 @import "./partials/navigation";
+@import "./partials/article";
 
 
 @import "./partials/global"; // Global site layout

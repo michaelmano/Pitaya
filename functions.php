@@ -3,6 +3,12 @@
  Functions.php
 ========================================================================== */
 
+// Add support for custom styles in WordPress editor
+add_editor_style();
+
+// Add default content width
+if ( ! !empty( $content_width ) ) $content_width = 640;
+
 /*
 |--------------------------------------------------------------------------
 | Enque Stylesheets and javascripts.
@@ -71,7 +77,6 @@ add_filter('use_default_gallery_style', '__return_false' );
 
 add_post_type_support('page', 'excerpt');
 
-
 if (!current_user_can('edit_pages')) {
     add_filter('show_admin_bar', '__return_false'); //remove admin bar for all but admins/editors
 }
@@ -80,9 +85,22 @@ if(!current_user_can('manage_options')){
   add_filter('wpseo_use_page_analysis', '__return_false'); //only show for admins
 }
 
-add_image_size('thumbnail-wide', 400, 266, true); //.666 ratio
-//add_image_size('header-image', 1800, 250, true);
-//add_image_size('home-slide', 1800, 400, true);
+if ( function_exists( 'add_image_size' ) ) add_theme_support( 'post-thumbnails' );
+if ( function_exists( 'add_image_size' ) ) {
+  add_image_size( 'feed-thumb', 300, 185, true );
+  add_image_size( 'article-featured', 640, 300, true );
+  add_image_size( 'list-thumb', 382, 204, true );
+}
+
+// Remove width and height dimensions from uploaded images
+
+add_filter( 'get_image_tag', 'remove_width_and_height_attribute', 10 );
+add_filter( 'post_thumbnail_html', 'remove_width_and_height_attribute', 10 );
+add_filter( 'image_send_to_editor', 'remove_width_and_height_attribute', 10 );
+
+function remove_width_and_height_attribute( $html ) {
+   return preg_replace( '/(height|width)="\d*"\s/', "", $html );
+}
 
 /*
 |--------------------------------------------------------------------------

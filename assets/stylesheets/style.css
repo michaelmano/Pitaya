@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* Resets & Variables
   ======================================================================= */
 /* ==========================================================================
@@ -320,249 +319,6 @@ textarea {
 
 /* Vendors
   ======================================================================= */
-/* line 1, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
-.carousel--slider {
-  position: relative;
-  display: block;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -ms-touch-action: pan-y;
-  touch-action: pan-y;
-  -webkit-tap-highlight-color: transparent;
-  overflow: hidden; }
-
-/* line 17, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
-.carousel--list {
-  position: relative;
-  overflow: hidden;
-  display: block;
-  margin: 0;
-  padding: 0; }
-  /* line 24, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
-  .carousel--list:focus {
-    outline: none; }
-  /* line 28, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
-  .carousel--list.dragging {
-    cursor: pointer;
-    cursor: hand; }
-
-/* line 33, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
-.carousel--slider .carousel--track,
-.carousel--slider .carousel--list {
-  -webkit-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0); }
-
-/* line 42, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
-.carousel--track {
-  position: relative;
-  left: 0;
-  top: 0;
-  display: block; }
-  /* line 48, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
-  .carousel--track:before, .carousel--track:after {
-    content: "";
-    display: table; }
-  /* line 54, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
-  .carousel--track:after {
-    clear: both; }
-  /* line 58, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
-  .carousel--loading .carousel--track {
-    visibility: hidden; }
-
-/* line 62, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
-.carousel--slide {
-  float: left;
-  height: 100%;
-  min-height: 1px;
-  display: none; }
-  /* line 66, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
-  [dir="rtl"] .carousel--slide {
-    float: right; }
-  /* line 69, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
-  .carousel--slide img {
-    display: block; }
-  /* line 72, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
-  .carousel--slide.carousel--loading img {
-    display: none; }
-  /* line 78, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
-  .carousel--slide.dragging img {
-    pointer-events: none; }
-  /* line 82, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
-  .carousel--initialized .carousel--slide {
-    display: block; }
-  /* line 86, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
-  .carousel--loading .carousel--slide {
-    visibility: hidden; }
-  /* line 90, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
-  .carousel--vertical .carousel--slide {
-    display: block;
-    height: auto;
-    border: 1px solid transparent; }
-
-/* line 96, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
-.carousel--arrow.carousel--hidden {
-  display: none; }
-
-/* Slider */
-/* line 122, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
-.carousel--loading .carousel--list {
-  background: #fff url("../images/icons/ajax-loader.gif") center center no-repeat; }
-
-/* Icons */
-@font-face {
-  font-family: "slick";
-  src: url("../fonts/slick.eot");
-  src: url("../fonts/slick.eot?#iefix") format("embedded-opentype"), url("../fonts/slick.woff") format("woff"), url("../fonts/slick.ttf") format("truetype"), url("../fonts/slick.svg#slick") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-
-/* Arrows */
-/* line 140, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
-.carousel--prev,
-.carousel--next {
-  position: absolute;
-  display: block;
-  height: 20px;
-  width: 20px;
-  line-height: 0px;
-  font-size: 0px;
-  cursor: pointer;
-  background: transparent;
-  color: transparent;
-  top: 50%;
-  -webkit-transform: translate(0, -50%);
-  -ms-transform: translate(0, -50%);
-  transform: translate(0, -50%);
-  padding: 0;
-  border: none;
-  outline: none; }
-  /* line 158, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
-  .carousel--prev:hover, .carousel--prev:focus,
-  .carousel--next:hover,
-  .carousel--next:focus {
-    outline: none;
-    background: transparent;
-    color: transparent; }
-    /* line 162, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
-    .carousel--prev:hover:before, .carousel--prev:focus:before,
-    .carousel--next:hover:before,
-    .carousel--next:focus:before {
-      opacity: 1; }
-  /* line 166, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
-  .carousel--prev.carousel--disabled:before,
-  .carousel--next.carousel--disabled:before {
-    opacity: 0.25; }
-  /* line 169, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
-  .carousel--prev:before,
-  .carousel--next:before {
-    font-family: "slick";
-    font-size: 20px;
-    line-height: 1;
-    color: white;
-    opacity: 0.75;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale; }
-
-/* line 180, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
-.carousel--prev {
-  left: 25px;
-  z-index: 10; }
-  /* line 183, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
-  [dir="rtl"] .carousel--prev {
-    left: auto;
-    right: 25px; }
-  /* line 187, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
-  .carousel--prev:before {
-    content: "←"; }
-    /* line 189, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
-    [dir="rtl"] .carousel--prev:before {
-      content: "→"; }
-
-/* line 195, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
-.carousel--next {
-  z-index: 10;
-  right: 25px; }
-  /* line 198, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
-  [dir="rtl"] .carousel--next {
-    left: 25px;
-    right: auto; }
-  /* line 202, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
-  .carousel--next:before {
-    content: "→"; }
-    /* line 204, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
-    [dir="rtl"] .carousel--next:before {
-      content: "←"; }
-
-/* Dots */
-/* line 212, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
-.carousel--dotted.carousel--slider {
-  margin-bottom: 30px; }
-
-/* line 216, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
-.carousel--dots {
-  position: absolute;
-  bottom: 25px;
-  list-style: none;
-  display: block;
-  text-align: center;
-  padding: 0;
-  margin: 0;
-  width: 100%; }
-  /* line 225, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
-  .carousel--dots li {
-    position: relative;
-    display: inline-block;
-    height: 20px;
-    width: 20px;
-    margin: 0 5px;
-    padding: 0;
-    cursor: pointer; }
-    /* line 233, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
-    .carousel--dots li button {
-      border: 0;
-      background: transparent;
-      display: block;
-      height: 20px;
-      width: 20px;
-      outline: none;
-      line-height: 0px;
-      font-size: 0px;
-      color: transparent;
-      padding: 5px;
-      cursor: pointer; }
-      /* line 245, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
-      .carousel--dots li button:hover, .carousel--dots li button:focus {
-        outline: none; }
-        /* line 247, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
-        .carousel--dots li button:hover:before, .carousel--dots li button:focus:before {
-          opacity: 1; }
-      /* line 251, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
-      .carousel--dots li button:before {
-        position: absolute;
-        top: 0;
-        left: 0;
-        content: "•";
-        width: 20px;
-        height: 20px;
-        font-family: "slick";
-        font-size: 6px;
-        line-height: 20px;
-        text-align: center;
-        color: black;
-        opacity: 0.25;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale; }
-    /* line 268, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/vendors/_slick.scss */
-    .carousel--dots li.carousel--active button:before {
-      color: black;
-      opacity: 0.75; }
-
 /* Base
   ======================================================================= */
 /* line 1, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_overlay.scss */
@@ -706,11 +462,82 @@ textarea {
   .carousel--initialized {
     visibility: visible; }
   /* line 22, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_carousel.scss */
+  .carousel--list {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    margin: 0;
+    padding: 0; }
+    /* line 28, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_carousel.scss */
+    .carousel--list:focus {
+      outline: none; }
+    /* line 31, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_carousel.scss */
+    .carousel--list.dragging {
+      cursor: pointer;
+      cursor: hand; }
+  /* line 36, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_carousel.scss */
+  .carousel--track, .carousel--list {
+    -webkit-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
+  /* line 44, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_carousel.scss */
+  .carousel--track {
+    position: relative;
+    left: 0;
+    top: 0;
+    display: block; }
+    /* line 50, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_carousel.scss */
+    .carousel--track:before, .carousel--track:after {
+      content: "";
+      display: table; }
+    /* line 56, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_carousel.scss */
+    .carousel--track:after {
+      clear: both; }
+    /* line 60, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_carousel.scss */
+    .carousel--loading .carousel--track {
+      visibility: hidden; }
+  /* line 64, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_carousel.scss */
+  .carousel--dots {
+    position: absolute;
+    bottom: 25px;
+    list-style: none;
+    display: block;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    width: 100%; }
+    /* line 73, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_carousel.scss */
+    .carousel--dots li {
+      position: relative;
+      display: inline-block;
+      height: 4px;
+      width: 4px;
+      margin: 0 5px;
+      padding: 0;
+      cursor: pointer; }
+      /* line 81, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_carousel.scss */
+      .carousel--dots li button {
+        border: 0;
+        background: #135058;
+        display: block;
+        padding: 4px;
+        border-radius: 50%;
+        outline: none;
+        line-height: 0px;
+        font-size: 0px;
+        color: transparent;
+        cursor: pointer;
+        outline: none;
+        opacity: 0.6; }
+      /* line 95, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_carousel.scss */
+      .carousel--dots li.carousel--active button {
+        opacity: 1; }
+  /* line 100, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_carousel.scss */
   .carousel__item {
     width: 100%;
     counter-increment: gallery__cell;
     position: relative; }
-    /* line 26, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_carousel.scss */
+    /* line 104, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_carousel.scss */
     .carousel__item:before {
       display: block;
       text-align: center;
@@ -718,7 +545,7 @@ textarea {
       line-height: 600px;
       font-size: 80px;
       color: white; }
-  /* line 35, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_carousel.scss */
+  /* line 113, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_carousel.scss */
   .carousel__content {
     position: absolute;
     top: 50%;
@@ -727,7 +554,7 @@ textarea {
     -webkit-transform: perspective(1px) translateY(-50%);
             transform: perspective(1px) translateY(-50%);
     text-align: center; }
-  /* line 43, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_carousel.scss */
+  /* line 121, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_carousel.scss */
   .carousel__button {
     position: absolute;
     top: 50%;
@@ -740,153 +567,54 @@ textarea {
     height: 30px;
     margin: -15px 0 0 0;
     padding: 0; }
-    /* line 55, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_carousel.scss */
+    /* line 133, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_carousel.scss */
     .carousel__button--previous {
       left: 20px; }
-    /* line 58, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_carousel.scss */
+    /* line 136, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_carousel.scss */
     .carousel__button--next {
       right: 20px; }
-    /* line 61, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_carousel.scss */
+    /* line 139, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_carousel.scss */
     .carousel__button svg {
       width: 30px;
       height: 30px;
       fill: #fff; }
-
-/* line 69, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_carousel.scss */
-.carousel--list {
-  position: relative;
-  overflow: hidden;
-  display: block;
-  margin: 0;
-  padding: 0; }
-  /* line 76, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_carousel.scss */
-  .carousel--list:focus {
-    outline: none; }
-  /* line 80, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_carousel.scss */
-  .carousel--list.dragging {
-    cursor: pointer;
-    cursor: hand; }
-
-/* line 85, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_carousel.scss */
-.carousel--slider .carousel--track,
-.carousel--slider .carousel--list {
-  -webkit-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0); }
-
-/* line 94, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_carousel.scss */
-.carousel--track {
-  position: relative;
-  left: 0;
-  top: 0;
-  display: block; }
-  /* line 100, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_carousel.scss */
-  .carousel--track:before, .carousel--track:after {
-    content: "";
-    display: table; }
-  /* line 106, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_carousel.scss */
-  .carousel--track:after {
-    clear: both; }
-  /* line 110, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_carousel.scss */
-  .carousel--loading .carousel--track {
-    visibility: hidden; }
-
-/* line 114, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_carousel.scss */
-.carousel--slide {
-  float: left;
-  height: 100%;
-  min-height: 1px;
-  display: none; }
-  /* line 119, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_carousel.scss */
-  [dir="rtl"] .carousel--slide {
-    float: right; }
-  /* line 122, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_carousel.scss */
-  .carousel--slide img {
-    display: block; }
-  /* line 125, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_carousel.scss */
-  .carousel--slide.carousel--loading img {
+  /* line 145, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_carousel.scss */
+  .carousel--slide {
+    float: left;
+    height: 100%;
+    min-height: 1px;
     display: none; }
-  /* line 129, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_carousel.scss */
-  .carousel--slide.dragging img {
-    pointer-events: none; }
-  /* line 132, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_carousel.scss */
-  .carousel--initialized .carousel--slide {
-    display: block; }
-  /* line 135, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_carousel.scss */
-  .carousel--loading .carousel--slide {
-    visibility: hidden; }
-  /* line 138, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_carousel.scss */
-  .carousel--vertical .carousel--slide {
-    display: block;
-    height: auto;
-    border: 1px solid transparent; }
+    /* line 150, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_carousel.scss */
+    [dir="rtl"] .carousel--slide {
+      float: right; }
+    /* line 153, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_carousel.scss */
+    .carousel--slide img {
+      display: block; }
+    /* line 156, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_carousel.scss */
+    .carousel--slide.carousel--loading img {
+      display: none; }
+    /* line 160, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_carousel.scss */
+    .carousel--slide.dragging img {
+      pointer-events: none; }
+    /* line 163, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_carousel.scss */
+    .carousel--initialized .carousel--slide {
+      display: block; }
+    /* line 166, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_carousel.scss */
+    .carousel--loading .carousel--slide {
+      visibility: hidden; }
+    /* line 169, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_carousel.scss */
+    .carousel--vertical .carousel--slide {
+      display: block;
+      height: auto;
+      border: 1px solid transparent; }
 
-/* line 144, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_carousel.scss */
+/* line 176, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_carousel.scss */
 .carousel--arrow.carousel--hidden {
   display: none; }
 
-/* line 148, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_carousel.scss */
+/* line 179, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_carousel.scss */
 .carousel--dotted.carousel--slider {
   margin-bottom: 30px; }
-
-/* line 151, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_carousel.scss */
-.carousel--dots {
-  position: absolute;
-  bottom: 25px;
-  list-style: none;
-  display: block;
-  text-align: center;
-  padding: 0;
-  margin: 0;
-  width: 100%; }
-  /* line 160, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_carousel.scss */
-  .carousel--dots li {
-    position: relative;
-    display: inline-block;
-    height: 20px;
-    width: 20px;
-    margin: 0 5px;
-    padding: 0;
-    cursor: pointer; }
-    /* line 168, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_carousel.scss */
-    .carousel--dots li button {
-      border: 0;
-      background: transparent;
-      display: block;
-      height: 20px;
-      width: 20px;
-      outline: none;
-      line-height: 0px;
-      font-size: 0px;
-      color: transparent;
-      padding: 5px;
-      cursor: pointer; }
-      /* line 180, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_carousel.scss */
-      .carousel--dots li button:hover, .carousel--dots li button:focus {
-        outline: none; }
-        /* line 182, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_carousel.scss */
-        .carousel--dots li button:hover:before, .carousel--dots li button:focus:before {
-          opacity: 1; }
-      /* line 186, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_carousel.scss */
-      .carousel--dots li button:before {
-        position: absolute;
-        top: 0;
-        left: 0;
-        content: "•";
-        width: 20px;
-        height: 20px;
-        font-family: "slick";
-        font-size: 6px;
-        line-height: 20px;
-        text-align: center;
-        color: black;
-        opacity: 0.25;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale; }
-    /* line 203, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_carousel.scss */
-    .carousel--dots li.carousel--active button:before {
-      color: black;
-      opacity: 0.75; }
 
 /* ==========================================================================
  Grid system
@@ -1172,6 +900,11 @@ nav.navigation .navigation__primary {
       border-radius: 0;
       padding: 28px 10px; }
 
+/* line 2, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_article.scss */
+.article--thumbnail {
+  width: 100%;
+  height: auto; }
+
 /* ==========================================================================
  Global Elements.
 ========================================================================== */
@@ -1197,29 +930,33 @@ a {
     display: table;
     clear: both; }
 
+/* line 34, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_global.scss */
+img {
+  max-width: 100%; }
+
 /* Header Elements
   ======================================================================= */
-/* line 38, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_global.scss */
+/* line 41, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_global.scss */
 header {
   background: #1f1f1f; }
 
-/* line 41, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_global.scss */
+/* line 44, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_global.scss */
 .logo {
   display: inline-block;
   float: left;
   padding: 20px 20px 20px 0;
   width: 40px; }
-  /* line 46, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_global.scss */
+  /* line 49, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_global.scss */
   .logo img {
     width: 100%; }
 
 /* Footer Elements
   ======================================================================= */
-/* line 55, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_global.scss */
+/* line 58, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_global.scss */
 footer .socials {
   margin-top: 12px; }
 
-/* line 58, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_global.scss */
+/* line 61, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_global.scss */
 footer p {
   font-size: 11px;
   display: inline-block;
@@ -1227,11 +964,11 @@ footer p {
   font-weight: 500;
   text-transform: uppercase;
   line-height: 22px; }
-  /* line 65, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_global.scss */
+  /* line 68, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_global.scss */
   footer p a {
     text-decoration: none;
     color: inherit; }
-    /* line 68, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_global.scss */
+    /* line 71, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_global.scss */
     footer p a span {
       text-decoration: underline;
       color: #135058; }

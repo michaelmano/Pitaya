@@ -28,7 +28,6 @@ function pitaya_create_initial_pages() {
   wp_delete_comment(1);
   update_option('image_default_link_type', 'file');
   update_option('image_default_align', 'none' );
-  update_option('image_default_size', 'medium' );
 
 
   /*
