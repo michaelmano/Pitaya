@@ -7,7 +7,14 @@
   ======================================================================= */
 
 html {
-
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  & * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
 }
 body {
 
@@ -35,6 +42,33 @@ img {
   max-width: 100%;
 }
 
+// can remove
+pre {
+  white-space: pre;
+  word-wrap: normal;
+  overflow: auto;
+  padding: 12px;
+  background-color: #333;
+  border-radius: 3px;
+  color: #fff;
+}
+// can remove
+.sandbox {
+  padding: 20px;
+  margin-bottom: 2em;
+  margin-top: 5px;
+  background: #f2f2f2;
+}
+// can remove
+.box {
+  padding: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  background: #cecece;
+  color: #787878;
+}
+
+
 /* Header Elements
   ======================================================================= */
 
@@ -45,12 +79,61 @@ header {
   display: inline-block;
   float: left;
   padding: $gutter $gutter $gutter 0;
-  width: 40px;
+  width: 60px;
   & img {
     width: 100%;
   }
 }
 
+/* Content Elements
+  ======================================================================= */
+.content {
+  padding: $gutter 0;
+  &--sidebar {
+    width: 100%;
+    float: left;
+    @media screen and (min-width: $av-min-med-width) {
+      width: 71%;
+    }
+  }
+}
+.sidebar {
+  width: 100%;
+  @media screen and (min-width: $av-min-med-width) {
+    width: 29%;
+    float: right;
+    padding: $gutter 0 $gutter $gutter;
+  }
+}
+.list {
+  &--links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li {
+      float: left;
+      display: block;
+      width: 100%;
+      margin-bottom: 2px;
+      position: relative;
+      a {
+        font-size: 12px;
+        text-transform: uppercase;
+        background: $dark-grey;
+        color: #fff;
+        text-decoration: none;
+        display: block;
+        padding: $gutter/2 $gutter;
+        width: 100%;
+        &:hover {
+          text-decoration: none;
+          background: $primary-color;
+          transform: scale(1.02,1.02)
+        }
+      }
+    }
+  }
+}
 /* Footer Elements
   ======================================================================= */
 

@@ -61,16 +61,14 @@ remove_action('admin_print_styles', 'print_emoji_styles' );
 | Notice the indentaiton as each line has less and less
 */
 
-register_nav_menus([
-  'primary' => __(
-    'Primary Navigation',
-    'Pitaya'
-  ),
-  'footer' => __(
-    'Footer Navigation',
-    'Pitaya'
-  ),
-]);
+// Add support for WordPress custom menus
+add_action( 'init', 'register_my_menu' );
+
+// Register areas for custom menus
+function register_my_menu() {
+	register_nav_menu( 'primary', __( 'Primary Navigation' ) );
+	register_nav_menu( 'secondary', __( 'Secondary Navigation' ) );
+}
 
 //removes inline css for galleries
 add_filter('use_default_gallery_style', '__return_false' );
@@ -87,7 +85,7 @@ if(!current_user_can('manage_options')){
 
 if ( function_exists( 'add_image_size' ) ) add_theme_support( 'post-thumbnails' );
 if ( function_exists( 'add_image_size' ) ) {
-  add_image_size( 'feed-thumb', 300, 185, true );
+  add_image_size( 'gallery-thumb', 300, 999999 , false);
   add_image_size( 'article-featured', 640, 300, true );
   add_image_size( 'list-thumb', 382, 204, true );
 }
@@ -101,6 +99,7 @@ add_filter( 'image_send_to_editor', 'remove_width_and_height_attribute', 10 );
 function remove_width_and_height_attribute( $html ) {
    return preg_replace( '/(height|width)="\d*"\s/', "", $html );
 }
+
 
 /*
 |--------------------------------------------------------------------------

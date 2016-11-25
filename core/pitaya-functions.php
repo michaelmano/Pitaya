@@ -207,7 +207,7 @@ function pitaya_gallery($output, $attr) {
     <div class="gallery gallery--<?php if ($attr['type'] === 'slider') { echo 'slider'; } else { echo 'masonry'; } ?>">
     <?php
     foreach ($attachments as $id => $attachment) {
-      $thumb = wp_get_attachment_image_src($id, 'medium_large');
+      $thumb  = wp_get_attachment_image_src($id, 'gallery-thumb');
       $full   = wp_get_attachment_image_src($id, 'full'); ?>
       <div class="gallery__item">
         <a href="<?php echo $full[0]; ?>">
@@ -239,24 +239,28 @@ function pitaya_add_sidebar_meta() {
 }
 
 function pitaya_sidebar_meta_callback( $post ) {
-	global $post;
-  $args = [
-    'enable_sidebar'  =>  get_post_meta( $post->ID, 'enable_sidebar', true )
-  ];
+  if(get_post_type($post->ID) === 'page') {
+  	global $post;
+    $args = [
+      'enable_sidebar'  =>  get_post_meta( $post->ID, 'enable_sidebar', true )
+    ];
 
-  if($post->post_parent) $args['hide_from_menu'] = get_post_meta( $post->ID, 'hide_from_menu' , true );
+    if($post->post_parent) $args['hide_from_menu'] = get_post_meta( $post->ID, 'hide_from_menu' , true );
 
-  foreach ($args as $key => $value) { ?>
-    <input type="checkbox" style="margin:0 16px 0 0;" name="<?php echo $key; ?>" value="true" <?php echo (($value=='true') ? 'checked="checked"': '');?>/>
-    <label for="<?php echo $key; ?>"><?php echo ucwords ( str_replace('_', ' ', $key)); ?></label><br />
-<?php
+    foreach ($args as $key => $value) { ?>
+      <input type="checkbox" style="margin:0 16px 0 0;" name="<?php echo $key; ?>" value="true" <?php echo (($value=='true') ? 'checked="checked"': '');?>/>
+      <label for="<?php echo $key; ?>"><?php echo ucwords ( str_replace('_', ' ', $key)); ?></label><br />
+  <?php
+    }
   }
 }
 
 
 function pitaya_save_sidebar_meta($post_id){
-  update_post_meta( $post_id, 'enable_sidebar', $_POST['enable_sidebar']);
-	update_post_meta( $post_id, 'hide_from_menu', $_POST['hide_from_menu']);
+  if(get_post_type($post_id) === 'page') {
+    update_post_meta( $post_id, 'enable_sidebar', $_POST['enable_sidebar']);
+    if($post->post_parent) update_post_meta( $post_id, 'hide_from_menu', $_POST['hide_from_menu']);
+  }
 }
 
 add_action( 'save_post'     , 'pitaya_save_sidebar_meta');

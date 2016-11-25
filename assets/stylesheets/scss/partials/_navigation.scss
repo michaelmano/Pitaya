@@ -50,7 +50,7 @@ nav {
         float: left;
         position: relative;
         a {
-          padding: $gutter + 10px 10px; // default padding + 10 for the logo height in play
+          padding: $gutter + 11px 10px; // default padding + 10 for the logo height in play
           display: block;
           color: $nav-primary-link-color;
         }
@@ -133,7 +133,7 @@ nav {
         float: right;
         & a {
           border-radius: 0;
-          padding: $gutter + 8px 10px; // Hack to fix the overflow from the hover affect. (notice the padding is 2px less than the nav)
+          padding: $gutter*2 $gutter;
         }
       }
     }

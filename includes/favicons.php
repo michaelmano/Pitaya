@@ -10,6 +10,7 @@ $primary_color = $options['Theme Primary Colour'];
 <link rel="apple-touch-icon-precomposed" sizes="120x120" href="<?php echo get_template_directory_uri(); ?>/assets/images/icons/favicons/apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon-precomposed" sizes="76x76" href="<?php echo get_template_directory_uri(); ?>/assets/images/icons/favicons/apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon-precomposed" sizes="152x152" href="<?php echo get_template_directory_uri(); ?>/assets/images/icons/favicons/apple-touch-icon-152x152.png" />
+
 <link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/assets/images/icons/favicons/favicon-196x196.png" sizes="196x196" />
 <link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/assets/images/icons/favicons/favicon-96x96.png" sizes="96x96" />
 <link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/assets/images/icons/favicons/favicon-32x32.png" sizes="32x32" />
@@ -23,3 +24,4 @@ $primary_color = $options['Theme Primary Colour'];
 <meta name="msapplication-square150x150logo" content="<?php echo get_template_directory_uri(); ?>/assets/images/icons/favicons/mstile-150x150.png" />
 <meta name="msapplication-wide310x150logo" content="<?php echo get_template_directory_uri(); ?>/assets/images/icons/favicons/mstile-310x150.png" />
 <meta name="msapplication-square310x310logo" content="<?php echo get_template_directory_uri(); ?>/assets/images/icons/favicons/mstile-310x310.png" />
+<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/assets/images/icons/favicons/apple-touch-icon-152x152.png" />

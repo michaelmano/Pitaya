@@ -111,10 +111,10 @@ function pitaya_create_initial_pages() {
   */
 
   $menus = [
-   'Primary'  => [
-     '/'      => 'Home',
-     'contact'=> 'Contact',
-     'news'   => 'News',
+   'Primary'    => [
+     '/'        => 'Home',
+     'contact'  => 'Contact',
+     'news'     => 'News',
    ],
   ];
 
