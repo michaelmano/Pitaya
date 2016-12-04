@@ -108,6 +108,9 @@ nav {
               &:hover {
                 background: $primary-color;
                 color: #fff;
+                & ul {
+                  min-width: 100%;
+                }
               }
             }
           }

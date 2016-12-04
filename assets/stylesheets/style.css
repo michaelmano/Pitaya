@@ -869,26 +869,29 @@ nav.navigation .navigation__primary {
           nav.navigation .navigation__primary.mobile.show li a:hover {
             background: #135058;
             color: #fff; }
-      /* line 114, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_navigation.scss */
+            /* line 111, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_navigation.scss */
+            nav.navigation .navigation__primary.mobile.show li a:hover ul {
+              min-width: 100%; }
+      /* line 117, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_navigation.scss */
       nav.navigation .navigation__primary.mobile.show .socials {
         float: none;
         display: block; }
-        /* line 117, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_navigation.scss */
+        /* line 120, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_navigation.scss */
         nav.navigation .navigation__primary.mobile.show .socials li {
           width: 25%;
           float: left;
           display: inline-block;
           margin: 0; }
-          /* line 122, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_navigation.scss */
+          /* line 125, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_navigation.scss */
           nav.navigation .navigation__primary.mobile.show .socials li a {
             width: 100%;
             text-align: center;
             border-radius: 0;
             padding: 28px 10px; }
-  /* line 132, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_navigation.scss */
+  /* line 135, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_navigation.scss */
   nav.navigation .navigation__primary .socials {
     float: right; }
-    /* line 134, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_navigation.scss */
+    /* line 137, D:/Dropbox/Development/Personal/Projects/Pitaya/assets/stylesheets/scss/partials/_navigation.scss */
     nav.navigation .navigation__primary .socials a {
       border-radius: 0;
       padding: 40px 20px; }

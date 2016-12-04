@@ -8,23 +8,30 @@ function navigationSizeCheck(time) {
 
   total += Number($('header .container .logo').outerWidth())
 
+  if(nav.hasClass('mobile')) {
+    nav.removeClass('mobile').css('opacity', '0').css('position', 'absolute')
+    navToggle.removeClass('mobile')
+  }
+
   $('header .navigation ul li').each(function() {
     total += Number($(this).outerWidth())
-  });
+  })
+
+  setTimeout(function(){
+    nav.css('opacity', '1').css('position', 'static')
+  }, 150)
+
   if($('header .container').width() < total) {
-    if(!nav.hasClass('mobile')) {
-      setTimeout(function(){
+    setTimeout(function(){
+      nav.css('opacity', '1').css('position', 'static')
+      if(!nav.hasClass('mobile')) {
         nav.addClass('mobile')
         navToggle.addClass('mobile')
-      }, time)
-    }
-  } else {
-    if(nav.hasClass('mobile')) {
-      setTimeout(function(){
+      } else {
         nav.removeClass('mobile')
         navToggle.removeClass('mobile')
-      }, time)
-    }
+      }
+    }, time)
   }
 }
 

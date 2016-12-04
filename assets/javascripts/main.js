@@ -1,10 +1,10 @@
 "use strict";
 $(window).on('load', function () {
 
+  // This initiates the naviagion.
   navigationSizeCheck(0)
 
   $("ul.sub-menu").parents().addClass('parent')
-
 
   Macy.init({
     container: '.gallery',
@@ -36,6 +36,10 @@ $(window).on('load', function () {
     openSpeed: 300
   })
 
+  $('.content a[href$=".jpeg"], .content a[href$=".jpg"], .content a[href$=".gif"], .content a[href$=".png"]').featherlight({
+    openSpeed: 300
+  })
+
   $(".nav-toggle").click(function(event) {
     $(this).toggleClass('toggled');
     $('.navigation__primary').toggleClass('show');
@@ -48,19 +52,13 @@ $(window).on('load', function () {
     }
   })
 
-  // if ($('body').hasClass('blog')) {
-  //   var maxHeight = ''
-  //   $('h2.post-title').each(function(){
-  //     if($(this).height() > maxHeight) {
-  //       maxHeight = $(this).height()
-  //     }
-  //   })
-  //   $('h2.post-title').css('height', maxHeight)
-  // }
 
-
-  $(window).on('resize', function () {
-    navigationSizeCheck(300) // Time it takes to add the classes to the div to stop jittering
+  var resizeTimer;
+  $(window).on('resize', function(event) {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function() {
+      navigationSizeCheck()
+    }, 250)
   })
 
   $(window).on('scroll', function () {
