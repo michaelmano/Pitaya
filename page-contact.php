@@ -4,7 +4,15 @@
  * Description: Contact Page
  */
 get_header(); ?>
-<?php while(have_posts()) : the_post(); ?>
-<?php the_content(); ?>
-<?php endwhile; ?>
+<div class="container">
+  <div class="content">
+    <?php
+    if ( have_posts() ) {
+      while ( have_posts() ) {
+    		the_post();
+    		the_content();
+    	}
+    } ?>
+  </div><!-- END content -->
+</div><!-- END container -->
 <?php get_footer(); ?>

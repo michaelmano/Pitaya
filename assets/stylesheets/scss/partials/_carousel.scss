@@ -99,15 +99,12 @@
   }
   &__item {
     width: 100%;
-    counter-increment: gallery__cell;
     position: relative;
-    &:before {
-      display: block;
-      text-align: center;
-      content: counter(gallery__cell);
-      line-height: 600px;
-      font-size: 80px;
-      color: white;
+    & a {
+      color: inherit;
+      &:hover {
+        color: inherit;
+      }
     }
   }
   &__content {
@@ -116,7 +113,12 @@
     right: 0;
     left: 0;
     transform: perspective(1px) translateY(-50%);
+    background: rgba(255,255,255,0.5);
     text-align: center;
+    padding: 0 65px;
+    & p {
+      font-weight: bold;
+    }
   }
   &__button {
     position: absolute;
@@ -151,6 +153,10 @@
       float: right;
     }
     img {
+      min-height: 340px;
+      max-width: 1920px;
+      left: 50%;
+      margin-left: -960px;
       display: block;
     }
     &.carousel--loading img {

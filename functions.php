@@ -88,6 +88,7 @@ if ( function_exists( 'add_image_size' ) ) {
   add_image_size( 'gallery-thumb', 300, 999999 , false);
   add_image_size( 'article-featured', 640, 300, true );
   add_image_size( 'list-thumb', 382, 204, true );
+  add_image_size( 'carousel', 1920, 600, true );
 }
 
 // Remove width and height dimensions from uploaded images

@@ -122,6 +122,66 @@ add_action('login_head', 'pitaya_custom_login_logo');
 
 /*
 |--------------------------------------------------------------------------
+| Custom Post Type Save Field functions
+|--------------------------------------------------------------------------
+|
+*/
+
+function pitaya_save_cp_fields($post_id, $fields) {
+	foreach ($fields as $key => $field) {
+		if($field['multiple'] == true) {
+			delete_post_meta($post_id, $key);
+			$postValues = array();
+			foreach ($_POST[$key] as $postKey => $postValue) {
+				if($postValue != '') {
+					$postValues[] = $postValue;
+				}
+			}
+			$field['value'] = $postValues;
+		}
+		pitaya_save_cp_field($post_id, $key, $field);
+	}
+}
+
+function pitaya_save_cp_field($post_id, $key, $field) {
+	if($field['type'] == 'csv') {
+		pitaya_save_cp_csv_input($post_id, $key, $field);
+	}
+	else if($field['type'] == 'date') {
+		pitaya_save_cp_date_input($post_id, $key, $field);
+	}
+	else {
+		pitaya_save_cp_input($post_id, $key, $field);
+	}
+}
+
+function pitaya_save_cp_input($post_id, $key, $field) {
+	$value = $_POST[$key];
+	if(isset($field['value'])) {
+		$value = $field['value'];
+	}
+	update_post_meta($post_id, $key, $value);
+}
+
+function pitaya_save_cp_date_input($post_id, $key, $field) {
+	$value = $_POST[$key];
+	if(isset($field['value'])) {
+		$value = $field['value'];
+	}
+	update_post_meta($post_id, $key, $value);
+}
+
+function pitaya_save_cp_csv_input($post_id, $key, $field) {
+	$value = $_POST[$key];
+	if(isset($field['value'])) {
+		$value = $field['value'];
+	}
+	$values = explode(',', $value);
+	update_post_meta($post_id, $key, $values);
+}
+
+/*
+|--------------------------------------------------------------------------
 | Wordpress Gallery Override.
 |--------------------------------------------------------------------------
 |
@@ -222,46 +282,3 @@ function pitaya_gallery($output, $attr) {
   return $output;
 }
 add_filter('post_gallery', 'pitaya_gallery', 10, 2);
-
-/*
-|--------------------------------------------------------------------------
-| Add Post Meta to all pages
-|--------------------------------------------------------------------------
-|
-| The Below function will add a post meta box to all pages that has a checkbox
-| That will enable or disable the sidebar instead of having multiple page
-| Templates I find this to be the cleanest way of doing things.
-*/
-
-
-function pitaya_add_sidebar_meta() {
-  add_meta_box('featured_checkbox_id','Pitaya Functions', 'pitaya_sidebar_meta_callback', 'page', 'side', 'high');
-}
-
-function pitaya_sidebar_meta_callback( $post ) {
-  if(get_post_type($post->ID) === 'page') {
-  	global $post;
-    $args = [
-      'enable_sidebar'  =>  get_post_meta( $post->ID, 'enable_sidebar', true )
-    ];
-
-    if($post->post_parent) $args['hide_from_menu'] = get_post_meta( $post->ID, 'hide_from_menu' , true );
-
-    foreach ($args as $key => $value) { ?>
-      <input type="checkbox" style="margin:0 16px 0 0;" name="<?php echo $key; ?>" value="true" <?php echo (($value=='true') ? 'checked="checked"': '');?>/>
-      <label for="<?php echo $key; ?>"><?php echo ucwords ( str_replace('_', ' ', $key)); ?></label><br />
-  <?php
-    }
-  }
-}
-
-
-function pitaya_save_sidebar_meta($post_id){
-  if(get_post_type($post_id) === 'page') {
-    update_post_meta( $post_id, 'enable_sidebar', $_POST['enable_sidebar']);
-    if($post->post_parent) update_post_meta( $post_id, 'hide_from_menu', $_POST['hide_from_menu']);
-  }
-}
-
-add_action( 'save_post'     , 'pitaya_save_sidebar_meta');
-add_action( 'add_meta_boxes', 'pitaya_add_sidebar_meta' );

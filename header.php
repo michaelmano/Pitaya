@@ -41,7 +41,7 @@
         'depth' => 3,
       ]);
       pitaya_social_nav([
-        'size'  =>  'small',
+        'size'  =>  'medium',
         'float' =>  'right'
       ]);
       ?>
@@ -49,3 +49,4 @@
     </nav>
   </div><!-- END container -->
 </header>
+<?php get_template_part( 'includes/carousel' ); ?>
