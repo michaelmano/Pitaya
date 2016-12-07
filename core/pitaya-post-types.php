@@ -79,6 +79,8 @@ function pitaya_custom_post_carousel() {
 		'labels' => $labels,
 		'description' => 'Holds Carousel specific data',
 		'menu_position' => 30,
+    'show_in_rest'  => true,
+    'rest_controller_class' => 'WP_REST_Posts_Controller',
 		'supports' => array('title', 'thumbnail'),
 		'menu_icon' => 'dashicons-images-alt',
 		'public' => true,

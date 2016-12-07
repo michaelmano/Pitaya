@@ -142,3 +142,4 @@ require_once(dirname(__FILE__) . '/core/pitaya-menu.php');
 require_once(dirname(__FILE__) . '/core/pitaya-settings.php');
 require_once(dirname(__FILE__) . '/core/pitaya-functions.php');
 require_once(dirname(__FILE__) . '/core/pitaya-post-types.php');
+require_once(dirname(__FILE__) . '/core/pitaya-rest-api.php');
