@@ -208,7 +208,7 @@ This one returns true when its a touch screen device. It can be used like so
 
 ## Carousel
 
-To use the carousel you first need to make a new carousel item and give it the category of the page you want it on. e.g. `home`
+To use the carousel you first need to make a new carousel item and give it the category of the page you want it on. e.g. `home` and set the featured image.
 
 ## TODO
 * Init all files.
