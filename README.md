@@ -14,6 +14,7 @@
   * [Gulp Setup](#gulp-setip)
   * [Theme Activation Functions](#theme-activation-functions)
   * [Theme Specific Functions](#theme-specific-functions)
+- [Carousel](#carousel)
 - [Todo](#todo)
 
 
@@ -204,6 +205,10 @@ This one returns true when its a touch screen device. It can be used like so
 
 `if(deviceDetection() === true) $('.header').addClass('device')`
 
+
+## Carousel
+
+To use the carousel you first need to make a new carousel item and give it the category of the page you want it on. e.g. `home`
 
 ## TODO
 * Init all files.
