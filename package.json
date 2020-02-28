@@ -7,6 +7,10 @@
     "url": "git@github.com:michaelmano/Pitaya.git",
     "type": "git"
   },
+  "scripts": {
+    "watch": "node ./node_modules/gulp/bin/gulp.js",
+    "prod": "node ./node_modules/gulp/bin/gulp.js production"
+  },
   "author": "Michael Mano",
   "license": "MIT",
   "dependencies": {},
